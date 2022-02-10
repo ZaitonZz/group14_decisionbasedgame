@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">group14_decisionbasedgame</string>
+    <string name="btn_start_txt">Start</string>
+    <string name="titleView_txt">MCM\nLiterature Club</string>
 </resources>
