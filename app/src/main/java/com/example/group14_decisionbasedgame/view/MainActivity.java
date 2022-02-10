@@ -1,8 +1,10 @@
-package com.example.group14_decisionbasedgame;
+package com.example.group14_decisionbasedgame.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.group14_decisionbasedgame.R;
 
 public class MainActivity extends AppCompatActivity {
 
