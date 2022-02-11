@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Group14_decisionbasedgame">
         <activity
+            android:name=".view.Intro_Screen"
+            android:exported="false" />
+        <activity
+            android:name=".view.default_starting_screen"
+            android:exported="false" />
+        <activity
+            android:name=".view.main_menu"
+            android:exported="false" />
+        <activity
             android:name=".view.loading_screen"
             android:exported="true">
             <intent-filter>
