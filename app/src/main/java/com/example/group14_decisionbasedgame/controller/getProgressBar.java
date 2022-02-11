@@ -1,4 +1,4 @@
-package com.example.group14_decisionbasedgame.view;
+package com.example.group14_decisionbasedgame.controller;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,20 +7,21 @@ import android.view.animation.Transformation;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-public class ProgressAnimation extends Animation {
+public class getProgressBar extends Animation {
     private Context context;
     private TextView textView;
-    private ProgressBar progressBar;
+    private android.widget.ProgressBar progressBar;
     private float from;
     private float to;
+    private Class nextActivity;
 
-
-    public ProgressAnimation(Context context, TextView textView, ProgressBar progressBar, float from, float to) {
+    public getProgressBar(Context context, TextView textView, android.widget.ProgressBar progressBar, float from, float to, Class nextActivity) {
         this.context = context;
         this.textView = textView;
         this.progressBar = progressBar;
         this.from = from;
         this.to = to;
+        this.nextActivity = nextActivity;
     }
 
     @Override
@@ -32,7 +33,7 @@ public class ProgressAnimation extends Animation {
         textView.setText((int) value + "%");
 
         if (value == to) {
-            context.startActivity(new Intent(context, default_starting_screen.class));
+            context.startActivity(new Intent(context, this.nextActivity));
         }
     }
 }
