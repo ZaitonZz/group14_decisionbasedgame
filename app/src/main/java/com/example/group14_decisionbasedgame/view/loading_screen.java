@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.controller.getProgressBar;
+import com.example.group14_decisionbasedgame.model.start_game;
 
 
 public class loading_screen extends AppCompatActivity {
@@ -21,6 +22,7 @@ public class loading_screen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        enableFullscreen();
         setContentView(R.layout.loading_screen);
 
         progressBar = findViewById(R.id.pro);
@@ -35,7 +37,7 @@ public class loading_screen extends AppCompatActivity {
 
     private void progressAnimation() {
 
-        getProgressBar animation =  new getProgressBar(this,textView,progressBar,0f,100f, main_menu.class);
+        getProgressBar animation =  new getProgressBar(this,textView,progressBar,0f,100f, start_game.class);
         animation.setDuration(8000);
         progressBar.setAnimation(animation);
     }
