@@ -2,14 +2,19 @@ package com.example.group14_decisionbasedgame.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 import com.example.group14_decisionbasedgame.R;
 
 public class main_menu extends AppCompatActivity {
 
+    private Button btnStart;
+    private Button btnSettings;
+    private Button btnExit;
 
 
     @Override
@@ -17,7 +22,31 @@ public class main_menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         enableFullscreen();
         setContentView(R.layout.main_menu);
+        btnStart = (Button) findViewById(R.id.btn_start);
+
+        btnStart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(main_menu.this, loading_screen.class));
+                ;
+            }
+        });
+        btnSettings = (Button) findViewById((R.id.btn_settings));
+        btnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(main_menu.this, settings_screen.class));
+            }
+        });
+        btnExit = (Button) findViewById((R.id.btn_exit));
+        btnExit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(main_menu.this, exit_confirmation.class));
+            }
+        });
     }
+
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {

@@ -16,8 +16,8 @@
         android:layout_height="64dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="173dp"
-        android:layout_marginEnd="154dp"
+        android:layout_marginStart="159dp"
+        android:layout_marginEnd="150dp"
         android:padding="16dp"
         android:text="100%" />
 

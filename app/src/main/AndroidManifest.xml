@@ -27,6 +27,13 @@
         <activity
             android:name=".view.loading_screen"
             android:exported="true"/>
+        <activity android:name=".view.exit_confirmation"
+            android:exported="true"/>
+        <activity android:name=".view.settings_screen"
+            android:exported="true"/>
+        <activity android:name=".view.start_game"
+            android:exported="true"/>
+
 
 </application>
 

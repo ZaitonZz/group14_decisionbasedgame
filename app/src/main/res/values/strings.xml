@@ -5,4 +5,9 @@
     <string name="btn_settings_txt">Settings</string>
     <string name="btn_credits_txt">Credits</string>
     <string name="btn_exit_txt">Exit</string>
+    <string name="are_you_sure_you_want_to_exit">Are you sure you want to exit?</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="agree">Agree</string>
+    <string name="back">Back</string>
+    <string name="_100">100%</string>
 </resources>
