@@ -29,8 +29,8 @@ public class getProgressBar extends Animation {
         super.applyTransformation(interpolatedTime, t);
         float value = from + (to - from) * interpolatedTime;
 
-        progressBar.setProgress((int) value);
-        textView.setText((int) value + "%");
+        progressBar.setProgress((int)value);
+        textView.setText((int)value+"%");
 
         if (value == to) {
             context.startActivity(new Intent(context, this.nextActivity));

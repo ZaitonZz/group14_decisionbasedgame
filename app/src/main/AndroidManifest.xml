@@ -26,7 +26,8 @@
             android:exported="false" />
         <activity
             android:name=".view.loading_screen"
-            android:exported="false"/>
-    </application>
+            android:exported="true"/>
+
+</application>
 
 </manifest>

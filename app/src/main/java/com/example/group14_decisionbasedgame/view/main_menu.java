@@ -10,6 +10,8 @@ import com.example.group14_decisionbasedgame.R;
 
 public class main_menu extends AppCompatActivity {
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

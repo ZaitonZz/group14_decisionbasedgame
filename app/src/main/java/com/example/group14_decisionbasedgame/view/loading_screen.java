@@ -3,6 +3,7 @@ package com.example.group14_decisionbasedgame.view;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,14 +14,13 @@ import com.example.group14_decisionbasedgame.controller.getProgressBar;
 
 public class loading_screen extends AppCompatActivity {
 
-    android.widget.ProgressBar progressBar;
+    ProgressBar progressBar;
     TextView textView;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        enableFullscreen();
         setContentView(R.layout.loading_screen);
 
         progressBar = findViewById(R.id.pro);
@@ -35,7 +35,7 @@ public class loading_screen extends AppCompatActivity {
 
     private void progressAnimation() {
 
-        getProgressBar animation =  new getProgressBar(this,textView,progressBar,0f,100f,default_starting_screen.class);
+        getProgressBar animation =  new getProgressBar(this,textView,progressBar,0f,100f, main_menu.class);
         animation.setDuration(8000);
         progressBar.setAnimation(animation);
     }
@@ -52,6 +52,7 @@ public class loading_screen extends AppCompatActivity {
         }
     }
 }
+
 
 
 
