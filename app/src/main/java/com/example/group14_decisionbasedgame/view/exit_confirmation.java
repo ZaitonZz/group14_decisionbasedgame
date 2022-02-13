@@ -25,7 +25,7 @@ public class exit_confirmation extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 android.os.Process.killProcess(android.os.Process.myPid());
-                ;
+                Intro_Screen.stopMusic();
             }
         });
         btnDismiss = (Button) findViewById(R.id.btn_Dismiss);

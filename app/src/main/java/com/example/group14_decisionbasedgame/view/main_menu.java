@@ -22,23 +22,25 @@ public class main_menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         enableFullscreen();
         setContentView(R.layout.main_menu);
+        new Intro_Screen();
+        // Calling Buttons
         btnStart = (Button) findViewById(R.id.btn_start);
+        btnSettings = (Button) findViewById((R.id.btn_settings));
+        btnExit = (Button) findViewById((R.id.btn_exit));
 
         btnStart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(main_menu.this, loading_screen.class));
-                ;
+                startActivity(new Intent(main_menu.this, loading_screen_toStart.class));
+                Intro_Screen.stopMusic();
             }
         });
-        btnSettings = (Button) findViewById((R.id.btn_settings));
         btnSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(main_menu.this, settings_screen.class));
             }
         });
-        btnExit = (Button) findViewById((R.id.btn_exit));
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

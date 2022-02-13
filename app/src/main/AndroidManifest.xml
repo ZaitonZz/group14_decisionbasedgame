@@ -25,7 +25,7 @@
             android:name=".view.main_menu"
             android:exported="false" />
         <activity
-            android:name=".view.loading_screen"
+            android:name=".view.loading_screen_toStart"
             android:exported="true"/>
         <activity android:name=".view.exit_confirmation"
             android:exported="true"/>
