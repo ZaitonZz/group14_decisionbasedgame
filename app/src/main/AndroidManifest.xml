@@ -39,6 +39,9 @@
         <activity
             android:name=".view.start_game"
             android:exported="true" />
+        <activity
+            android:name=".controller.splash_screen"
+            android:exported="true"/>
     </application>
 
 </manifest>
