@@ -1,7 +1,10 @@
 package com.example.group14_decisionbasedgame.view;
 
+import static android.content.ContentValues.TAG;
+
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -10,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.controller.getProgressBar;
+import com.example.group14_decisionbasedgame.controller.musicRelated;
 
 
 public class loading_screen_toStart extends AppCompatActivity {
@@ -17,7 +21,6 @@ public class loading_screen_toStart extends AppCompatActivity {
     //TODO: make a corrupted version of the music for loading screen and main menu as the plot twist is reached. Probably will have a boolean that is checked everytime the game is started? to change the music and bg picture
     ProgressBar progressBar;
     TextView textView;
-    //static MediaPlayer load_rdm_music;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +34,7 @@ public class loading_screen_toStart extends AppCompatActivity {
         progressBar.setScaleY(2f);
         progressAnimation();
 
-        // load_rdm_music= MediaPlayer.create(this, Array(R.raw.girl_one_main, R.raw.girl_two_main));
+        musicRelated.strtLscreen(this);
     }
 
     private void progressAnimation() {
@@ -51,6 +54,12 @@ public class loading_screen_toStart extends AppCompatActivity {
                             View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
                             View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         }
+    }
+    @Override
+    protected void onPause(){
+        super.onPause();
+        musicRelated.stopLscreen_music();
+        Log.d(TAG, "Lscreen onPause: working");
     }
 }
 

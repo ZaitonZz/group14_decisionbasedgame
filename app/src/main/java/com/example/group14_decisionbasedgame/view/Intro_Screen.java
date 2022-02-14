@@ -20,8 +20,7 @@ public class Intro_Screen extends AppCompatActivity {
     //TODO: Change to activity to splash screen
     android.widget.ProgressBar progressBar;
     TextView textView;
-    static MediaPlayer intronstart_music;
-    public static boolean went = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,10 +30,6 @@ public class Intro_Screen extends AppCompatActivity {
         new musicRelated();
         setContentView(R.layout.intro_screen);
 
-        //intronstart_music = MediaPlayer.create(this, R.raw.main_menu_loop);
-        //intronstart_music.setLooping(true);
-       // intronstart_music.setVolume(100, 100);
-       // intronstart_music.start();
         musicRelated.strtintro_music(this);
         progressBar = findViewById(R.id.pro);
         textView = findViewById(R.id.txt);
@@ -68,15 +63,13 @@ public class Intro_Screen extends AppCompatActivity {
     @Override
     protected void onPause(){
         super.onPause();
-        musicRelated.pMusic();
-        Log.d(TAG, "onPause: working");
+        musicRelated.pintro_music();
+        Log.d(TAG, "Intro onPause: working");
     }
     @Override
     protected void onResume(){
         super.onResume();
-        musicRelated.conMusic();
-        Log.d(TAG, "onResume: working");
-        went = true;
+        musicRelated.conintro_music();
+        Log.d(TAG, "Intro onResume: working");
     }
-    public static boolean isWent() { return went; }
 }

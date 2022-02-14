@@ -36,7 +36,7 @@ public class main_menu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(main_menu.this, loading_screen_toStart.class));
-                musicRelated.stopMusic();
+                musicRelated.stopintro_music();
             }
         });
         btnSettings.setOnClickListener(new View.OnClickListener() {

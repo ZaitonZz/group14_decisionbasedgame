@@ -24,17 +24,16 @@ public class exit_confirmation extends AppCompatActivity {
         enableFullscreen();
 
         btnAgree = (Button) findViewById(R.id.btn_Agree);
+        btnDismiss = (Button) findViewById(R.id.btn_Dismiss);
         btnAgree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 android.os.Process.killProcess(android.os.Process.myPid());
-                musicRelated.stopMusic();
-            }
-        });
-        btnDismiss = (Button) findViewById(R.id.btn_Dismiss);
+                musicRelated.stopintro_music(); }});
         btnDismiss.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { startActivity(new Intent(exit_confirmation.this, main_menu.class)); }}); }
+
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
