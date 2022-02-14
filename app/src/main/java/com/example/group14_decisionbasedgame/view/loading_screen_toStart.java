@@ -17,7 +17,6 @@ import com.example.group14_decisionbasedgame.controller.musicRelated;
 
 
 public class loading_screen_toStart extends AppCompatActivity {
-    //TODO: make an array playlist with randomizer either here or most probably in a controller class, exclude all the corrupted music.
     //TODO: make a corrupted version of the music for loading screen and main menu as the plot twist is reached. Probably will have a boolean that is checked everytime the game is started? to change the music and bg picture
     ProgressBar progressBar;
     TextView textView;
