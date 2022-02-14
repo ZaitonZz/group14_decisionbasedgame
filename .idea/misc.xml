@@ -19,9 +19,13 @@
         <entry key="..\:/Users/Jay Gamao/AndroidStudioProjects/group14_decisionbasedgame/app/src/main/res/layout/loading_screen.xml" value="0.33" />
         <entry key="..\:/Users/Jay Gamao/AndroidStudioProjects/group14_decisionbasedgame/app/src/main/res/layout/main_menu.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/Philip/AndroidStudioProjects/group14_decisionbasedgame/app/src/main/res/drawable/custom_bg.xml" value="0.252" />
+        <entry key="..\:/Users/Philip/AndroidStudioProjects/group14_decisionbasedgame/app/src/main/res/layout/exit_confirmation.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/Philip/AndroidStudioProjects/group14_decisionbasedgame/app/src/main/res/layout/intro_screen.xml" value="0.33" />
         <entry key="..\:/Users/Philip/AndroidStudioProjects/group14_decisionbasedgame/app/src/main/res/layout/loading_screen.xml" value="0.23703703703703705" />
         <entry key="..\:/Users/Philip/AndroidStudioProjects/group14_decisionbasedgame/app/src/main/res/layout/main_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Philip/AndroidStudioProjects/group14_decisionbasedgame/app/src/main/res/layout/pause_screen.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/Philip/AndroidStudioProjects/group14_decisionbasedgame/app/src/main/res/layout/settings_screen.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Philip/AndroidStudioProjects/group14_decisionbasedgame/app/src/main/res/xml/root_preferences.xml" value="0.18802083333333333" />
       </map>
     </option>
   </component>

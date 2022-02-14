@@ -10,12 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Group14_decisionbasedgame">
         <activity
+            android:name=".view.pause_screen"
+            android:exported="false" />
+        <activity
             android:name=".view.Intro_Screen"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
@@ -26,15 +29,16 @@
             android:exported="false" />
         <activity
             android:name=".view.loading_screen_toStart"
-            android:exported="true"/>
-        <activity android:name=".view.exit_confirmation"
-            android:exported="true"/>
-        <activity android:name=".view.settings_screen"
-            android:exported="true"/>
-        <activity android:name=".view.start_game"
-            android:exported="true"/>
-
-
-</application>
+            android:exported="true" />
+        <activity
+            android:name=".view.exit_confirmation"
+            android:exported="true" />
+        <activity
+            android:name=".view.settings_screen"
+            android:exported="true" />
+        <activity
+            android:name=".view.start_game"
+            android:exported="true" />
+    </application>
 
 </manifest>

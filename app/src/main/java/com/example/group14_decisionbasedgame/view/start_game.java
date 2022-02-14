@@ -12,7 +12,7 @@ import com.example.group14_decisionbasedgame.R;
 public class start_game extends AppCompatActivity {
 
     private Button btnBack;
-
+    private Boolean allowedback = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +24,14 @@ public class start_game extends AppCompatActivity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(start_game.this, main_menu.class));
-            }
-        });
-
+                startActivity(new Intent(start_game.this, main_menu.class)); }});
+    }
+    @Override
+    public void onBackPressed() {
+        if (allowedback) {
+            super.onBackPressed();
+        } else {
+            startActivity(new Intent(this, main_menu.class));
+        }
     }
 }

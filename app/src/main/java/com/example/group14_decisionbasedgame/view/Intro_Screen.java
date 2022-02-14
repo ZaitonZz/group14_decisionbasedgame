@@ -17,7 +17,6 @@ import com.example.group14_decisionbasedgame.controller.getProgressBar;
 public class Intro_Screen extends AppCompatActivity {
 
     //TODO: Change to activity to splash screen
-    //TODO: Cannot go back to a loading screen
     android.widget.ProgressBar progressBar;
     TextView textView;
     static MediaPlayer intronstart_music;
@@ -41,10 +40,6 @@ public class Intro_Screen extends AppCompatActivity {
         progressBar.setScaleY(2f);
 
         progressAnimation();
-
-
-        // player.stop();
-        //     startActivity(intent);
     }
 
     public Intro_Screen(){};
@@ -87,7 +82,5 @@ public class Intro_Screen extends AppCompatActivity {
         Log.d(TAG, "onResume: working");
         went = true;
     }
-    public static boolean isWent() {
-        return went;
-    }
+    public static boolean isWent() { return went; }
 }

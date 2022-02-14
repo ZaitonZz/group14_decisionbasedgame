@@ -20,7 +20,7 @@ public class main_menu extends AppCompatActivity {
     private Button btnStart;
     private Button btnSettings;
     private Button btnExit;
-
+    private boolean allowedback = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +53,16 @@ public class main_menu extends AppCompatActivity {
     public void chkWent() {
         Intro_Screen.isWent();
         if (went){Intro_Screen.conMusic();
-            Log.d(TAG, "chkWent: working");}
+            Log.d(TAG, "chkWent: working");} }
+    @Override
+    public void onBackPressed() {
+        if (allowedback) {
+            super.onBackPressed();
+        } else {
+            startActivity(new Intent(main_menu.this, exit_confirmation.class));
+        }
     }
+
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
