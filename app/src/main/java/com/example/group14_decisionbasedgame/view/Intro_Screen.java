@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.controller.getProgressBar;
+import com.example.group14_decisionbasedgame.controller.musicRelated;
 
 public class Intro_Screen extends AppCompatActivity {
 
@@ -24,15 +25,17 @@ public class Intro_Screen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "onCreate: working");
         super.onCreate(savedInstanceState);
         enableFullscreen();
+        new musicRelated();
         setContentView(R.layout.intro_screen);
 
-        intronstart_music = MediaPlayer.create(this, R.raw.main_menu_loop);
-        intronstart_music.setLooping(true);
-        intronstart_music.setVolume(100, 100);
-        intronstart_music.start();
-
+        //intronstart_music = MediaPlayer.create(this, R.raw.main_menu_loop);
+        //intronstart_music.setLooping(true);
+       // intronstart_music.setVolume(100, 100);
+       // intronstart_music.start();
+        musicRelated.strtintro_music(this);
         progressBar = findViewById(R.id.pro);
         textView = findViewById(R.id.txt);
 
@@ -50,13 +53,6 @@ public class Intro_Screen extends AppCompatActivity {
         animation.setDuration(8000);
         progressBar.setAnimation(animation);
     }
-    public static void stopMusic() {
-        intronstart_music.release();
-        intronstart_music = null;
-        Log.d(TAG, "stopMusic: working");
-    }
-    public static void conMusic() { intronstart_music.start();}
-    public static void pMusic() { intronstart_music.pause();}
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
@@ -72,13 +68,13 @@ public class Intro_Screen extends AppCompatActivity {
     @Override
     protected void onPause(){
         super.onPause();
-        intronstart_music.pause();
+        musicRelated.pMusic();
         Log.d(TAG, "onPause: working");
     }
     @Override
     protected void onResume(){
         super.onResume();
-        intronstart_music.start();
+        musicRelated.conMusic();
         Log.d(TAG, "onResume: working");
         went = true;
     }
