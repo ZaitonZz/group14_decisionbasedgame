@@ -8,6 +8,7 @@ import android.media.MediaPlayer;
 import android.util.Log;
 
 import com.example.group14_decisionbasedgame.R;
+import com.example.group14_decisionbasedgame.view.main_menu;
 
 public class musicRelated {
     static MediaPlayer intronstart_music;
@@ -28,4 +29,7 @@ public class musicRelated {
     }
     public static void conMusic() { intronstart_music.start();}
     public static void pMusic() { intronstart_music.pause();}
+    public static void introisNorP(Context context){
+        if (intronstart_music==null){ strtintro_music(context); }
+        else if (!intronstart_music.isPlaying()){ conMusic(); } }
 }
