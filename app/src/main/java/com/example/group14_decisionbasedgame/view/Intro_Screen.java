@@ -58,10 +58,10 @@ public class Intro_Screen extends AppCompatActivity {
     public static void stopMusic() {
         intronstart_music.release();
         intronstart_music = null;
-        Log.d(TAG, "stopMusic: 1");
+        Log.d(TAG, "stopMusic: working");
     }
     public static void conMusic() { intronstart_music.start();}
-
+    public static void pMusic() { intronstart_music.pause();}
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {

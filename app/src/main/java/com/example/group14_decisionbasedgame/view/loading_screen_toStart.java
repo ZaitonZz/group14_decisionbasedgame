@@ -1,6 +1,5 @@
 package com.example.group14_decisionbasedgame.view;
 
-import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.controller.getProgressBar;
-import com.example.group14_decisionbasedgame.model.start_game;
 
 
 public class loading_screen_toStart extends AppCompatActivity {
