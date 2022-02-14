@@ -1,10 +1,13 @@
 package com.example.group14_decisionbasedgame.view;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
@@ -18,6 +21,7 @@ public class Intro_Screen extends AppCompatActivity {
     android.widget.ProgressBar progressBar;
     TextView textView;
     static MediaPlayer intronstart_music;
+    public static boolean went = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +56,11 @@ public class Intro_Screen extends AppCompatActivity {
         progressBar.setAnimation(animation);
     }
     public static void stopMusic() {
-        intronstart_music.stop();
+        intronstart_music.release();
+        intronstart_music = null;
+        Log.d(TAG, "stopMusic: 1");
     }
+    public static void conMusic() { intronstart_music.start();}
 
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();
@@ -66,5 +73,21 @@ public class Intro_Screen extends AppCompatActivity {
                             View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
                             View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         }
+    }
+    @Override
+    protected void onPause(){
+        super.onPause();
+        intronstart_music.pause();
+        Log.d(TAG, "onPause: working");
+    }
+    @Override
+    protected void onResume(){
+        super.onResume();
+        intronstart_music.start();
+        Log.d(TAG, "onResume: working");
+        went = true;
+    }
+    public static boolean isWent() {
+        return went;
     }
 }

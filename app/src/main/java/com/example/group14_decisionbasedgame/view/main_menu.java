@@ -1,12 +1,17 @@
 package com.example.group14_decisionbasedgame.view;
 
+import static android.content.ContentValues.TAG;
+import static com.example.group14_decisionbasedgame.view.Intro_Screen.went;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.net.Uri;
 
 import com.example.group14_decisionbasedgame.R;
 
@@ -23,6 +28,8 @@ public class main_menu extends AppCompatActivity {
         enableFullscreen();
         setContentView(R.layout.main_menu);
         new Intro_Screen();
+        chkWent();
+
         // Calling Buttons
         btnStart = (Button) findViewById(R.id.btn_start);
         btnSettings = (Button) findViewById((R.id.btn_settings));
@@ -37,18 +44,17 @@ public class main_menu extends AppCompatActivity {
         });
         btnSettings.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(main_menu.this, settings_screen.class));
-            }
-        });
+            public void onClick(View view) { startActivity(new Intent(main_menu.this, settings_screen.class)); }});
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(main_menu.this, exit_confirmation.class));
-            }
-        });
+            public void onClick(View view) { startActivity(new Intent(main_menu.this, exit_confirmation.class)); }});
     }
 
+    public void chkWent() {
+        Intro_Screen.isWent();
+        if (went){Intro_Screen.conMusic();
+            Log.d(TAG, "chkWent: working");}
+    }
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
