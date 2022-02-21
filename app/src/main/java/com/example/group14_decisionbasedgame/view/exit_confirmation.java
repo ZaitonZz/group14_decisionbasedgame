@@ -19,7 +19,7 @@ public class exit_confirmation extends Activity {
     private Button btnAgree;
     private Button btnDismiss;
 
-//TODO: make the settings transparent/translucent
+//TODO: make the settings transparent/translucent (FIXED)
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

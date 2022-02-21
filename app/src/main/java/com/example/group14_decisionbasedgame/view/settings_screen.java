@@ -10,7 +10,7 @@ import android.widget.Button;
 
 import com.example.group14_decisionbasedgame.R;
 
-//TODO: make the settings transparent/translucent
+//TODO: make the settings transparent/translucent (FIXED)
 
 //TODO: make buttons for settings
 
