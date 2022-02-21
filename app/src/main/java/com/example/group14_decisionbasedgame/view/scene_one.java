@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.group14_decisionbasedgame.R;
 
-public class start_game extends AppCompatActivity {
+public class scene_one extends AppCompatActivity {
 //TODO: UI + clock
 
 
@@ -19,14 +19,14 @@ public class start_game extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.start_game);
+        setContentView(R.layout.scene_one);
 
         btnBack = (Button) findViewById(R.id.btn_back);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(start_game.this, main_menu.class)); }});
+                startActivity(new Intent(scene_one.this, main_menu.class)); }});
     }
     @Override
     public void onBackPressed() {

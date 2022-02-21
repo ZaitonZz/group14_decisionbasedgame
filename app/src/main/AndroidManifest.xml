@@ -22,9 +22,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.default_starting_screen"
-            android:exported="false" />
-        <activity
             android:name=".view.main_menu"
             android:exported="false" />
         <activity
@@ -38,7 +35,7 @@
             android:name=".view.settings_screen"
             android:exported="true" />
         <activity
-            android:name=".view.start_game"
+            android:name=".view.scene_one"
             android:exported="true" />
         <activity
             android:name=".controller.splash_screen"

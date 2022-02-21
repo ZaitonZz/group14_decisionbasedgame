@@ -38,7 +38,7 @@ public class loading_screen_toStart extends AppCompatActivity {
 
     private void progressAnimation() {
 
-        getProgressBar animation =  new getProgressBar(this,textView,progressBar,0f,100f, start_game.class);
+        getProgressBar animation =  new getProgressBar(this,textView,progressBar,0f,100f, scene_one.class);
         animation.setDuration(8000);
         progressBar.setAnimation(animation);
     }
