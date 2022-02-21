@@ -14,7 +14,8 @@
             android:exported="false" />
         <activity
             android:name=".view.Intro_Screen"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
