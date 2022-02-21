@@ -7,6 +7,8 @@ import android.view.animation.Transformation;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+//TODO: find better design for loading screen
+
 public class getProgressBar extends Animation {
     private Context context;
     private TextView textView;

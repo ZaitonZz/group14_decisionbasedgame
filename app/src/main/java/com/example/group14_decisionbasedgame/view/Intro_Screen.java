@@ -21,7 +21,6 @@ public class Intro_Screen extends AppCompatActivity {
     android.widget.ProgressBar progressBar;
     TextView textView;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.d(TAG, "onCreate: working");

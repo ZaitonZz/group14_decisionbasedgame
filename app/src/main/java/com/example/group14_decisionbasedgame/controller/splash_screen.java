@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.view.main_menu;
+//TODO: Fix the design
 
 
 public class splash_screen extends AppCompatActivity {

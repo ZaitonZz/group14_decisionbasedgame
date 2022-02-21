@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.group14_decisionbasedgame.R;
 
 public class start_game extends AppCompatActivity {
+//TODO: UI + clock
+
 
     private Button btnBack;
     private Boolean allowedback = false;

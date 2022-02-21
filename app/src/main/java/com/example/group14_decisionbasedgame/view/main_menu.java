@@ -1,7 +1,11 @@
 package com.example.group14_decisionbasedgame.view;
 
+import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -12,6 +16,8 @@ import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.controller.musicRelated;
 
 public class main_menu extends AppCompatActivity {
+//TODO: Add the background
+//TODO: Button designs
 
     private Button btnStart;
     private Button btnSettings;
@@ -44,9 +50,12 @@ public class main_menu extends AppCompatActivity {
             public void onClick(View view) { startActivity(new Intent(main_menu.this, settings_screen.class)); }});
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) { startActivity(new Intent(main_menu.this, exit_confirmation.class)); }});
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), exit_confirmation.class);
+                startActivity(i);
+            }
+        });
     }
-
     @Override
     public void onBackPressed() {
         if (allowedback) {
