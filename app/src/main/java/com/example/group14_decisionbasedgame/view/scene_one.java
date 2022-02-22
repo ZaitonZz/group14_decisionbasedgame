@@ -5,17 +5,19 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.group14_decisionbasedgame.R;
+import com.example.group14_decisionbasedgame.controller.bgRelated;
 
 public class scene_one extends AppCompatActivity {
 //TODO: UI + clock
 
-
-    private Button btnBack;
+    private Button btnBack, btnAuto;
     private Boolean allowedback = false;
+    ImageView background;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,20 +26,21 @@ public class scene_one extends AppCompatActivity {
         enableFullscreen();
 
         btnBack = (Button) findViewById(R.id.btn_back);
+        btnAuto = findViewById(R.id.btn_auto);
+
+        background = findViewById(R.id.bg_image);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(scene_one.this, main_menu.class)); }});
+            public void onClick(View view) { startActivity(new Intent(scene_one.this, main_menu.class)); }});
     }
+
+
     @Override
     public void onBackPressed() {
-        if (allowedback) {
-            super.onBackPressed();
-        } else {
-            startActivity(new Intent(this, main_menu.class));
-        }
-    }
+        if (allowedback) { super.onBackPressed(); }
+        else { startActivity(new Intent(this, main_menu.class)); } }
+
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {

@@ -35,26 +35,17 @@ public class musicRelated {
     //loading screen music randomizer
     public static void strtLscreen(Context context){
         Random randomizer = new Random();
-
         byte seed= (byte) randomizer.nextInt(7);
 
         switch(seed){
-            case 0: Lscreen_music = MediaPlayer.create(context, R.raw.girl_one_main);
-                break;
-            case 1: Lscreen_music = MediaPlayer.create(context, R.raw.girl_one_secondary);
-                break;
-            case 2: Lscreen_music = MediaPlayer.create(context, R.raw.girl_two_main);
-                break;
-            case 3: Lscreen_music = MediaPlayer.create(context, R.raw.girl_two_secondary);
-                break;
-            case 4: Lscreen_music = MediaPlayer.create(context, R.raw.girl_three_main);
-                break;
-            case 5: Lscreen_music = MediaPlayer.create(context, R.raw.girl_three_secondary);
-                break;
-            case 6: Lscreen_music = MediaPlayer.create(context, R.raw.girl_four_main);
-                break;
-            case 7: Lscreen_music = MediaPlayer.create(context, R.raw.girl_four_secondary);
-                break; }
+            case 0: Lscreen_music = MediaPlayer.create(context, R.raw.girl_one_main); break;
+            case 1: Lscreen_music = MediaPlayer.create(context, R.raw.girl_one_secondary); break;
+            case 2: Lscreen_music = MediaPlayer.create(context, R.raw.girl_two_main); break;
+            case 3: Lscreen_music = MediaPlayer.create(context, R.raw.girl_two_secondary); break;
+            case 4: Lscreen_music = MediaPlayer.create(context, R.raw.girl_three_main); break;
+            case 5: Lscreen_music = MediaPlayer.create(context, R.raw.girl_three_secondary); break;
+            case 6: Lscreen_music = MediaPlayer.create(context, R.raw.girl_four_main); break;
+            case 7: Lscreen_music = MediaPlayer.create(context, R.raw.girl_four_secondary); break; }
         Lscreen_music.start();
     }
     public static void stopLscreen_music() {

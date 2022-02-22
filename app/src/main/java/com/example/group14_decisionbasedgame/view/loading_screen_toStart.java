@@ -6,12 +6,14 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.group14_decisionbasedgame.R;
+import com.example.group14_decisionbasedgame.controller.bgRelated;
 import com.example.group14_decisionbasedgame.controller.getProgressBar;
 import com.example.group14_decisionbasedgame.controller.musicRelated;
 
@@ -20,6 +22,7 @@ public class loading_screen_toStart extends AppCompatActivity {
     //TODO: make a corrupted version of the music for loading screen and main menu as the plot twist is reached. Probably will have a boolean that is checked everytime the game is started? to change the music and bg picture
     ProgressBar progressBar;
     TextView textView;
+    ImageView background;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,11 +32,14 @@ public class loading_screen_toStart extends AppCompatActivity {
 
         progressBar = findViewById(R.id.pro);
         textView = findViewById(R.id.txt);
+        background = findViewById(R.id.L_bg_image);
+
         progressBar.setMax(100);
         progressBar.setScaleY(2f);
         progressAnimation();
 
         musicRelated.strtLscreen(this);
+        bgRelated.Lscreen_bgRandom(background);
     }
 
     private void progressAnimation() {

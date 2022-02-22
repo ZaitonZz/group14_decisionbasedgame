@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.group14_decisionbasedgame.R;
+import com.example.group14_decisionbasedgame.controller.bgRelated;
 import com.example.group14_decisionbasedgame.controller.getProgressBar;
 import com.example.group14_decisionbasedgame.controller.musicRelated;
 
@@ -27,6 +28,7 @@ public class Intro_Screen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         enableFullscreen();
         new musicRelated();
+        new bgRelated();
         setContentView(R.layout.intro_screen);
 
         musicRelated.strtintro_music(this);

@@ -3,8 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:scaleType="fitXY">
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/bg_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/outside" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="38dp"
+        android:layout_height="149dp"
+        android:layout_marginTop="31dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@+id/mylayout1"
+        app:layout_constraintStart_toStartOf="@+id/mylayout1"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/temp_box" />
 
     <Button
         android:id="@+id/btn_back"
@@ -14,7 +32,7 @@
         android:text="Settings"
         android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintHorizontal_bias="0.009"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
