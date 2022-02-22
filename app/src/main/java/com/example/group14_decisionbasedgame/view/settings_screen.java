@@ -41,7 +41,7 @@ public class settings_screen extends Activity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(settings_screen.this, main_menu.class));
+                onBackPressed();
             }
         });
     }

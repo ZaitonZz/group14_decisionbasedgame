@@ -52,8 +52,7 @@ public class exit_confirmation extends Activity {
         btnDismiss.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(exit_confirmation.this, main_menu.class));
-                ;
+                onBackPressed();
             }
         });
     }
