@@ -41,5 +41,26 @@ public class appDialogue {
     String D6_6 ="while the rest listen with their undivided attention solely on her exquisite tone of voice that shapes the sentences everytime she speaks.";
     String D6_7 ="You stand in front of all your peers and begin your presentation.";
     String D6_8 ="MC-kun continues to casually speak about his/her device in a controlled tone.";
+    String D6_9 ="ICT continued to power through with her discussion.";
+    String D6_10="ABM senpai quickly breezed through her device, and soon enough STEM senpai was presenting hers as well,";
+    String D6_11="and then the bell rang just on time. STEM senpai told the group that further discussion will be continued tomorrow.";
+    String D6_12="However you we’re called out by STEM senpai after the whole group went outside the club room.";
 
+    String T1_1 ="Error 404 This Script Was Not Found! Data Corrupted! Error! Error! Restarting Simulation!";
+
+    String D7_1 ="Tomorrow has come and everyone was ready to hear STEM’s and ABM’s speeches while they were preparing.";
+    String D7_2 ="STEM casually looks and stares at MC-kun in the eyes while preparing. . .";
+    String D7_3 ="everyone claps while ABM has a smug look on her face.";
+    String D7_4 ="STEM stands up and centers herself from everyone";
+    String D7_5 ="Everyone claps even louder for their club leader.";
+    String D7_6 ="Now that all the speeches have been heard everybody goes home.";
+
+    String D8_1 ="Everyone is in the clubroom early, but you show up late on a whim. You see all your seniors listening to the club leader.";
+    String D8_2 ="Everyone looks ecstatic and happy, you see that even ICT senpai is blushing and energetic in her seat.";
+    String D8_3 ="STEM senpai is seated and mentions a quick 5 minute break before discussions begin.";
+    String D8_4 ="You take a look around the room and observe all your senpais. You begin to imagine putting yourself in their shoes and pursuing their strands.";
+    String D8_5 ="It's now your faith to decide on what strand you are going to pursue once you're in Senior High!";
+    String D8_6 ="The story settles in a surprising twist for You! Have I made a good deal?";
+    String D8_7 ="\"Wait, who are you STOP!\"";
+    //end of Narrator Dialogue
 }
