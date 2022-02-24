@@ -1,24 +1,28 @@
 package com.example.group14_decisionbasedgame.view;
 
 import android.app.Activity;
+import android.app.AlarmManager;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.group14_decisionbasedgame.R;
 
 //TODO: make the settings transparent/translucent (FIXED)
 
-//TODO: make buttons for settings
+//TODO: make buttons for settings (FIXED)
 
-//TODO: Window Size, restart game, volume.
+//TODO: Window Size, restart game, volume.(NEED ADJUSTMENTS)
 
 
 
 public class settings_screen extends Activity {
 
-    private Button btnBack;
+    private Button btnBack, btnUpdate, btnRestart;
 
 
     @Override
@@ -31,7 +35,7 @@ public class settings_screen extends Activity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*.8),(int)(height*.8));
+        getWindow().setLayout((int)(width*.4),(int)(height*.7));
 
 
         btnBack = (Button) findViewById(R.id.btn_Pause);
@@ -39,9 +43,23 @@ public class settings_screen extends Activity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed();
+                onBackPressed(); }});
+        btnRestart = (Button) findViewById(R.id.btn_Restart);
+        btnRestart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                PendingIntent pendingIntent = PendingIntent.getActivity(settings_screen.this, 1000,
+                        getIntent(),PendingIntent.FLAG_CANCEL_CURRENT);
+                AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+                alarmManager.set(AlarmManager.RTC, System.currentTimeMillis() + 1000, pendingIntent);
             }
         });
+        btnUpdate = (Button) findViewById(R.id.btn_Update);
+        btnUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(settings_screen.this, R.string.update,Toast.LENGTH_LONG).show();
+          }
+        });
     }
-
 }
