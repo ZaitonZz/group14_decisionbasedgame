@@ -13,8 +13,8 @@ import android.widget.Button;
 import com.example.group14_decisionbasedgame.R;
 
 public class pause_screen extends AppCompatActivity {
-    //TODO: Ui for the pause screen such as Exit game/Settings/Resume and functions(Need adjustment,Functions Added)
-    //TODO: make the pause screen transparent/translucent
+    //TODO: Ui for the pause screen such as Exit game/Settings/Resume and functions(FIXED)
+    //TODO: make the pause screen transparent/translucent(FIXED)
 
 
     private Button btnResume;
@@ -32,7 +32,7 @@ public class pause_screen extends AppCompatActivity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int) (width * .6), (int) (height * .5));
+        getWindow().setLayout((int) (width * .3), (int) (height * .7));
 
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.gravity = Gravity.CENTER;

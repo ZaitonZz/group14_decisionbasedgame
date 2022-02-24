@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/btn_back"
+        android:id="@+id/btn_Pause"
         android:layout_width="96dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"

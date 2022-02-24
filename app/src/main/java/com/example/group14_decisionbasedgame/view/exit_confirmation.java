@@ -1,7 +1,6 @@
 package com.example.group14_decisionbasedgame.view;
 
 import android.app.Activity;
-import android.content.Intent;
 
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -9,7 +8,6 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
-import androidx.appcompat.app.AppCompatActivity;
 
 
 import com.example.group14_decisionbasedgame.R;
@@ -40,7 +38,7 @@ public class exit_confirmation extends Activity {
         params.y = -20;
 
         getWindow().setAttributes(params);
-        btnAgree = (Button) findViewById(R.id.btn_Agree);
+        btnAgree = (Button) findViewById(R.id.btn_Confirm);
         btnAgree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,7 +46,7 @@ public class exit_confirmation extends Activity {
                 android.os.Process.killProcess(android.os.Process.myPid());
                 System.exit(1);}
         });
-        btnDismiss = (Button) findViewById(R.id.btn_Dismiss);
+        btnDismiss = (Button) findViewById(R.id.btn_ConfirmBack);
         btnDismiss.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

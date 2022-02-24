@@ -25,11 +25,11 @@
         app:srcCompat="@drawable/temp_box" />
 
     <Button
-        android:id="@+id/btn_back"
+        android:id="@+id/btn_Pause"
         android:layout_width="93dp"
         android:layout_height="40dp"
         android:layout_marginTop="4dp"
-        android:text="Settings"
+        android:text="Pause"
         android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.009"
@@ -44,9 +44,9 @@
         android:text="History"
         android:textSize="11sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btn_back"
+        app:layout_constraintEnd_toEndOf="@+id/btn_Pause"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_back" />
+        app:layout_constraintStart_toStartOf="@+id/btn_Pause" />
 
     <Button
         android:id="@+id/btn_skip"

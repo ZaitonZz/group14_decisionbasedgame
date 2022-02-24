@@ -10,12 +10,11 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.group14_decisionbasedgame.R;
-import com.example.group14_decisionbasedgame.controller.bgRelated;
 
 public class scene_one extends AppCompatActivity {
 //TODO: UI + clock
 
-    private Button btnBack, btnAuto;
+    private Button btnBack, btnAuto, btnPause;
     private Boolean allowedback = false;
     ImageView background;
 
@@ -24,15 +23,14 @@ public class scene_one extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.scene_one);
         enableFullscreen();
-
-        btnBack = (Button) findViewById(R.id.btn_back);
+        btnBack = (Button) findViewById(R.id.btn_Pause);
         btnAuto = findViewById(R.id.btn_auto);
 
         background = findViewById(R.id.bg_image);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) { startActivity(new Intent(scene_one.this, main_menu.class)); }});
+            public void onClick(View view) { startActivity(new Intent(scene_one.this, pause_screen.class)); }});
     }
 
 

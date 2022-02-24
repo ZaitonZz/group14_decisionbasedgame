@@ -10,9 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Group14_decisionbasedgame">
         <activity
-            android:name=".view.pause_screen"
-            android:exported="false" />
-        <activity
             android:name=".view.Intro_Screen"
             android:exported="true"
             android:screenOrientation="landscape">
@@ -31,7 +28,9 @@
         <activity
             android:name=".view.exit_confirmation"
             android:exported="true" />
-
+        <activity
+            android:name=".view.pause_screen"
+            android:exported="true" />
         <activity
             android:name=".view.settings_screen"
             android:exported="true" />
@@ -40,6 +39,9 @@
             android:exported="true" />
         <activity
             android:name=".controller.splash_screen"
+            android:exported="true"/>
+        <activity
+            android:name=".view.main_menu_confirmation"
             android:exported="true"/>
     </application>
 

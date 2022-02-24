@@ -1,8 +1,6 @@
 package com.example.group14_decisionbasedgame.view;
 
 import android.app.Activity;
-import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -36,7 +34,7 @@ public class settings_screen extends Activity {
         getWindow().setLayout((int)(width*.8),(int)(height*.8));
 
 
-        btnBack = (Button) findViewById(R.id.btn_back);
+        btnBack = (Button) findViewById(R.id.btn_Pause);
 
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override

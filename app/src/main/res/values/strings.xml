@@ -10,4 +10,6 @@
     <string name="agree">Agree</string>
     <string name="back">Back</string>
     <string name="_100">100%</string>
+    <string name="you_will_lose_all_your_progress_do_you_wish_to_continue">You will lose all your progress. Do you wish to continue?</string>
+    <string name="confirm">Confirm</string>
 </resources>
