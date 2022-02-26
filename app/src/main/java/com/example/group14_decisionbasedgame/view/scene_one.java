@@ -37,7 +37,7 @@ public class scene_one extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if (allowedback) { super.onBackPressed(); }
-        else { startActivity(new Intent(this, main_menu.class)); } }
+        else { startActivity(new Intent(this, pause_screen.class)); } }
 
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();

@@ -14,4 +14,5 @@ public class abmDialogue {
 
     String A6_1 = "says speech*";
     String A6_2 = "Hmph! I knew everyone would like it.";
+    // End of ABM dialogue
 }
