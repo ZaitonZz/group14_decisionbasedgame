@@ -15,4 +15,50 @@ public class abmDialogue {
     String A6_1 = "says speech*";
     String A6_2 = "Hmph! I knew everyone would like it.";
     // End of ABM dialogue
+
+    public abmDialogue(){}
+
+    public String getA2_1() {
+        return A2_1;
+    }
+
+    public String getA2_2() {
+        return A2_2;
+    }
+
+    public String getA5_1() {
+        return A5_1;
+    }
+
+    public String getA5_2() {
+        return A5_2;
+    }
+
+    public String getA5_3() {
+        return A5_3;
+    }
+
+    public String getA5_4() {
+        return A5_4;
+    }
+
+    public String getA5_5() {
+        return A5_5;
+    }
+
+    public String getA5_6() {
+        return A5_6;
+    }
+
+    public String getA5_7() {
+        return A5_7;
+    }
+
+    public String getA6_1() {
+        return A6_1;
+    }
+
+    public String getA6_2() {
+        return A6_2;
+    }
 }

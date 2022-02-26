@@ -39,6 +39,7 @@ public class mcDialogue {
 
     //End of mcDialogue
 
+    public mcDialogue(){}
 
     public String getM2_1() { return M2_1; }
 

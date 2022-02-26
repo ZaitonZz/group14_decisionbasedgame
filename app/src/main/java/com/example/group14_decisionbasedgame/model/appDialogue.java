@@ -64,6 +64,7 @@ public class appDialogue {
     String D8_7 ="\"Wait, who are you STOP!\"";
     //end of Narrator Dialogue
 
+    public appDialogue(){}
 
     public String getD1_1() { return D1_1; }
     public String getD1_2() { return D1_2; }

@@ -35,6 +35,7 @@ public class stemDialogue {
     String S8_2 ="You thought you could escape from ME!";
     //end of STEM Dialogue
 
+    public stemDialogue(){}
 
     public String getS4_1() { return S4_1; }
 
