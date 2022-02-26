@@ -34,4 +34,39 @@ public class stemDialogue {
     String S8_1 ="Thank you again, for joining this club!";
     String S8_2 ="You thought you could escape from ME!";
     //end of STEM Dialogue
+
+
+    public String getS4_1() { return S4_1; }
+
+    public String getS5_1() { return S5_1; }
+    public String getS5_2() { return S5_2; }
+    public String getS5_3() { return S5_3; }
+    public String getS5_4() { return S5_4; }
+    public String getS5_5() { return S5_5; }
+    public String getS5_6() { return S5_6; }
+    public String getS5_7() { return S5_7; }
+    public String getS5_8() { return S5_8; }
+    public String getS5_9() { return S5_9; }
+    public String getS5_10() { return S5_10; }
+    public String getS5_11() { return S5_11; }
+
+    public String getS6_1() { return S6_1; }
+    public String getS6_2() { return S6_2; }
+    public String getS6_3() { return S6_3; }
+
+    public String getS6_4() { return S6_4; }
+    public String getS6_5() { return S6_5; }
+    public String getS6_6() { return S6_6; }
+
+    public String getST_1() { return ST_1; }
+    public String getST_2() { return ST_2; }
+    public String getST_3() { return ST_3; }
+    public String getST_4() { return ST_4; }
+
+    public String getS7_1() { return S7_1; }
+    public String getS7_2() { return S7_2; }
+    public String getS7_3() { return S7_3; }
+
+    public String getS8_1() { return S8_1; }
+    public String getS8_2() { return S8_2; }
 }

@@ -63,4 +63,68 @@ public class appDialogue {
     String D8_6 ="The story settles in a surprising twist for You! Have I made a good deal?";
     String D8_7 ="\"Wait, who are you STOP!\"";
     //end of Narrator Dialogue
+
+
+    public String getD1_1() { return D1_1; }
+    public String getD1_2() { return D1_2; }
+    public String getD1_3() { return D1_3; }
+
+    public String getD2_1() { return D2_1; }
+
+    public String getD3_1() { return D3_1; }
+    public String getD3_2() { return D3_2; }
+
+    public String getD4_1() { return D4_1; }
+    public String getD4_2() { return D4_2; }
+
+    public String getQ1() { return Q1; }
+
+    public String getD5_1() { return D5_1; }
+    public String getD5_2() { return D5_2; }
+    public String getD5_3() { return D5_3; }
+    public String getD5_4() { return D5_4; }
+    public String getD5_5() { return D5_5; }
+    public String getD5_6() { return D5_6; }
+    public String getD5_7() { return D5_7; }
+    public String getD5_8() { return D5_8; }
+    public String getD5_9() { return D5_9; }
+    public String getD5_10() { return D5_10; }
+    public String getD5_11() { return D5_11; }
+    public String getD5_12() { return D5_12; }
+    public String getD5_13() { return D5_13; }
+    public String getD5_14() { return D5_14; }
+
+    public String getQ2() { return Q2; }
+
+    public String getD6_1() { return D6_1; }
+    public String getD6_2() { return D6_2; }
+    public String getD6_3() { return D6_3; }
+    public String getD6_4() { return D6_4; }
+    public String getD6_5() { return D6_5; }
+    public String getD6_6() { return D6_6; }
+    public String getD6_7() { return D6_7; }
+    public String getD6_8() { return D6_8; }
+    public String getD6_9() { return D6_9; }
+    public String getD6_10() { return D6_10; }
+    public String getD6_11() { return D6_11; }
+    public String getD6_12() { return D6_12; }
+
+    public String getQ3() { return Q3; }
+
+    public String getT1_1() { return T1_1; }
+
+    public String getD7_1() { return D7_1; }
+    public String getD7_2() { return D7_2; }
+    public String getD7_3() { return D7_3; }
+    public String getD7_4() { return D7_4; }
+    public String getD7_5() { return D7_5; }
+    public String getD7_6() { return D7_6; }
+
+    public String getD8_1() { return D8_1; }
+    public String getD8_2() { return D8_2; }
+    public String getD8_3() { return D8_3; }
+    public String getD8_4() { return D8_4; }
+    public String getD8_5() { return D8_5; }
+    public String getD8_6() { return D8_6; }
+    public String getD8_7() { return D8_7; }
 }

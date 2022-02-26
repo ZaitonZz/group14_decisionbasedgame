@@ -8,4 +8,11 @@ public class ictDialogue {
     String I6_1 = "A-a-a-alright!";
     String I6_2 = "I will be presenting the RGB colours. It is a device famously known for its colourful lights that can be soothed to your preference.";
     //End of ICT dialogue
+
+    public String getI5_1() { return I5_1; }
+    public String getI5_2() { return I5_2; }
+    public String getI5_3() { return I5_3; }
+
+    public String getI6_1() { return I6_1; }
+    public String getI6_2() { return I6_2; }
 }
