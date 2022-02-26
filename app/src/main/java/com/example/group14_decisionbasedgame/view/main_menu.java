@@ -18,6 +18,7 @@ import com.example.group14_decisionbasedgame.controller.musicRelated;
 public class main_menu extends AppCompatActivity {
 //TODO: Add the background
 //TODO: Button designs
+//TODO: use switch for buttons for cleaner code
 
     private Button btnStart;
     private Button btnSettings;

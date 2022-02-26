@@ -22,7 +22,9 @@ public class dialogueFlow {
     }
 
     public static void sceneone(ImageView character, TextView dialogue, Button next){
-
+        //TODO: test out how this single command should wait for input before moving on to the next dialogue
+        //TODO: should map to scenetwo after this one is done
+        //TODO: animation for characters when they fade in and fade out
 
     }
 }

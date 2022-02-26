@@ -15,6 +15,7 @@ import com.example.group14_decisionbasedgame.controller.dialogueFlow;
 
 public class scene_one extends AppCompatActivity {
 //TODO: UI + clock
+//TODO: use switch for buttons for cleaner code
 
     private Button btnBack, btnAuto, btnPause;
     private Boolean allowedback = false;

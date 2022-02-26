@@ -12,9 +12,6 @@ import android.widget.Toast;
 
 import com.example.group14_decisionbasedgame.R;
 
-//TODO: make the settings transparent/translucent (FIXED)
-
-//TODO: make buttons for settings (FIXED)
 
 //TODO: Window Size, restart game, volume.(NEED ADJUSTMENTS)
 
