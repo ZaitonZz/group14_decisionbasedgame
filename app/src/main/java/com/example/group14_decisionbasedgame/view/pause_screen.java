@@ -43,7 +43,7 @@ public class pause_screen extends AppCompatActivity {
             @Override
             public void onClick(View view) { onBackPressed(); }});
         getWindow().setAttributes(params);
-        btnSettings = (Button) findViewById(R.id.btn_Settings);
+        btnSettings = (Button) findViewById(R.id.btn_settings_ingame);
         btnSettings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -15,14 +15,12 @@ import android.widget.Button;
 import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.controller.musicRelated;
 
-public class main_menu extends AppCompatActivity {
+public class main_menu extends AppCompatActivity implements View.OnClickListener{
 //TODO: Add the background
 //TODO: Button designs
 //TODO: use switch for buttons for cleaner code
 
-    private Button btnStart;
-    private Button btnSettings;
-    private Button btnExit;
+    private Button btnStart, btnSettings,btnExit, btnCredits;
     private boolean allowedback = false;
 
     @Override
@@ -38,31 +36,34 @@ public class main_menu extends AppCompatActivity {
         btnStart = (Button) findViewById(R.id.btn_start);
         btnSettings = (Button) findViewById((R.id.btn_settings));
         btnExit = (Button) findViewById((R.id.btn_exit));
+        btnCredits = findViewById(R.id.btn_credits);
 
-        btnStart.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(main_menu.this, loading_screen_toStart.class));
-                musicRelated.stopintro_music();
-            }
-        });
-        btnSettings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) { startActivity(new Intent(main_menu.this, settings_screen.class)); }});
-        btnExit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), exit_confirmation.class);
-                startActivity(i);
-            }
-        });
+        btnStart.setOnClickListener(this);
+        btnSettings.setOnClickListener(this);
+        btnExit.setOnClickListener(this);
+        btnCredits.setOnClickListener(this);
     }
     @Override
     public void onBackPressed() {
-        if (allowedback) {
-            super.onBackPressed();
-        } else {
-            startActivity(new Intent(main_menu.this, exit_confirmation.class));
+        if (allowedback) { super.onBackPressed(); }
+        else { startActivity(new Intent(main_menu.this, exit_confirmation.class)); }
+    }
+
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.btn_start:
+                startActivity(new Intent(main_menu.this, loading_screen_toStart.class));
+                musicRelated.stopintro_music();
+                break;
+            case R.id.btn_settings:
+                startActivity(new Intent(main_menu.this, settings_screen.class));
+                break;
+            case R.id.btn_exit:
+                Intent i = new Intent(getApplicationContext(), exit_confirmation.class);
+                startActivity(i);
+                break;
+            case R.id.btn_credits:
+                break;
         }
     }
 

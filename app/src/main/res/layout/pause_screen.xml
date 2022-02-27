@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_Settings"
+        android:id="@+id/btn_settings_ingame"
         android:layout_width="164dp"
         android:layout_height="72dp"
         android:layout_marginTop="20dp"
@@ -32,6 +32,6 @@
         android:layout_height="72dp"
         android:layout_marginTop="20dp"
         android:text="Main Menu"
-        app:layout_constraintStart_toStartOf="@+id/btn_Settings"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Settings" />
+        app:layout_constraintStart_toStartOf="@+id/btn_settings_ingame"
+        app:layout_constraintTop_toBottomOf="@+id/btn_settings_ingame" />
 </androidx.constraintlayout.widget.ConstraintLayout>

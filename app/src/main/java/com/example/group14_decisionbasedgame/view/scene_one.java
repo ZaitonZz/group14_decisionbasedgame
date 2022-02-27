@@ -13,11 +13,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.controller.dialogueFlow;
 
-public class scene_one extends AppCompatActivity {
+public class scene_one extends AppCompatActivity implements View.OnClickListener {
 //TODO: UI + clock
-//TODO: use switch for buttons for cleaner code
 
-    private Button btnBack, btnAuto, btnPause;
+
+    private Button btnAuto, btnPause, btnHist, btnSkip;
     private Boolean allowedback = false;
     ImageView background, img_char;
     TextView txt_dlg;
@@ -29,17 +29,17 @@ public class scene_one extends AppCompatActivity {
         enableFullscreen();
         new dialogueFlow();
 
-        btnBack = (Button) findViewById(R.id.btn_Pause);
+        btnPause = (Button) findViewById(R.id.btn_Pause);
         btnAuto = findViewById(R.id.btn_auto);
+
 
         txt_dlg = findViewById(R.id.txt_dlg);
 
         background = findViewById(R.id.bg_image);
         img_char = findViewById(R.id.img_char);
 
-        btnBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) { startActivity(new Intent(scene_one.this, pause_screen.class)); }});
+        btnPause.setOnClickListener(this);
+        btnAuto.setOnClickListener(this);
 
         dialogueFlow.sceneone(img_char,txt_dlg, btnAuto);
     }
@@ -49,6 +49,16 @@ public class scene_one extends AppCompatActivity {
     public void onBackPressed() {
         if (allowedback) { super.onBackPressed(); }
         else { startActivity(new Intent(this, pause_screen.class)); } }
+
+    public void onClick(View v) {
+    switch (v.getId()) {
+        case R.id.btn_Pause:
+            startActivity(new Intent(scene_one.this, pause_screen.class));
+            break;
+        case R.id.btn_auto:
+            break;
+    }
+    }
 
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();
