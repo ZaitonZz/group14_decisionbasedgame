@@ -4,14 +4,20 @@ import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
+import android.media.AudioManager;
+import android.media.session.MediaController;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.Toast;
 
-import com.example.group14_decisionbasedgame.R;
+import androidx.appcompat.widget.SwitchCompat;
 
+import com.example.group14_decisionbasedgame.R;
+import com.example.group14_decisionbasedgame.controller.musicRelated;
 
 
 //TODO: fix restart game and music
@@ -21,6 +27,7 @@ import com.example.group14_decisionbasedgame.R;
 public class settings_screen extends Activity {
 
     private Button btnBack, btnUpdate, btnRestart;
+    private SwitchCompat audioSwitch;
 
 
     @Override
@@ -29,15 +36,24 @@ public class settings_screen extends Activity {
         setContentView(R.layout.settings_screen);
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
-
         int width = dm.widthPixels;
         int height = dm.heightPixels;
+
 
         getWindow().setLayout((int)(width*.4),(int)(height*.7));
 
 
+        audioSwitch = (SwitchCompat) findViewById(R.id.switch1);
+        audioSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (audioSwitch.isChecked()) {
+                    musicRelated.conintro_music();
+                    }else{musicRelated.pintro_music();
+                    }
+                }
+        });
         btnBack = (Button) findViewById(R.id.btn_Pause);
-
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -46,10 +62,9 @@ public class settings_screen extends Activity {
         btnRestart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                PendingIntent pendingIntent = PendingIntent.getActivity(settings_screen.this, 1000,
-                        getIntent(),PendingIntent.FLAG_CANCEL_CURRENT);
-                AlarmManager alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-                alarmManager.set(AlarmManager.RTC, System.currentTimeMillis() + 1000, pendingIntent);
+                finish();
+                startActivity(new Intent(settings_screen.this, Intro_Screen.class));
+
             }
         });
         btnUpdate = (Button) findViewById(R.id.btn_Update);
