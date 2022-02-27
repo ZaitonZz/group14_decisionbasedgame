@@ -1,6 +1,7 @@
 package com.example.group14_decisionbasedgame.model;
 
 public class stemDialogue {
+    //TODO: make getters and strings static
     String S4_1 = "Hello there, is there any chance you wouldn’t mind joining our club? We only need one more member to secure our club's value.";
 
     String S5_1 = "Girls, this is our new member! Please, introduce yourself stranger.";

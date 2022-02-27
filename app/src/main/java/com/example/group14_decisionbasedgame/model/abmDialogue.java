@@ -1,6 +1,7 @@
 package com.example.group14_decisionbasedgame.model;
 
 public class abmDialogue {
+    //TODO: make getters and strings static
     String A2_1 = "Hey! What do you think you're doing!";
     String A2_2 = "Sheesh! A sorry hm? Move out of the way i'm walking here!.";
 

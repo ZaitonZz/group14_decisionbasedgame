@@ -1,5 +1,6 @@
 package com.example.group14_decisionbasedgame.controller;
 
+import android.content.Context;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -25,6 +26,7 @@ public class dialogueFlow {
         //TODO: test out how this single command should wait for input before moving on to the next dialogue
         //TODO: should map to scenetwo after this one is done
         //TODO: animation for characters when they fade in and fade out
+        dialogue.setText(appDialogue.getD1_1());
 
     }
 }

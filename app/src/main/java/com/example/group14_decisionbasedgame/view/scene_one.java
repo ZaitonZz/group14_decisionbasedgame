@@ -21,6 +21,7 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
     private Boolean allowedback = false;
     ImageView background, img_char;
     TextView txt_dlg;
+    int clicked = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,7 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
 
         btnPause = (Button) findViewById(R.id.btn_Pause);
         btnAuto = findViewById(R.id.btn_auto);
-
+        btnSkip = findViewById(R.id.btn_skip);
 
         txt_dlg = findViewById(R.id.txt_dlg);
 
@@ -40,6 +41,7 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
 
         btnPause.setOnClickListener(this);
         btnAuto.setOnClickListener(this);
+        btnSkip.setOnClickListener(this);
 
         dialogueFlow.sceneone(img_char,txt_dlg, btnAuto);
     }
@@ -57,8 +59,12 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
             break;
         case R.id.btn_auto:
             break;
+        case R.id.btn_skip:
+            clicked++;
+            break;
     }
     }
+
 
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();

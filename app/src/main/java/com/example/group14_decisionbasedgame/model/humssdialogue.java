@@ -1,6 +1,7 @@
 package com.example.group14_decisionbasedgame.model;
 
 public class humssdialogue {
+    //TODO: make getters and strings static
     String H5_1 = "I knew this would  happen.";
     String H5_2 = "I’m HUMSS, and am evidently the most knowledgeable of the whole bunch. I keep everyone in line respectfully as the club's Vice President.";
     String H5_3 = "Hmmm. . . within my knowledge and our club president's view I shall accept the proposed name. ";

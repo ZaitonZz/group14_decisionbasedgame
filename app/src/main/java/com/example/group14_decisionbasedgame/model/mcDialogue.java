@@ -1,6 +1,7 @@
 package com.example.group14_decisionbasedgame.model;
 
 public class mcDialogue {
+    //TODO: make getters and strings static
     String M2_1 = "Whoah! My bad i didn’t mean to nudge you like that, I’m sorry (MC bows his head).";
 
     String M4_1 = "Huh?";
