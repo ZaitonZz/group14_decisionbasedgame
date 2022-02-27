@@ -13,7 +13,8 @@ import android.widget.Toast;
 import com.example.group14_decisionbasedgame.R;
 
 
-//TODO: Window Size, restart game, volume.(NEED ADJUSTMENTS)
+
+//TODO: fix restart game and music
 
 
 

@@ -4,23 +4,33 @@ import static android.content.ContentValues.TAG;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.TextView;
 
 import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.controller.bgRelated;
 import com.example.group14_decisionbasedgame.controller.getProgressBar;
 import com.example.group14_decisionbasedgame.controller.musicRelated;
+import com.example.group14_decisionbasedgame.controller.splash_screen;
 
 public class Intro_Screen extends AppCompatActivity {
 
     //TODO: Change to activity to splash screen
-    android.widget.ProgressBar progressBar;
-    TextView textView;
+    private static int SPLASH_SCREEN = 5000;
+
+
+
+    Animation splashScreen;
+    TextView appTitle;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,25 +39,22 @@ public class Intro_Screen extends AppCompatActivity {
         enableFullscreen();
         new musicRelated();
         new bgRelated();
-        setContentView(R.layout.intro_screen);
+        setContentView(R.layout.splash_screen);
 
         musicRelated.strtintro_music(this);
-        progressBar = findViewById(R.id.pro);
-        textView = findViewById(R.id.txt);
+        splashScreen = AnimationUtils.loadAnimation(this,R.anim.splash_screen_animation);
 
-        progressBar.setMax(100);
-        progressBar.setScaleY(2f);
+        appTitle = findViewById(R.id.splashTitle);
+        appTitle.setAnimation(splashScreen);
 
-        progressAnimation();
-    }
-
-    public Intro_Screen(){};
-
-    private void progressAnimation() {
-
-        getProgressBar animation =  new getProgressBar(this,textView,progressBar,0f,100f, main_menu.class);
-        animation.setDuration(8000);
-        progressBar.setAnimation(animation);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent (Intro_Screen.this, main_menu.class );
+                startActivity(intent);
+                finish();
+            }
+        },SPLASH_SCREEN);
     }
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();

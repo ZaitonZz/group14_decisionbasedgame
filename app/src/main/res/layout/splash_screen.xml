@@ -11,14 +11,14 @@
         android:id="@+id/splashTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="216dp"
+        android:layout_marginTop="84dp"
         android:fontFamily="cursive"
         android:gravity="center"
         android:text="@string/titleView_txt"
         android:textAlignment="center"
         android:textSize="100dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.472"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

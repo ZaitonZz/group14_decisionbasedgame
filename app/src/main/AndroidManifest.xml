@@ -15,13 +15,13 @@
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".view.main_menu"
-            android:exported="false" />
+            android:exported="true"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".view.loading_screen_toStart"
             android:exported="true" />
@@ -37,9 +37,6 @@
         <activity
             android:name=".view.scene_one"
             android:exported="true" />
-        <activity
-            android:name=".controller.splash_screen"
-            android:exported="true"/>
         <activity
             android:name=".view.main_menu_confirmation"
             android:exported="true"/>
