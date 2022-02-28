@@ -1,7 +1,10 @@
 package com.example.group14_decisionbasedgame.controller;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
 import android.widget.ProgressBar;
@@ -16,6 +19,8 @@ public class getProgressBar extends Animation {
     private float from;
     private float to;
     private Class nextActivity;
+    private Intent toG;
+    private boolean called = false;
 
     public getProgressBar(Context context, TextView textView, android.widget.ProgressBar progressBar, float from, float to, Class nextActivity) {
         this.context = context;
@@ -35,7 +40,11 @@ public class getProgressBar extends Animation {
         textView.setText((int)value+"%");
 
         if (value == to) {
+            if (!called){
             context.startActivity(new Intent(context, this.nextActivity));
+                Log.d(TAG, "kenji activated");}
+            called = true;
+            Log.d(TAG, "next act from prg bar activated");
         }
     }
 }

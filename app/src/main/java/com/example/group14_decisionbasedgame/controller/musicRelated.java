@@ -13,6 +13,7 @@ import java.util.Random;
 public class musicRelated {
     private static MediaPlayer intronstart_music;
     private static MediaPlayer Lscreen_music;
+    private static MediaPlayer gScreen;
 
     public musicRelated() { }
 
@@ -52,4 +53,18 @@ public class musicRelated {
         Lscreen_music.release();
         Lscreen_music = null;
         Log.d(TAG, "stopLscreen_music: working"); }
+
+    //game screen controls
+    public static void strtg1_main(Context context) {
+        gScreen = MediaPlayer.create(context, R.raw.girl_one_main);
+        gScreen.setLooping(true);
+        gScreen.start();
+        Log.d(TAG, "girl one activated");
+    }
+    public static void stop_g1_main() {
+        gScreen.release();
+        gScreen = null;
+        Log.d(TAG, "stopg1_main: working"); }
+    public static void con_g1_main() { gScreen.start();}
+    public static void p_g1_main() { gScreen.pause();}
 }

@@ -1,8 +1,11 @@
 package com.example.group14_decisionbasedgame.view;
 
+import static android.content.ContentValues.TAG;
+
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,14 +21,10 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
     //TODO: UI + clock
     // TODO: button design for Pause, auto, skip and back
 
-
-
-
     private Button btnAuto, btnPause, btnHist, btnSkip;
-    private Boolean allowedback = false;
+    private Boolean allowedback;
     ImageView background, img_char;
-    TextView txt_dlg;
-    int clicked = 0;
+    typewriter_effect txt_dlg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,18 +32,15 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.scene_one);
         enableFullscreen();
         new dialogueFlow();
-
-
+        Log.d(TAG, "scene one activated");
+        allowedback = false;
 
         btnPause = (Button) findViewById(R.id.btn_Pause);
         btnAuto = findViewById(R.id.btn_auto);
         btnSkip = findViewById(R.id.btn_skip);
 
-        typewriter_effect txt_dlg = findViewById(R.id.txt_dlg);
+        txt_dlg = findViewById(R.id.txt_dlg);
 
-        txt_dlg.setText("");
-        txt_dlg.setCharacterDelay(50);
-        txt_dlg.animateText("");
         //im finding a way to input string in animate text
 
         background = findViewById(R.id.bg_image);
@@ -54,9 +50,13 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
         btnAuto.setOnClickListener(this);
         btnSkip.setOnClickListener(this);
 
-        dialogueFlow.sceneone(img_char,txt_dlg, btnAuto);
-    }
 
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        dialogueFlow.sceneone(img_char, txt_dlg, btnAuto, this);
+    }
 
     @Override
     public void onBackPressed() {
@@ -71,7 +71,6 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
         case R.id.btn_auto:
             break;
         case R.id.btn_skip:
-            clicked++;
             break;
     }
     }

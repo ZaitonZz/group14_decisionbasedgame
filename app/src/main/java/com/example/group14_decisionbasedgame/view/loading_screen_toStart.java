@@ -47,6 +47,7 @@ public class loading_screen_toStart extends AppCompatActivity {
         getProgressBar animation =  new getProgressBar(this,textView,progressBar,0f,100f, scene_one.class);
         animation.setDuration(8000);
         progressBar.setAnimation(animation);
+
     }
     private void enableFullscreen() {
         View decorView = getWindow().getDecorView();
@@ -63,8 +64,8 @@ public class loading_screen_toStart extends AppCompatActivity {
     @Override
     protected void onPause(){
         super.onPause();
-        musicRelated.stopLscreen_music();
         Log.d(TAG, "Lscreen onPause: working");
+        musicRelated.stopLscreen_music();
     }
 }
 
