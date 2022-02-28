@@ -6,20 +6,24 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.controller.dialogueFlow;
 import com.example.group14_decisionbasedgame.controller.typewriter_effect;
+import com.example.group14_decisionbasedgame.model.appDialogue;
 
 public class scene_one extends AppCompatActivity implements View.OnClickListener {
     //TODO: UI + clock
     // TODO: button design for Pause, auto, skip and back
+    private androidx.constraintlayout.widget.ConstraintLayout myLayout = null;
 
     private Button btnAuto, btnPause, btnHist, btnSkip;
     private Boolean allowedback;
@@ -35,6 +39,15 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
         Log.d(TAG, "scene one activated");
         allowedback = false;
 
+        myLayout = (ConstraintLayout) findViewById(R.id.scene_one);
+        myLayout.setOnTouchListener(new View.OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event){
+                txt_dlg.setCharacterDelay(10);
+                return true;
+
+            }
+        });
         btnPause = (Button) findViewById(R.id.btn_Pause);
         btnAuto = findViewById(R.id.btn_auto);
         btnSkip = findViewById(R.id.btn_skip);
@@ -49,6 +62,7 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
         btnPause.setOnClickListener(this);
         btnAuto.setOnClickListener(this);
         btnSkip.setOnClickListener(this);
+
 
 
     }
