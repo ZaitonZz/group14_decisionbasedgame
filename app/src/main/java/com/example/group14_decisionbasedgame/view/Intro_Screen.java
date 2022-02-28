@@ -23,7 +23,6 @@ import com.example.group14_decisionbasedgame.controller.splash_screen;
 
 public class Intro_Screen extends AppCompatActivity {
 
-    //TODO: Change to activity to splash screen
     private static int SPLASH_SCREEN = 5000;
 
 

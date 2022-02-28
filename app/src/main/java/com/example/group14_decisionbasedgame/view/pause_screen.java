@@ -15,9 +15,8 @@ import com.example.group14_decisionbasedgame.R;
 public class pause_screen extends AppCompatActivity {
 
 
-    private Button btnResume;
-    private Button btnSettings;
-    private Button btnMainMenu;
+    private Button btnResume, btnSettings, btnMainMenu, btnExitGame;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +29,7 @@ public class pause_screen extends AppCompatActivity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int) (width * .3), (int) (height * .7));
+        getWindow().setLayout((int) (width * .25), (int) (height * .7));
 
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.gravity = Gravity.CENTER;
@@ -54,6 +53,13 @@ public class pause_screen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(pause_screen.this, main_menu_confirmation.class));
+            }
+        });
+        btnExitGame = (Button) findViewById(R.id.btn_Exit2);
+        btnExitGame.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(pause_screen.this, exit_confirmation.class));
             }
         });
     }

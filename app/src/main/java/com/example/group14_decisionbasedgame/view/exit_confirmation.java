@@ -28,7 +28,7 @@ public class exit_confirmation extends Activity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*.8),(int)(height*.3));
+        getWindow().setLayout((int)(width*.5),(int)(height*.3));
 
         WindowManager.LayoutParams params = getWindow().getAttributes();
         params.gravity = Gravity.CENTER;

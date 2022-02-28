@@ -20,7 +20,6 @@ import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.controller.musicRelated;
 
 
-//TODO: fix restart game and music
 
 
 
