@@ -43,7 +43,7 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
         myLayout.setOnTouchListener(new View.OnTouchListener(){
             @Override
             public boolean onTouch(View v, MotionEvent event){
-                txt_dlg.setCharacterDelay(10);
+                txt_dlg.setCharacterDelay(0);
                 return true;
 
             }
