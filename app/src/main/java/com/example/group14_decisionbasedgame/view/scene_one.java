@@ -15,7 +15,9 @@ import com.example.group14_decisionbasedgame.controller.dialogueFlow;
 import com.example.group14_decisionbasedgame.controller.typewriter_effect;
 
 public class scene_one extends AppCompatActivity implements View.OnClickListener {
-//TODO: UI + clock
+    //TODO: UI + clock
+    // TODO: button design for Pause, auto, skip and back
+
 
 
 

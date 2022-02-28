@@ -15,7 +15,8 @@ public class main_menu_confirmation extends Activity {
 
     private Button btnConfirmBack, btnConfirm;
 
-    //TODO: Add a go to main menu and/or exit button
+
+    // TODO: button design for  Back and confirm, Background
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

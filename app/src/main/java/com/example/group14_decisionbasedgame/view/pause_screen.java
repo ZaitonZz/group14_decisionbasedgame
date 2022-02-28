@@ -17,6 +17,9 @@ public class pause_screen extends AppCompatActivity {
 
     private Button btnResume, btnSettings, btnMainMenu, btnExitGame;
 
+    // TODO: Background, Button design for Resume,Settings,Main menu and Exit game
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
