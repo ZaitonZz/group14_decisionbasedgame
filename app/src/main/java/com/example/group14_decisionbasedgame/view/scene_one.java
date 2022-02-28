@@ -12,9 +12,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.controller.dialogueFlow;
+import com.example.group14_decisionbasedgame.controller.typewriter_effect;
 
 public class scene_one extends AppCompatActivity implements View.OnClickListener {
 //TODO: UI + clock
+
 
 
     private Button btnAuto, btnPause, btnHist, btnSkip;
@@ -30,11 +32,18 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
         enableFullscreen();
         new dialogueFlow();
 
+
+
         btnPause = (Button) findViewById(R.id.btn_Pause);
         btnAuto = findViewById(R.id.btn_auto);
         btnSkip = findViewById(R.id.btn_skip);
 
-        txt_dlg = findViewById(R.id.txt_dlg);
+        typewriter_effect txt_dlg = findViewById(R.id.txt_dlg);
+
+        txt_dlg.setText("");
+        txt_dlg.setCharacterDelay(50);
+        txt_dlg.animateText("");
+        //im finding a way to input string in animate text
 
         background = findViewById(R.id.bg_image);
         img_char = findViewById(R.id.img_char);
