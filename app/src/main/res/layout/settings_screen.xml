@@ -10,9 +10,9 @@
         android:layout_width="50dp"
         android:layout_height="37dp"
         android:text="X"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="209dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/btn_Update"
