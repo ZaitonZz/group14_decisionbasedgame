@@ -50,9 +50,9 @@ public class settings_screen extends Activity {
             public void onClick(View view) {
                 if (audioSwitch.isChecked()) {
                     musicRelated.conintro_music();
-                    }else{musicRelated.pintro_music();
-                    }
+                }else{musicRelated.pintro_music();
                 }
+            }
         });
         btnBack = (Button) findViewById(R.id.btn_Pause);
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -73,7 +73,7 @@ public class settings_screen extends Activity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(settings_screen.this, R.string.update,Toast.LENGTH_LONG).show();
-          }
+            }
         });
     }
 }
