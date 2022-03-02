@@ -39,14 +39,14 @@ public class musicRelated {
         byte seed= (byte) randomizer.nextInt(7);
 
         switch(seed){
-            case 0: Lscreen_music = MediaPlayer.create(context, R.raw.girl_one_main); break;
-            case 1: Lscreen_music = MediaPlayer.create(context, R.raw.girl_one_secondary); break;
-            case 2: Lscreen_music = MediaPlayer.create(context, R.raw.girl_two_main); break;
-            case 3: Lscreen_music = MediaPlayer.create(context, R.raw.girl_two_secondary); break;
-            case 4: Lscreen_music = MediaPlayer.create(context, R.raw.girl_three_main); break;
-            case 5: Lscreen_music = MediaPlayer.create(context, R.raw.girl_three_secondary); break;
-            case 6: Lscreen_music = MediaPlayer.create(context, R.raw.girl_four_main); break;
-            case 7: Lscreen_music = MediaPlayer.create(context, R.raw.girl_four_secondary); break; }
+            case 0: Lscreen_music = MediaPlayer.create(context, R.raw.stem_main); break;
+            case 1: Lscreen_music = MediaPlayer.create(context, R.raw.stem_secondary); break;
+            case 2: Lscreen_music = MediaPlayer.create(context, R.raw.abm_main); break;
+            case 3: Lscreen_music = MediaPlayer.create(context, R.raw.abm_secondary); break;
+            case 4: Lscreen_music = MediaPlayer.create(context, R.raw.ict_main); break;
+            case 5: Lscreen_music = MediaPlayer.create(context, R.raw.ict_secondary); break;
+            case 6: Lscreen_music = MediaPlayer.create(context, R.raw.humss_main); break;
+            case 7: Lscreen_music = MediaPlayer.create(context, R.raw.humss_secondary); break; }
         Lscreen_music.start();
     }
     public static void stopLscreen_music() {
@@ -55,16 +55,63 @@ public class musicRelated {
         Log.d(TAG, "stopLscreen_music: working"); }
 
     //game screen controls
-    public static void strtg1_main(Context context) {
-        gScreen = MediaPlayer.create(context, R.raw.girl_one_main);
+    public static void strtstem_main(Context context) {
+        gScreen = MediaPlayer.create(context, R.raw.stem_main);
         gScreen.setLooping(true);
         gScreen.start();
         Log.d(TAG, "girl one activated");
     }
-    public static void stop_g1_main() {
+
+    public static void strtstem_secondary(Context context) {
+        gScreen = MediaPlayer.create(context, R.raw.stem_secondary);
+        gScreen.setLooping(true);
+        gScreen.start();
+        Log.d(TAG, "girl one activated");
+    }
+
+    public static void strtabm_main(Context context) {
+        gScreen = MediaPlayer.create(context, R.raw.abm_main);
+        gScreen.setLooping(true);
+        gScreen.start();
+        Log.d(TAG, "girl one activated");
+    }
+
+    public static void strtabm_secondary(Context context) {
+        gScreen = MediaPlayer.create(context, R.raw.abm_secondary);
+        gScreen.setLooping(true);
+        gScreen.start();
+        Log.d(TAG, "girl one activated");
+    }
+
+    public static void strtict_main(Context context) {
+        gScreen = MediaPlayer.create(context, R.raw.ict_main);
+        gScreen.setLooping(true);
+        gScreen.start();
+        Log.d(TAG, "girl one activated");
+    }
+    public static void strtict_secondary(Context context) {
+        gScreen = MediaPlayer.create(context, R.raw.ict_secondary);
+        gScreen.setLooping(true);
+        gScreen.start();
+        Log.d(TAG, "girl one activated");
+    }
+    public static void strthumss_main(Context context) {
+        gScreen = MediaPlayer.create(context, R.raw.humss_main);
+        gScreen.setLooping(true);
+        gScreen.start();
+        Log.d(TAG, "girl one activated");
+    }
+    public static void strthumss_secondary(Context context) {
+        gScreen = MediaPlayer.create(context, R.raw.humss_secondary);
+        gScreen.setLooping(true);
+        gScreen.start();
+        Log.d(TAG, "girl one activated");
+    }
+
+    public static void stop_gScreen_music() {
         gScreen.release();
         gScreen = null;
-        Log.d(TAG, "stopg1_main: working"); }
-    public static void con_g1_main() { gScreen.start();}
-    public static void p_g1_main() { gScreen.pause();}
+        Log.d(TAG, "stopgScreen_music: working"); }
+    public static void con_gScreen_music() { gScreen.start();}
+    public static void p_gScreen_music() { gScreen.pause();}
 }

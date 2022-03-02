@@ -4,7 +4,7 @@ public class mcDialogue {
 
     private static String M2_1 = "Whoah! My bad i didn’t mean to nudge you like that, I’m sorry (MC bows his head).";
 
-    private static  String M4_1 = "Huh?";
+    private static String M4_1 = "Huh?";
 
     private static String M5_1 = "Uhmm. Hello I’m MC-kun. It's my first time being here. I hope we can work well together…";
     private static String M5_2 = "I'm very sorry for bumping into you this morning, it was all an accident and I promise to never do it again.";

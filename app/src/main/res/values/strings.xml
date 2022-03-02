@@ -13,4 +13,6 @@
     <string name="you_will_lose_all_your_progress_do_you_wish_to_continue">You will lose all your progress. Do you wish to continue?</string>
     <string name="confirm">Confirm</string>
     <string name="update">The app is already running in the latest version</string>
+    <string name="next_btn">Next</string>
+    <string name="skip_btn">Skip</string>
 </resources>

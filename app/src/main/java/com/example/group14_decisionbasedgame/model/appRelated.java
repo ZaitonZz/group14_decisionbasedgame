@@ -1,8 +1,9 @@
 package com.example.group14_decisionbasedgame.model;
 
-import android.os.Bundle;
+public class appRelated {
+    int scenenum = 0;
+    int questionnum = 0;
 
-public class appDialogue {
     static String D1_1 =" You're starting your last year as a Junior Highschool student at Malayan Colleges Mindanao and have to make an important decision!";
     static String D1_2 =" You have to pick a strand soon for senior highschool!";
     static String D1_3 ="A lot of decisions and factors to consider, the overwhelming thoughts are put away immediately as you start to venture in.";
@@ -13,8 +14,13 @@ public class appDialogue {
     static String D3_2 ="After you and all your classmates have conversed you decide to go out and check out some of the clubs.";
 
     static String D4_1 ="You find yourself pacing through the halls, and take notice of a girl waiting out by the hall.";
-    static String D4_2 = "You start thinking of what to say to or do, you pin it down to four possible outcomes,";
-    static String Q1 = "[A. take your chances and join the club.] or [B. refuse the offer and keep looking for new clubs.] or [C. run away from the scene.] or [D. ignore the offer.]";
+    static String D4_2 ="You both make eye contact and she sparks up with joy making her way towards you.";
+    static String D4_3 = "You start thinking of what to say to or do, you pin it down to four possible outcomes,";
+
+    static String Q1_A = "[A. take your chances and join the club.] ";
+    static String Q1_B = "[B. refuse the offer and keep looking for new clubs.]";
+    static String Q1_C = "[C. run away from the scene.]";
+    static String Q1_D = "[D. ignore the offer.]";
 
     static String D5_1 ="You enter the club room with the pretty senior, and see three girls glaring as you enter the room.";
     static String D5_2 ="You realise one of them was the girl you bumped into earlier this morning.";
@@ -64,7 +70,7 @@ public class appDialogue {
     static String D8_7 ="\"Wait, who are you STOP!\"";
     //end of Narrator Dialogue
 
-    public appDialogue(){}
+    public appRelated(){}
 
     public static String getD1_1() { return D1_1; }
     public static String getD1_2() { return D1_2; }
@@ -77,8 +83,12 @@ public class appDialogue {
 
     public static String getD4_1() { return D4_1; }
     public static String getD4_2() { return D4_2; }
+    public static String getD4_3() { return D4_3; }
 
-    public static String getQ1() { return Q1; }
+    public static String getQ1_A() { return Q1_A; }
+    public static String getQ1_B() { return Q1_B; }
+    public static String getQ1_C() { return Q1_C; }
+    public static String getQ1_D() { return Q1_D; }
 
     public static String getD5_1() { return D5_1; }
     public static String getD5_2() { return D5_2; }
@@ -128,4 +138,9 @@ public class appDialogue {
     public static String getD8_5() { return D8_5; }
     public static String getD8_6() { return D8_6; }
     public static String getD8_7() { return D8_7; }
+
+    public int getScenenum() { return scenenum; }
+    public void setScenenum(int scenenum) { this.scenenum = scenenum; }
+    public int getQuestionnum() { return questionnum; }
+    public void setQuestionnum(int questionnum) { this.questionnum = questionnum; }
 }

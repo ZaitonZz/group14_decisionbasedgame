@@ -18,17 +18,20 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.controller.dialogueFlow;
 import com.example.group14_decisionbasedgame.controller.typewriter_effect;
-import com.example.group14_decisionbasedgame.model.appDialogue;
+import com.example.group14_decisionbasedgame.model.appRelated;
 
 public class scene_one extends AppCompatActivity implements View.OnClickListener {
     //TODO: UI + clock
     // TODO: button design for Pause, auto, skip and back
     private androidx.constraintlayout.widget.ConstraintLayout myLayout = null;
 
-    private Button btnAuto, btnPause, btnHist, btnSkip;
+    private Button btnAuto, btnPause, btnHist, btnNext,btnA, btnB, btnC, btnD;
     private Boolean allowedback;
     ImageView background, img_char;
     typewriter_effect txt_dlg;
+    appRelated test;
+    int localvar;
+    TextView txt_A,txt_B,txt_C,txt_D;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +41,8 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
         new dialogueFlow();
         Log.d(TAG, "scene one activated");
         allowedback = false;
+        test= new appRelated();
+        localvar = 0;
 
         myLayout = (ConstraintLayout) findViewById(R.id.scene_one);
         myLayout.setOnTouchListener(new View.OnTouchListener(){
@@ -50,9 +55,17 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
         });
         btnPause = (Button) findViewById(R.id.btn_Pause);
         btnAuto = findViewById(R.id.btn_auto);
-        btnSkip = findViewById(R.id.btn_skip);
+        btnNext = findViewById(R.id.btn_next);
+        btnA = findViewById(R.id.btn_A);
+        btnB = findViewById(R.id.btn_B);
+        btnC = findViewById(R.id.btn_C);
+        btnD = findViewById(R.id.btn_D);
 
         txt_dlg = findViewById(R.id.txt_dlg);
+        txt_A = findViewById(R.id.txt_A);
+        txt_B = findViewById(R.id.txt_B);
+        txt_C = findViewById(R.id.txt_C);
+        txt_D = findViewById(R.id.txt_D);
 
         //im finding a way to input string in animate text
 
@@ -61,7 +74,7 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
 
         btnPause.setOnClickListener(this);
         btnAuto.setOnClickListener(this);
-        btnSkip.setOnClickListener(this);
+        btnNext.setOnClickListener(this);
 
 
 
@@ -69,7 +82,7 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
     @Override
     protected void onStart() {
         super.onStart();
-        dialogueFlow.sceneone(img_char, txt_dlg, btnAuto, this);
+        dialogueFlow.sceneone(img_char, txt_dlg, btnAuto, btnNext, this);
     }
 
     @Override
@@ -84,7 +97,10 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
             break;
         case R.id.btn_auto:
             break;
-        case R.id.btn_skip:
+        case R.id.btn_next:
+            localvar++;
+            test.setScenenum(localvar);
+                dialogueFlow.nextscene(test, img_char, background, txt_dlg, btnNext, btnA, btnB, btnC, btnD, this, txt_A, txt_B,txt_C,txt_D);
             break;
     }
     }
