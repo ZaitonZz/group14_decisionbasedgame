@@ -28,11 +28,13 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
     private Button btnAuto, btnPause, btnHist, btnNext,btnA, btnB, btnC, btnD;
     private Boolean allowedback;
     ImageView background, img_char;
-    typewriter_effect txt_dlg;
+    typewriter_effect txt_dlg,txt_A,txt_B,txt_C,txt_D;
     appRelated test;
+    dialogueFlow crazy;
     int localvar;
-    TextView txt_A,txt_B,txt_C,txt_D;
 
+
+    public scene_one(){}
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +44,9 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
         Log.d(TAG, "scene one activated");
         allowedback = false;
         test= new appRelated();
+        crazy = new dialogueFlow();
         localvar = 0;
+
 
         myLayout = (ConstraintLayout) findViewById(R.id.scene_one);
         myLayout.setOnTouchListener(new View.OnTouchListener(){
@@ -75,8 +79,10 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
         btnPause.setOnClickListener(this);
         btnAuto.setOnClickListener(this);
         btnNext.setOnClickListener(this);
-
-
+        txt_A.setOnClickListener(this);
+        txt_B.setOnClickListener(this);
+        txt_C.setOnClickListener(this);
+        txt_D.setOnClickListener(this);
 
     }
     @Override
@@ -98,9 +104,36 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
         case R.id.btn_auto:
             break;
         case R.id.btn_next:
-            localvar++;
-            test.setScenenum(localvar);
-                dialogueFlow.nextscene(test, img_char, background, txt_dlg, btnNext, btnA, btnB, btnC, btnD, this, txt_A, txt_B,txt_C,txt_D);
+            if (test.getScenenum()==0){
+                test.setScenenum(1);
+            }else {
+            test.setScenenum(test.getScenenum()+1);}
+            crazy.nextscene(test, img_char, background, txt_dlg, btnNext, this, txt_A, txt_B,txt_C,txt_D);
+            break;
+        case R.id.txt_A:
+            crazy.actNxtBut_disQstBut(btnNext,txt_A,txt_B,txt_C,txt_D);
+            Log.d(TAG, "btnA pressed");
+            test.setChoicenum(1);
+            crazy.nextResp(txt_dlg, test.getQuestionnum(),test.getChoicenum());
+            break;
+        case R.id.txt_B:
+            crazy.actNxtBut_disQstBut(btnNext,txt_A,txt_B,txt_C,txt_D);
+            Log.d(TAG, "btnB pressed");
+            test.setChoicenum(2);
+            test.setChoicenumbuffer(2);
+            crazy.nextResp(txt_dlg, test.getQuestionnum(),test.getChoicenum());
+            break;
+        case R.id.txt_C:
+            crazy.actNxtBut_disQstBut(btnNext,txt_A,txt_B,txt_C,txt_D);
+            Log.d(TAG, "btnC pressed");
+            test.setChoicenum(3);
+            crazy.nextResp(txt_dlg, test.getQuestionnum(),test.getChoicenum());
+            break;
+        case R.id.txt_D:
+            crazy.actNxtBut_disQstBut(btnNext,txt_A,txt_B,txt_C,txt_D);
+            Log.d(TAG, "btnD pressed");
+            test.setChoicenum(4);
+            crazy.nextResp(txt_dlg, test.getQuestionnum(),test.getChoicenum());
             break;
     }
     }
@@ -117,5 +150,13 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
                             View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
                             View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         }
+    }
+    public void updateUI(){
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run(){
+                crazy.nextquestion(test,txt_A,txt_B,txt_C,txt_D);
+            }
+        });
     }
 }

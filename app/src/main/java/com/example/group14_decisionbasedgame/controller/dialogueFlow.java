@@ -16,17 +16,8 @@ import com.example.group14_decisionbasedgame.model.ictDialogue;
 import com.example.group14_decisionbasedgame.model.mcDialogue;
 import com.example.group14_decisionbasedgame.model.stemDialogue;
 
-import org.w3c.dom.Text;
-
-import java.util.Timer;
-
 public class dialogueFlow {
-    private static Timer timer;
-    private static typewriter_effect localvar;
-    private static TextView dude,help, I, cant;
-    private static int localint;
-    private static appRelated why;
-
+    static int localint;
     public dialogueFlow(){
         new mcDialogue();
         new stemDialogue();
@@ -45,9 +36,10 @@ public class dialogueFlow {
         dialogue.setCharacterDelay(50);
         dialogue.animateText(appRelated.getD1_1());
     }
-    public static void nextscene(appRelated test, ImageView character, ImageView background, typewriter_effect dialogue, Button next, Button a, Button b, Button c, Button d, Context context, TextView A, TextView B, TextView C, TextView D) {
+    public void nextscene(appRelated test, ImageView character, ImageView background, typewriter_effect dialogue, Button next, Context context, typewriter_effect A, typewriter_effect B, typewriter_effect C, typewriter_effect D) {
       switch(test.getScenenum()){
           case 1:
+              actNxtBut_disQstBut(next, A, B, C, D);
               dialogue.setText(appRelated.getD1_2());
               dialogue.setCharacterDelay(50);
               dialogue.animateText(appRelated.getD1_2());
@@ -120,15 +112,48 @@ public class dialogueFlow {
               dialogue.animateText(mcDialogue.getM4_1());
               break;
           case 13:
-              disNxtBut_actQstBut(next, a, b, c, d);
+              disNxtBut_actQstBut(next, A, B, C, D);
               dialogue.setText(appRelated.getD4_3());
               dialogue.setCharacterDelay(50);
               dialogue.animateText(appRelated.getD4_3());
-              localint=1;
+              localint = 1;
               test.setQuestionnum(localint);
-              checkingdone(test,dialogue,A,B,C,D);
+              nextquestion(test, A, B, C, D);
               break;
           case 14:
+              switch (test.getChoicenum()){
+                  case 1:
+                      dialogue.setText(stemDialogue.getR1_1());
+                      dialogue.setCharacterDelay(50);
+                      dialogue.animateText(stemDialogue.getR1_1());
+                      break;
+                  case 2:
+                      switch(test.getChoicenumbuffer()){
+                          case 2:
+                              dialogue.setText(appRelated.getQ1_B_1());
+                              dialogue.setCharacterDelay(50);
+                              dialogue.animateText(appRelated.getQ1_B_1());
+                              test.setChoicenumbuffer(1);
+                              test.setScenenum(13);
+                              break;
+                          case 1:
+                              dialogue.setText(mcDialogue.getRB_1());
+                              dialogue.setCharacterDelay(50);
+                              dialogue.animateText(mcDialogue.getRB_1());
+                      }
+
+                      break;
+                  case 3:
+                      dialogue.setText(appRelated.getQ1_C_1());
+                      dialogue.setCharacterDelay(50);
+                      dialogue.animateText(appRelated.getQ1_C_1());
+                      break;
+                  case 4:
+                      dialogue.setText(stemDialogue.getR1_1());
+                      dialogue.setCharacterDelay(50);
+                      dialogue.animateText(stemDialogue.getR1_1()); //TODO:
+                      break;
+              }
               break;
           case 15:
               break;
@@ -144,13 +169,21 @@ public class dialogueFlow {
               break;
       }
     }
-    public static void nextquestion(appRelated test, TextView A, TextView B, TextView C, TextView D){
+    public void nextquestion(appRelated test, typewriter_effect A, typewriter_effect B, typewriter_effect C, typewriter_effect D){
         switch (test.getQuestionnum()){
             case 1:
                 A.setText(appRelated.getQ1_A());
+                A.setCharacterDelay(0);
+                A.animateText(appRelated.getQ1_A());
                 B.setText(appRelated.getQ1_B());
+                B.setCharacterDelay(0);
+                B.animateText(appRelated.getQ1_B());
                 C.setText(appRelated.getQ1_C());
+                C.setCharacterDelay(0);
+                C.animateText(appRelated.getQ1_C());
                 D.setText(appRelated.getQ1_D());
+                D.setCharacterDelay(0);
+                D.animateText(appRelated.getQ1_D());
                 displayAns(A, B, C, D);
                 break;
             case 2:
@@ -161,64 +194,55 @@ public class dialogueFlow {
                 break;
         }
     }
-    public static void disNxtBut_actQstBut(Button next, Button a, Button b, Button c, Button d) {
+
+    public static void nextResp(typewriter_effect dialogue,int qnum, int choicenum){
+        switch (qnum){
+            case 1:
+                switch (choicenum){
+                    case 1:
+                        dialogue.setText(mcDialogue.getR1_1());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getR1_1());
+                    case 2:
+                        dialogue.setText(mcDialogue.getR1_2());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getR1_2());
+                    case 3:
+                        dialogue.setText(mcDialogue.getR1_3());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getR1_3());
+                    case 4:
+                        dialogue.setText(mcDialogue.getR1_1()); //TODO: route 4 shenanigans
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getR1_1());
+                }
+            case 2:
+        }
+    }
+    public static void disNxtBut_actQstBut(Button next, TextView a, TextView b, TextView c, TextView d) {
         next.setEnabled(false);
         a.setEnabled(true);
         b.setEnabled(true);
         c.setEnabled(true);
         d.setEnabled(true);
     }
-    public static void actNxtBut_disQstBut(Button next, Button a, Button b, Button c, Button d) {
+    public static void actNxtBut_disQstBut(Button next, TextView a, TextView b, TextView c, TextView d) {
         next.setEnabled(true);
         a.setEnabled(false);
         b.setEnabled(false);
         c.setEnabled(false);
         d.setEnabled(false);
     }
-    public static void displayAns(TextView A, TextView B, TextView C, TextView D){
+    public static void displayAns(typewriter_effect A, typewriter_effect B, typewriter_effect C, typewriter_effect D){
         A.setVisibility(A.VISIBLE);
         B.setVisibility(B.VISIBLE);
         C.setVisibility(C.VISIBLE);
         D.setVisibility(D.VISIBLE);
     }
-    public static void hideAns(TextView A, TextView B, TextView C, TextView D){
+    public static void hideAns(typewriter_effect A, typewriter_effect B, typewriter_effect C, typewriter_effect D){
         A.setVisibility(A.INVISIBLE);
         B.setVisibility(B.INVISIBLE);
         C.setVisibility(C.INVISIBLE);
         D.setVisibility(D.INVISIBLE);
-    }
-
-    public static typewriter_effect getLocalvar() { return localvar; }
-
-    public static TextView getDude() { return dude; }
-    public static TextView getHelp() { return help; }
-    public static TextView getI() { return I; }
-    public static TextView getCant() { return cant; }
-    public static appRelated getWhy() { return why; }
-
-    public static void checkingdone(appRelated test, typewriter_effect dialogue, TextView A, TextView B, TextView C, TextView D){
-        why=test;
-        localvar=dialogue;
-        dude = A;
-        help = B;
-        I = C;
-        cant=D;
-        if(!dialogue.isDone()){
-            timer = new Timer();
-            timer.schedule( new RemindTask(),5000);
-            Log.d(TAG, "help lads");
-        } else if (dialogue.isDone()){
-            Log.d(TAG, "we did it lads");
-            timer.cancel();
-            why =null;
-            localvar=null;
-            dude = null;
-            help = null;
-            I = null;
-            cant=null;
-
-            nextquestion(test, A, B, C, D);
-        }
-
     }
 }

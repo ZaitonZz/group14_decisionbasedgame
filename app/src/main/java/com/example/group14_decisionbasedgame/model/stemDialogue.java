@@ -4,6 +4,8 @@ public class stemDialogue {
 
     private static String S4_1 = "Hello there, is there any chance you wouldn’t mind joining our club? We only need one more member to secure our club's value.";
 
+    private static String R1_1 = "Superb! Now come on in.";
+
     private static String S5_1 = "Girls, this is our new member! Please, introduce yourself stranger.";
     private static String S5_2 = "Okay, now that MC-kun introduced himself, it is only fair as his seniors that we show the same respect when it comes to formalities.";
     private static String S5_3 = "So this is ABM she’s usually like this but she’s sweet on the inside. She is the clubs Treasurer.";
@@ -39,6 +41,8 @@ public class stemDialogue {
     public stemDialogue(){}
 
     public static String getS4_1() { return S4_1; }
+
+    public static String getR1_1() { return R1_1; }
 
     public static String getS5_1() { return S5_1; }
     public static String getS5_2() { return S5_2; }

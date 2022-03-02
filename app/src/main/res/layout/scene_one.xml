@@ -6,17 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btn_C"
-        android:layout_width="205dp"
-        android:layout_height="36dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="47dp"
-        android:text="Button"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
     <ImageView
         android:id="@+id/bg_image"
         android:layout_width="wrap_content"
@@ -29,21 +18,10 @@
         android:id="@+id/img_char"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/abmtwo" />
-
-    <Button
-        android:id="@+id/btn_D"
-        android:layout_width="205dp"
-        android:layout_height="36dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="5dp"
-        android:text="Button"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btn_Pause"
@@ -123,12 +101,67 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/answer_boxes" />
 
+    <com.example.group14_decisionbasedgame.controller.typewriter_effect
+        android:id="@+id/txt_A"
+        android:layout_width="198dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="136dp"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.example.group14_decisionbasedgame.controller.typewriter_effect
+        android:id="@+id/txt_B"
+        android:layout_width="198dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="21dp"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/txt_A"
+        app:layout_constraintStart_toStartOf="@+id/txt_A"
+        app:layout_constraintTop_toBottomOf="@+id/txt_A" />
+
+    <com.example.group14_decisionbasedgame.controller.typewriter_effect
+        android:id="@+id/txt_C"
+        android:layout_width="198dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="21dp"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/txt_B"
+        app:layout_constraintStart_toStartOf="@+id/txt_B"
+        app:layout_constraintTop_toBottomOf="@+id/txt_B" />
+
+    <com.example.group14_decisionbasedgame.controller.typewriter_effect
+        android:id="@+id/txt_D"
+        android:layout_width="198dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="21dp"
+        android:text="TextView"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/txt_C"
+        app:layout_constraintStart_toStartOf="@+id/txt_C"
+        app:layout_constraintTop_toBottomOf="@+id/txt_C" />
+
     <Button
         android:id="@+id/btn_A"
         android:layout_width="205dp"
         android:layout_height="36dp"
         android:layout_marginEnd="3dp"
         android:layout_marginBottom="129dp"
+        android:text="Button"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btn_C"
+        android:layout_width="205dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="47dp"
         android:text="Button"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -145,49 +178,16 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/txt_A"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="148dp"
-        android:layout_marginBottom="134dp"
-        android:text="TextView"
+    <Button
+        android:id="@+id/btn_D"
+        android:layout_width="205dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="5dp"
+        android:text="Button"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
-
-    <TextView
-        android:id="@+id/txt_B"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:text="TextView"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/txt_A"
-        app:layout_constraintStart_toStartOf="@+id/txt_A"
-        app:layout_constraintTop_toBottomOf="@+id/txt_A" />
-
-    <TextView
-        android:id="@+id/txt_C"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:text="TextView"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/txt_B"
-        app:layout_constraintStart_toStartOf="@+id/txt_B"
-        app:layout_constraintTop_toBottomOf="@+id/txt_B" />
-
-    <TextView
-        android:id="@+id/txt_D"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:text="TextView"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/txt_C"
-        app:layout_constraintStart_toStartOf="@+id/txt_C"
-        app:layout_constraintTop_toBottomOf="@+id/txt_C" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

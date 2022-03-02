@@ -6,6 +6,8 @@ public class mcDialogue {
 
     private static String M4_1 = "Huh?";
 
+    private static String RB_1 = "UGHHH! I can not find a good club to join… Hmm at this rate I should probably just circle back and take that girls offer for now… I should try to find that senpai again.";
+
     private static String M5_1 = "Uhmm. Hello I’m MC-kun. It's my first time being here. I hope we can work well together…";
     private static String M5_2 = "I'm very sorry for bumping into you this morning, it was all an accident and I promise to never do it again.";
     private static String M5_3 = "ABM senpai is really displeased with me. I hope she won’t be like this the whole year, but still I can't believe my suggested name worked!";
@@ -29,6 +31,8 @@ public class mcDialogue {
     private static String M7_8 = "Like STEM she's very knowledgeable in all things; pretty much like a philosopher… Hmm what if I go HUMSS?)";
 
     private static String R1_1 = "[Hmm.? sure why not what’s the worst thing that could happen.]";
+    private static String R1_2 = "[I think I’ll take a look at the other clubs instead…]";
+    private static String R1_3 = "[You run away from the scene.]";
 
     private static String R2_1 = "What about Desmos? Hmm I'm not sure if it's a good one, but what do you guys think?";
 
@@ -45,6 +49,8 @@ public class mcDialogue {
     public static String getM2_1() { return M2_1; }
 
     public static String getM4_1() { return M4_1; }
+
+    public static String getRB_1() { return RB_1; }
 
     public static String getM5_1() { return M5_1; }
     public static String getM5_2() { return M5_2; }
@@ -69,6 +75,8 @@ public class mcDialogue {
     public static String getM7_8() { return M7_8; }
 
     public static String getR1_1() { return R1_1; }
+    public static String getR1_2() { return R1_2; }
+    public static String getR1_3() { return R1_3; }
 
     public static String getR2_1() { return R2_1; }
 

@@ -3,6 +3,8 @@ package com.example.group14_decisionbasedgame.model;
 public class appRelated {
     int scenenum = 0;
     int questionnum = 0;
+    int choicenum = 0;
+    int choicenumbuffer = 0;
 
     static String D1_1 =" You're starting your last year as a Junior Highschool student at Malayan Colleges Mindanao and have to make an important decision!";
     static String D1_2 =" You have to pick a strand soon for senior highschool!";
@@ -21,6 +23,9 @@ public class appRelated {
     static String Q1_B = "[B. refuse the offer and keep looking for new clubs.]";
     static String Q1_C = "[C. run away from the scene.]";
     static String Q1_D = "[D. ignore the offer.]";
+
+    static String Q1_B_1 ="You notice that you’re constantly walking aimlessly for what feels like miles, and yet no interest has sparked. ";
+    static String Q1_C_1 ="You start to hear a song that you aren’t familiar with… As the narrator I know it’s the Bruno Mars Run Away song. As the songs starts to kick in this you realise that there is no escape to this tragic yet cursed wonderland, yet you keep running and running. You realise that the hallway looks similar to the one you saw earlier and decide to go into the room. As you take your first glance you see the same girl you bumped into earlier this morning…";
 
     static String D5_1 ="You enter the club room with the pretty senior, and see three girls glaring as you enter the room.";
     static String D5_2 ="You realise one of them was the girl you bumped into earlier this morning.";
@@ -90,6 +95,9 @@ public class appRelated {
     public static String getQ1_C() { return Q1_C; }
     public static String getQ1_D() { return Q1_D; }
 
+    public static String getQ1_B_1(){return Q1_B_1;}
+    public static String getQ1_C_1(){return Q1_C_1;}
+
     public static String getD5_1() { return D5_1; }
     public static String getD5_2() { return D5_2; }
     public static String getD5_3() { return D5_3; }
@@ -143,4 +151,8 @@ public class appRelated {
     public void setScenenum(int scenenum) { this.scenenum = scenenum; }
     public int getQuestionnum() { return questionnum; }
     public void setQuestionnum(int questionnum) { this.questionnum = questionnum; }
+    public int getChoicenum() { return choicenum; }
+    public void setChoicenum(int choicenum) { this.choicenum = choicenum; }
+    public int getChoicenumbuffer() { return choicenumbuffer; }
+    public void setChoicenumbuffer(int choicenumbuffer) { this.choicenumbuffer = choicenumbuffer; }
 }
