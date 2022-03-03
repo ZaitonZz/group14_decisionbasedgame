@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,9 +26,8 @@ public class splash_screen extends AppCompatActivity {
 
 
 
-    Animation splashScreen;
-    TextView appTitle;
-
+    Animation splashScreen,  splashScreen2;
+    ImageView station, station14 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,10 +38,14 @@ public class splash_screen extends AppCompatActivity {
         setContentView(R.layout.splash_screen);
         musicRelated.strtintro_music(this);
 
-        splashScreen = AnimationUtils.loadAnimation(this,R.anim.splash_screen_animation);
+        splashScreen = AnimationUtils.loadAnimation(this,R.anim.gasstation_anim);
+        splashScreen2 = AnimationUtils.loadAnimation(this,R.anim.station14_anim);
 
-        appTitle = findViewById(R.id.splashTitle);
-        appTitle.setAnimation(splashScreen);
+        station = findViewById(R.id.gasStation);
+        station.setAnimation(splashScreen);
+
+        station14 = findViewById(R.id.station14);
+        station14.setAnimation(splashScreen2);
 
         new Handler().postDelayed(new Runnable() {
             @Override

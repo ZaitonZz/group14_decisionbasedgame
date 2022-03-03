@@ -80,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/temp_box" />
+        app:srcCompat="@drawable/dialogue_box" />
 
     <com.example.group14_decisionbasedgame.controller.typewriter_effect
         android:id="@+id/txt_dlg"
@@ -154,7 +154,8 @@
         android:text="Button"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/answerbox1"/>
 
     <Button
         android:id="@+id/btn_C"
@@ -165,7 +166,8 @@
         android:text="Button"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/answerbox3"/>
 
     <Button
         android:id="@+id/btn_B"
@@ -176,7 +178,8 @@
         android:text="Button"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/answerbox2"/>
 
     <Button
         android:id="@+id/btn_D"
@@ -187,7 +190,8 @@
         android:text="Button"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/answerbox4"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

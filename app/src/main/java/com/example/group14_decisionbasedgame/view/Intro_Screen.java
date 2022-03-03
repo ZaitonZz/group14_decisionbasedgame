@@ -5,7 +5,6 @@ import static android.content.ContentValues.TAG;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,22 +12,20 @@ import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.controller.bgRelated;
-import com.example.group14_decisionbasedgame.controller.getProgressBar;
 import com.example.group14_decisionbasedgame.controller.musicRelated;
-import com.example.group14_decisionbasedgame.controller.splash_screen;
 
 public class Intro_Screen extends AppCompatActivity {
 
     private static int SPLASH_SCREEN = 5000;
 
 
+    Animation splashScreen,  splashScreen2, splashScreen3, splashScreen4, splashScreen5;
+    ImageView station, station14;
 
-    Animation splashScreen;
-    TextView appTitle;
 
 
     @Override
@@ -41,10 +38,44 @@ public class Intro_Screen extends AppCompatActivity {
         setContentView(R.layout.splash_screen);
 
         musicRelated.strtintro_music(this);
-        splashScreen = AnimationUtils.loadAnimation(this,R.anim.splash_screen_animation);
 
-        appTitle = findViewById(R.id.splashTitle);
-        appTitle.setAnimation(splashScreen);
+        splashScreen = AnimationUtils.loadAnimation(this,R.anim.gasstation_anim);
+        splashScreen2 = AnimationUtils.loadAnimation(this,R.anim.station14_anim);
+        splashScreen3 = AnimationUtils.loadAnimation(this,R.anim.station14bounceback_animation);
+        splashScreen4= AnimationUtils.loadAnimation(this,R.anim.gasstationbounceaway_animation);
+        splashScreen5= AnimationUtils.loadAnimation(this,R.anim.gasstationbounceback_animation);
+
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                station14.setAnimation(splashScreen2);
+            }
+        }, 1000);;
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                station14.setAnimation(splashScreen3);
+            }
+        }, 2000);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                station.setAnimation(splashScreen4);
+            }
+        }, 2900);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                station.setAnimation(splashScreen5);
+            }
+        }, 4000);
+
+        station = findViewById(R.id.gasStation);
+        station.setAnimation(splashScreen);
+
+        station14 = findViewById(R.id.station14);
+
 
         new Handler().postDelayed(new Runnable() {
             @Override
