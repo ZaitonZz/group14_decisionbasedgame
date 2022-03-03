@@ -92,14 +92,6 @@
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="334dp"
-        android:layout_height="176dp"
-        android:layout_marginStart="460dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/answer_boxes" />
 
     <com.example.group14_decisionbasedgame.controller.typewriter_effect
         android:id="@+id/txt_A"
@@ -145,50 +137,45 @@
         app:layout_constraintStart_toStartOf="@+id/txt_C"
         app:layout_constraintTop_toBottomOf="@+id/txt_C" />
 
-    <Button
+    <ImageView
         android:id="@+id/btn_A"
         android:layout_width="205dp"
         android:layout_height="36dp"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="129dp"
-        android:text="Button"
-        android:visibility="invisible"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="136dp"
+        android:background="@drawable/answerbox1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/answerbox1"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
+    <ImageView
         android:id="@+id/btn_C"
         android:layout_width="205dp"
         android:layout_height="36dp"
         android:layout_marginEnd="6dp"
         android:layout_marginBottom="47dp"
         android:text="Button"
-        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/answerbox3"/>
 
-    <Button
+    <ImageView
         android:id="@+id/btn_B"
         android:layout_width="205dp"
         android:layout_height="36dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="83dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="92dp"
+        android:background="@drawable/answerbox2"
         android:text="Button"
-        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/answerbox2"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
+    <ImageView
         android:id="@+id/btn_D"
         android:layout_width="205dp"
         android:layout_height="36dp"
         android:layout_marginEnd="6dp"
         android:layout_marginBottom="5dp"
         android:text="Button"
-        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@drawable/answerbox4"/>
