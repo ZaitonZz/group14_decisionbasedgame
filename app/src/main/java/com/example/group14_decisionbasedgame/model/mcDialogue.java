@@ -14,6 +14,7 @@ public class mcDialogue {
     private static String M5_4 = "So what does this club do exactly?";
     private static String M5_5 = "Welp if that’s what we're doing, I guess I can give my man/girl power as support";
     private static String M5_6 = "(Thank God this club is about computers!)";
+
     private static String M5_7 = "You feel this heavy aura of someone staring at you;";
     private static String M5_8 = "even after you’ve left the building the feeling hasn’t gone away. You head home.";
 
@@ -34,7 +35,10 @@ public class mcDialogue {
     private static String R1_2 = "[I think I’ll take a look at the other clubs instead…]";
     private static String R1_3 = "[You run away from the scene.]";
 
-    private static String R2_1 = "What about Desmos? Hmm I'm not sure if it's a good one, but what do you guys think?";
+    private static String R2_1 = "What about Station? Hmm I'm not sure if it's a good one, but what do you guys think?";
+    private static String R2_2 = "What about Kawaii Computers? Hmm I'm not sure if it's a good one, but what do you guys think?";
+    private static String R2_3 = "What about Computersocity? Hmm I'm not sure if it's a good one, but what do you guys think?";
+    private static String R2_4 = "[silence]";
 
     private static String R3_1_1 = "Alrighty, my device is more of a software that can switch to different apps within the desktop in an efficient amount of time, ";
     private static String R3_1_2 = "hinting that its quite fast. It's called StreamDeck.";
@@ -79,6 +83,9 @@ public class mcDialogue {
     public static String getR1_3() { return R1_3; }
 
     public static String getR2_1() { return R2_1; }
+    public static String getR2_2() { return R2_2; }
+    public static String getR2_3() { return R2_3; }
+    public static String getR2_4() { return R2_4; }
 
     public static String getR3_1_1() { return R3_1_1; }
     public static String getR3_1_2() { return R3_1_2; }

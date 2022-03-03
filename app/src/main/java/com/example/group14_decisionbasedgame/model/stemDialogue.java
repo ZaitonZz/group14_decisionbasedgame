@@ -5,6 +5,9 @@ public class stemDialogue {
     private static String S4_1 = "Hello there, is there any chance you wouldn’t mind joining our club? We only need one more member to secure our club's value.";
 
     private static String R1_1 = "Superb! Now come on in.";
+    private static String R2_4 = "Wow! That’s not bad… Station. It is quite a unique name for our Computer club! What do you girls think?";
+    private static String R2_2 = "Wow! That’s not bad… Kawaii Computers. It is quite a unique name for our Computer club! What do you girls think?";
+    private static String R2_3 = "Wow! That’s not bad… Computersocity. It is quite a unique name for our Computer club! What do you girls think?";
 
     private static String S5_1 = "Girls, this is our new member! Please, introduce yourself stranger.";
     private static String S5_2 = "Okay, now that MC-kun introduced himself, it is only fair as his seniors that we show the same respect when it comes to formalities.";
@@ -43,6 +46,10 @@ public class stemDialogue {
     public static String getS4_1() { return S4_1; }
 
     public static String getR1_1() { return R1_1; }
+
+    public static String getR2_4() { return R2_4; }
+    public static String getR2_2() { return R2_2; }
+    public static String getR2_3() { return R2_3; }
 
     public static String getS5_1() { return S5_1; }
     public static String getS5_2() { return S5_2; }

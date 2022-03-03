@@ -2,6 +2,7 @@ package com.example.group14_decisionbasedgame.model;
 
 public class appRelated {
     int scenenum = 0;
+    int dialoguenum = 0;
     int questionnum = 0;
     int choicenum = 0;
     int choicenumbuffer = 0;
@@ -25,23 +26,28 @@ public class appRelated {
     static String Q1_D = "[D. ignore the offer.]";
 
     static String Q1_B_1 ="You notice that you’re constantly walking aimlessly for what feels like miles, and yet no interest has sparked. ";
-    static String Q1_C_1 ="You start to hear a song that you aren’t familiar with… As the narrator I know it’s the Bruno Mars Run Away song. As the songs starts to kick in this you realise that there is no escape to this tragic yet cursed wonderland, yet you keep running and running. You realise that the hallway looks similar to the one you saw earlier and decide to go into the room. As you take your first glance you see the same girl you bumped into earlier this morning…";
+    static String Q1_C_1 ="You start to hear a song that you aren’t familiar with… As the narrator I know it’s the Bruno Mars Run Away song. As the songs starts to kick in this you realise that there is no escape to this tragic yet cursed wonderland,";
+    static String Q1_C_2 ="yet you keep running and running. You realise that the hallway looks similar to the one you saw earlier and decide to go into the room. As you take your first glance you see the same girl you bumped into earlier this morning…";
 
     static String D5_1 ="You enter the club room with the pretty senior, and see three girls glaring as you enter the room.";
     static String D5_2 ="You realise one of them was the girl you bumped into earlier this morning.";
     static String D5_3 ="You look at the girl you ran into this morning with pitiful eyes.";
-    static String D5_4 ="A girl with… (description of humms senpais appearance) stands up and begins to speak with confidence.";
+    static String D5_4 ="A girl with green hair and tall stature stands up and begins to speak with confidence.";
     static String D5_5 ="After her short introduction, HUMSS senpai is sits herself down, whilst a very shy individual takes the stand next.";
     static String D5_6 ="ICT senpai takes her seat. A few seconds go by with no one taking the stand,";
-    static String D5_7 =" but you notice all of your seniors staring at the girl in (ABM senpais appearance).";
+    static String D5_7 =" but you notice all of your seniors staring at the girl with pink hair.";
     static String D5_8 ="The senior who called you in for the club immediately interjects.";
     static String D5_9 ="You want to contribute and prove to your seniors that you are reliable,";
     static String D5_10="but the problem is you have no idea what the whole club is about.";
     static String D5_11="You scan the room for any clues that could give you an idea of what this is all for.";
     static String D5_12="Everyone in the room is staring and trying to come up with a name.";
     static String D5_13="You enter a sequence of events where the whole club needs a name. Thus you must decide what fate is waiting ahead!";
-    static String Q2 = "[A. Station ] [B. Desmos ] [C. Kongo] [D. Give up on naming the group and then decide for themselves?]";
     static String D5_14="With the club meeting being adjourned, you all leave and head home.";
+
+    static String Q2_A = "[A. Station ]";
+    static String Q2_B =" [B. Kawaii Computers ]";
+    static String Q2_C =" [C.Computersocity]";
+    static String Q2_D =" [D. Give up on naming the group and then decide for themselves?]";
 
     static String D6_1 ="With the club meeting being adjourned, you all leave and head home.";
     static String D6_2 ="You enter the clubroom with your senpais and settle yourselves. You remember the topics you will be discussing today,";
@@ -95,8 +101,9 @@ public class appRelated {
     public static String getQ1_C() { return Q1_C; }
     public static String getQ1_D() { return Q1_D; }
 
-    public static String getQ1_B_1(){return Q1_B_1;}
-    public static String getQ1_C_1(){return Q1_C_1;}
+    public static String getQ1_B_1() { return Q1_B_1; }
+    public static String getQ1_C_1() { return Q1_C_1; }
+    public static String getQ1_C_2() { return Q1_C_2; }
 
     public static String getD5_1() { return D5_1; }
     public static String getD5_2() { return D5_2; }
@@ -113,7 +120,10 @@ public class appRelated {
     public static String getD5_13() { return D5_13; }
     public static String getD5_14() { return D5_14; }
 
-    public static String getQ2() { return Q2; }
+    public static String getQ2_A() { return Q2_A; }
+    public static String getQ2_B() { return Q2_B; }
+    public static String getQ2_C() { return Q2_C; }
+    public static String getQ2_D() { return Q2_D; }
 
     public static String getD6_1() { return D6_1; }
     public static String getD6_2() { return D6_2; }
@@ -149,6 +159,8 @@ public class appRelated {
 
     public int getScenenum() { return scenenum; }
     public void setScenenum(int scenenum) { this.scenenum = scenenum; }
+    public int getDialoguenum() { return dialoguenum; }
+    public void setDialoguenum(int dialoguenum) { this.dialoguenum = dialoguenum; }
     public int getQuestionnum() { return questionnum; }
     public void setQuestionnum(int questionnum) { this.questionnum = questionnum; }
     public int getChoicenum() { return choicenum; }
