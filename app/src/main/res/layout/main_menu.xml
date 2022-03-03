@@ -31,7 +31,8 @@
         app:layout_constraintEnd_toEndOf="@+id/btn_settings"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_settings"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="#F999B7"/>
 
     <Button
         android:id="@+id/btn_settings"
@@ -41,7 +42,8 @@
         android:layout_marginTop="196dp"
         android:text="@string/btn_settings_txt"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="#F999B7"/>
 
     <Button
         android:id="@+id/btn_credits"
@@ -50,7 +52,8 @@
         android:layout_marginTop="20dp"
         android:text="@string/btn_credits_txt"
         app:layout_constraintStart_toStartOf="@+id/btn_settings"
-        app:layout_constraintTop_toBottomOf="@+id/btn_settings" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_settings"
+        android:backgroundTint="#F999B7"/>
 
     <Button
         android:id="@+id/btn_exit"
@@ -59,6 +62,7 @@
         android:layout_marginTop="20dp"
         android:text="@string/btn_exit_txt"
         app:layout_constraintStart_toStartOf="@+id/btn_credits"
-        app:layout_constraintTop_toBottomOf="@+id/btn_credits" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_credits"
+        android:backgroundTint="#F999B7"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
