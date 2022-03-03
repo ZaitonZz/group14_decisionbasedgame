@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.main_menu">
+    tools:context=".view.main_menu"
+    android:background="@drawable/main_menu">
 
     <TextView
         android:id="@+id/titleView"

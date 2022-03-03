@@ -14,10 +14,14 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
+import androidx.core.app.ActivityCompat;
 
 import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.controller.musicRelated;
@@ -26,7 +30,7 @@ import com.example.group14_decisionbasedgame.controller.musicRelated;
 
 
 
-public class settings_screen extends Activity {
+public class settings_screen extends Activity{
 
     private Button btnBack, btnUpdate, btnRestart;
     private SwitchCompat audioSwitch;
@@ -45,8 +49,8 @@ public class settings_screen extends Activity {
         int height = dm.heightPixels;
 
 
-        getWindow().setLayout((int)(width*.4),(int)(height*.7));
-        AudioManager amanager=(AudioManager)getSystemService(Context.AUDIO_SERVICE);
+        getWindow().setLayout((int) (width * .4), (int) (height * .7));
+        AudioManager amanager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
 
         audioSwitch = (SwitchCompat) findViewById(R.id.switch1);
@@ -55,8 +59,8 @@ public class settings_screen extends Activity {
             public void onClick(View view) {
                 if (audioSwitch.isChecked()) {
                     amanager.adjustVolume(AudioManager.ADJUST_UNMUTE, AudioManager.FLAG_SHOW_UI);
-                }else{amanager.adjustVolume(AudioManager.ADJUST_MUTE, AudioManager.FLAG_SHOW_UI);
-
+                } else {
+                    amanager.adjustVolume(AudioManager.ADJUST_MUTE, AudioManager.FLAG_SHOW_UI);
                 }
             }
         });
@@ -64,11 +68,13 @@ public class settings_screen extends Activity {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onBackPressed(); }});
+                onBackPressed();
+            }
+        });
         btnRestart = (Button) findViewById(R.id.btn_Restart);
         btnRestart.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view){
+            public void onClick(View view) {
                 finish();
                 startActivity(new Intent(settings_screen.this, Intro_Screen.class));
 
@@ -78,7 +84,7 @@ public class settings_screen extends Activity {
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(settings_screen.this, R.string.update,Toast.LENGTH_LONG).show();
+                Toast.makeText(settings_screen.this, R.string.update, Toast.LENGTH_LONG).show();
             }
         });
     }
