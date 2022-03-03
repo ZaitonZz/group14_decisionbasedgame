@@ -7,6 +7,7 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.AudioManager;
 import android.media.session.MediaController;
 import android.os.Bundle;
@@ -51,15 +52,25 @@ public class settings_screen extends Activity{
 
         getWindow().setLayout((int) (width * .4), (int) (height * .7));
         AudioManager amanager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-
-
+        SharedPreferences sharedPreferences = getSharedPreferences("save",MODE_PRIVATE);
         audioSwitch = (SwitchCompat) findViewById(R.id.switch1);
+        audioSwitch.setChecked(sharedPreferences.getBoolean("value",true));
+
+
         audioSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (audioSwitch.isChecked()) {
+                    SharedPreferences.Editor editor = getSharedPreferences("save",MODE_PRIVATE).edit();
+                    editor.putBoolean("value",true);
+                    editor.apply();
+                    audioSwitch.setChecked(true);
                     amanager.adjustVolume(AudioManager.ADJUST_UNMUTE, AudioManager.FLAG_SHOW_UI);
                 } else {
+                    SharedPreferences.Editor editor = getSharedPreferences("save",MODE_PRIVATE).edit();
+                    editor.putBoolean("value",false);
+                    editor.apply();
+                    audioSwitch.setChecked(false);
                     amanager.adjustVolume(AudioManager.ADJUST_MUTE, AudioManager.FLAG_SHOW_UI);
                 }
             }
