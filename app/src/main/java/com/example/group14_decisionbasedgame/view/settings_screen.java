@@ -1,5 +1,7 @@
 package com.example.group14_decisionbasedgame.view;
 
+import static android.content.ContentValues.TAG;
+
 import android.app.Activity;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
@@ -9,6 +11,7 @@ import android.media.AudioManager;
 import android.media.session.MediaController;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Switch;
@@ -35,6 +38,7 @@ public class settings_screen extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_screen);
+        new musicRelated();
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         int width = dm.widthPixels;
@@ -42,6 +46,7 @@ public class settings_screen extends Activity {
 
 
         getWindow().setLayout((int)(width*.4),(int)(height*.7));
+        AudioManager amanager=(AudioManager)getSystemService(Context.AUDIO_SERVICE);
 
 
         audioSwitch = (SwitchCompat) findViewById(R.id.switch1);
@@ -49,8 +54,9 @@ public class settings_screen extends Activity {
             @Override
             public void onClick(View view) {
                 if (audioSwitch.isChecked()) {
-                    musicRelated.conintro_music();
-                }else{musicRelated.pintro_music();
+                    amanager.adjustVolume(AudioManager.ADJUST_UNMUTE, AudioManager.FLAG_SHOW_UI);
+                }else{amanager.adjustVolume(AudioManager.ADJUST_MUTE, AudioManager.FLAG_SHOW_UI);
+
                 }
             }
         });
