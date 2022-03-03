@@ -6,7 +6,7 @@ public class abmDialogue {
     private static String A2_2 = "Sheesh! A sorry hm? Move out of the way i'm walking here!.";
 
     private static String A5_1 = "HUH! It’s you again! You’re that kid who tried nudging me!";
-    private static String A5_2 = "Hmpf!";
+    private static String A5_2 = "Hmpf! (quickly swivels her head out of MC-kuns face).";
     private static String A5_3 = "Hmpf! Why would I make the effort to introduce myself to someone like him!";
     private static String A5_4 = "You didn’t have to include me!!! STEM!!!";
     private static String A5_5 = "Hmpf? Fine if you guys said yes but I'm not saying that to MC-san!";

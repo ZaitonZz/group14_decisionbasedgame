@@ -10,7 +10,6 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -104,36 +103,35 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
         case R.id.btn_auto:
             break;
         case R.id.btn_next:
-            if (test.getScenenum()==0){
-                test.setScenenum(1);
+            if (test.getDialoguenum()==0){
+                test.setDialoguenum(1); Log.d(TAG, "new scene activated");
             }else {
-            test.setScenenum(test.getScenenum()+1);}
+            test.setDialoguenum(test.getDialoguenum()+1);}
             crazy.nextscene(test, img_char, background, txt_dlg, btnNext, this, txt_A, txt_B,txt_C,txt_D);
             break;
         case R.id.txt_A:
             crazy.actNxtBut_disQstBut(btnNext,txt_A,txt_B,txt_C,txt_D);
             Log.d(TAG, "btnA pressed");
             test.setChoicenum(1);
-            crazy.nextResp(txt_dlg, test.getQuestionnum(),test.getChoicenum());
+            crazy.nextResp(test,txt_dlg, test.getQuestionnum(),test.getChoicenum(),img_char);
             break;
         case R.id.txt_B:
             crazy.actNxtBut_disQstBut(btnNext,txt_A,txt_B,txt_C,txt_D);
             Log.d(TAG, "btnB pressed");
             test.setChoicenum(2);
-            test.setChoicenumbuffer(2);
-            crazy.nextResp(txt_dlg, test.getQuestionnum(),test.getChoicenum());
+            crazy.nextResp(test,txt_dlg, test.getQuestionnum(),test.getChoicenum(),img_char);
             break;
         case R.id.txt_C:
             crazy.actNxtBut_disQstBut(btnNext,txt_A,txt_B,txt_C,txt_D);
             Log.d(TAG, "btnC pressed");
             test.setChoicenum(3);
-            crazy.nextResp(txt_dlg, test.getQuestionnum(),test.getChoicenum());
+            crazy.nextResp(test,txt_dlg, test.getQuestionnum(),test.getChoicenum(),img_char);
             break;
         case R.id.txt_D:
             crazy.actNxtBut_disQstBut(btnNext,txt_A,txt_B,txt_C,txt_D);
             Log.d(TAG, "btnD pressed");
             test.setChoicenum(4);
-            crazy.nextResp(txt_dlg, test.getQuestionnum(),test.getChoicenum());
+            crazy.nextResp(test,txt_dlg, test.getQuestionnum(),test.getChoicenum(),img_char);
             break;
     }
     }
@@ -150,13 +148,5 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
                             View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
                             View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
         }
-    }
-    public void updateUI(){
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run(){
-                crazy.nextquestion(test,txt_A,txt_B,txt_C,txt_D);
-            }
-        });
     }
 }
