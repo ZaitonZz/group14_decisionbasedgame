@@ -73,7 +73,6 @@ public class appRelated {
     static String D6_2 = "You enter the clubroom with your senpais and settle yourselves. You remember the topics you will be discussing today,";
     static String D6_3 = "and try to remember what device you chose to cover.";
     static String D6_4 = "It's now your faith to decide on what to choose again. What type of speech are you willing to do!?";
-
     static String D6_5 = "HUMSS senpai continues to explain the Liquid Coolant device in more detail,";
     static String D6_6 = "while the rest listen with their undivided attention solely on her exquisite tone of voice that shapes the sentences everytime she speaks.";
     static String D6_7 = "You stand in front of all your peers and begin your presentation.";

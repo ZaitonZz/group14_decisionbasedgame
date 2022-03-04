@@ -13,8 +13,8 @@ public class abmDialogue {
     private static String A5_6 = "You didn’t have to include me!!! STEM!!!";
     private static String A5_7 = "Hmpf? Fine if you guys said yes but I'm not saying that to MC-san!";
 
-    private static String A6_1 = "says speech*";
-    private static String A6_2 = "Hmph! I knew everyone would like it.";
+    private static String A7_1 = "says speech*";
+    private static String A7_2 = "Hmph! I knew everyone would like it.";
     // End of ABM dialogue
 
     public abmDialogue(){}
@@ -28,6 +28,6 @@ public class abmDialogue {
     public static String getA5_5() { return A5_5; }
     public static String getA5_6() { return A5_6; }
     public static String getA5_7() { return A5_7; }
-    public static String getA6_1() { return A6_1; }
-    public static String getA6_2() { return A6_2; }
+    public static String getA7_1() { return A7_1; }
+    public static String getA7_2() { return A7_2; }
 }

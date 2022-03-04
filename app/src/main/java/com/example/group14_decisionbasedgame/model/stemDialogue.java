@@ -31,7 +31,7 @@ public class stemDialogue {
     private static String ST_1 ="MC-kun Do you know why I called you out here?";
     private static String ST_2 ="MC-kun I know that you’re just a simulation created by a person(She waves casually to the person who created this Script!,";
     private static String ST_3 ="while MC-kun was having trouble understanding the words that she had said!)";
-    private static String ST_4 ="I just want to say good-bye first to the person who’s reading and writing this Script!";
+    private static String ST_4 ="I just want to say good-bye first to the person who’s reading and writing this Script!(Continues to wave at nothing...)";
 
     private static String S7_1 ="says speech*";
     private static String S7_2 ="I’d just like to say that all the effort that we have been making for our club is highly appreciated,";

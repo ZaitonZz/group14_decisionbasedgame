@@ -520,6 +520,106 @@ public class dialogueFlow {
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(stemDialogue.getS6_5());
                         break;
+                    case 60:
+                        dialogue.setText(stemDialogue.getS6_6());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(stemDialogue.getS6_6());
+                        break;
+                    case 61:
+                        dialogue.setText(appRelated.getD6_10());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getD6_10());
+                        break;
+                    case 62:
+                        dialogue.setText(appRelated.getD6_11());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getD6_11());
+                        break;
+                    case 63:
+                        dialogue.setText(appRelated.getD6_12());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getD6_12());
+                        break;
+                    case 64:
+                        dialogue.setText(stemDialogue.getST_1());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(stemDialogue.getST_1());
+                        break;
+                    case 65:
+                        dialogue.setText(mcDialogue.getMT_1());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getMT_1());
+                        break;
+                    case 66:
+                        dialogue.setText(stemDialogue.getST_2());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(stemDialogue.getST_2());
+                        break;
+                    case 67:
+                        dialogue.setText(stemDialogue.getST_3());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(stemDialogue.getST_3());
+                        break;
+                    case 68:
+                        dialogue.setText(mcDialogue.getMT_2());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getMT_2());
+                        break;
+                    case 69:
+                        dialogue.setText(mcDialogue.getMT_3());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getMT_3());
+                        break;
+                    case 70:
+                        dialogue.setText(stemDialogue.getST_4());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(stemDialogue.getST_4());
+                        break;
+                    case 71:
+                        dialogue.setText(appRelated.getT1_1());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getT1_1());
+                        break;
+                    case 72:
+                        dialogue.setText(appRelated.getD7_1());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getD7_1());
+                        break;
+                    case 73:
+                        dialogue.setText(appRelated.getD7_2());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getD7_2());
+                        break;
+                    case 74:
+                        dialogue.setText(abmDialogue.getA7_1());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(abmDialogue.getA7_1());
+                        break;
+                    case 75:
+                        dialogue.setText(appRelated.getD7_3());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getD7_3());
+                        break;
+                    case 76:
+                        dialogue.setText(abmDialogue.getA7_2());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(abmDialogue.getA7_2());
+                        break;
+                    case 77:
+                        dialogue.setText(appRelated.getD7_4());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getD7_4());
+                        break;
+                    case 78:
+                        dialogue.setText(stemDialogue.getS7_1());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(stemDialogue.getS7_1());
+                        break;
+                    case 79:
+                        dialogue.setText(appRelated.getD7_5());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getD7_5());
+                        break;
                 }
                 break;
             case 2:
