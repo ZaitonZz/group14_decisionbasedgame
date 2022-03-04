@@ -2,6 +2,28 @@ package com.example.group14_decisionbasedgame.model;
 
 public class mcDialogue {
 
+    private static String Rt4mc1 = "Whoa ICT-senpai? Hugh, my head hurts huh? Where's the school where's everyone? What is this place [You only see an empty classroom, just a table and two chairs in the middle of it?] ";
+    private static String Rt4mc1_2 = "ICT is controlling what I type Wahhhh!!!  ";
+
+
+    private static String Rt4mc2 = "What! What do you mean by answering your questions? ";
+    private static String Rt4mc3 = "(You Look very hesitant don’t worry i won't shout at you anymore.)  huh? I didn’t even say that!? Did you do that! Fine, I will answer your four questions alright! ";
+
+    private static String Rt4mc3_A = "Of course idk space, an abyss, it's just two chairs and one table, it's just you and me here!? ";
+    private static String Rt4mc3_B = "Idk anymore you! Kept saying I’m sort of a simulation made by the so called writer, idk who i am anymore!";
+    private static String Rt4mc3_C = "We barely know each other. I haven't met you yet either? So what's the point of asking? I'm not mad, I'm just confused!";
+    private static String Rt4mc3_D = "All ready, okay can I go now!";
+
+    private static String Rt4mc4_A = "I will never fall to your tricks!";
+    private static String Rt4mc4_B = "YES! I will definitely not go back even if you think I am your soulmate!";
+    private static String Rt4mc4_C = "YES! I hope there’s no hope of staying here. . .";
+    private static String Rt4mc4_D = "Huh!? There’s no escape, No. No. NO!";
+
+    private static String Rt4mc5 = "I WISH TO BE NON EXISTENT(you yell on top of your lungs) ";
+
+
+
+
     private static String M2_1 = "Whoah! My bad i didn’t mean to nudge you like that, I’m sorry (MC bows his head).";
 
     private static String M4_1 = "Huh?";
@@ -51,6 +73,24 @@ public class mcDialogue {
     //End of mcDialogue
 
     public mcDialogue(){}
+
+
+    public static String getRt4mc1() { return  Rt4mc1; }
+    public static String getRt4mc1_2() { return  Rt4mc1_2; }
+
+    public static String getRt4mc2() { return  Rt4mc2; }
+    public static String getRt4mc3() { return  Rt4mc3; }
+    public static String getRt4mc3_A() { return  Rt4mc3_A; }
+    public static String getRt4mc3_B() { return  Rt4mc3_B; }
+    public static String getRt4mc3_C() { return  Rt4mc3_C; }
+    public static String getRt4mc3_D() { return  Rt4mc3_D; }
+
+    public static String getRt4mc4_A() { return  Rt4mc4_A; }
+    public static String getRt4mc4_B() { return  Rt4mc4_B; }
+    public static String getRt4mc4_C() { return  Rt4mc4_C; }
+    public static String getRt4mc4_D() { return  Rt4mc4_D; }
+    public static String getRt4mc5() { return  Rt4mc5; }
+
 
     public static String getM2_1() { return M2_1; }
 

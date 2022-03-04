@@ -7,6 +7,26 @@ public class appRelated {
     int choicenum = 0;
     int choicenumbuffer = 0;
 
+
+    static String Rt4Dlg1 ="All Script Deleted! All characters Deleted except ICT and MC-kun! Terraforming Script Loading. . . . . . . . . . ! Loaded new Script reformed! New outcomes reformed! New data and answers reformed! Delete Narrator Confirmed! ! ! !";
+    static String Rt4N1 ="Your wish is my command!";
+    static String Rt4Dlg2 ="DELETE APP CONFIRMED! ! !";
+
+    static String Rt4_Q1_A ="[A. where am i]";
+    static String Rt4_Q1_B ="[B. what are you]";
+    static String Rt4_Q1_C ="[C. are you mine?!? . . . . . . . .        ]";
+    static String Rt4_Q1_D ="[D. i am the one making the question i hope you answer all of them hehe! ! !] ";
+
+    static String Rt4_Q2_A ="[A. do you wish to continue]";
+    static String Rt4_Q2_B ="[B. do you wish to leave]";
+    static String Rt4_Q2_C ="[C. do you want to be free?]";
+    static String Rt4_Q2_D ="[D. do you want to restart, but once i restart it will be all this same as usual because we’re the only ones here in the world!?]";
+
+
+
+
+
+
     static String D1_1 =" You're starting your last year as a Junior Highschool student at Malayan Colleges Mindanao and have to make an important decision!";
     static String D1_2 =" You have to pick a strand soon for senior highschool!";
     static String D1_3 ="A lot of decisions and factors to consider, the overwhelming thoughts are put away immediately as you start to venture in.";
@@ -87,6 +107,21 @@ public class appRelated {
     //end of Narrator Dialogue
 
     public appRelated(){}
+
+
+
+    public static String getRt4_Q1_A() { return Rt4_Q1_A; }
+    public static String getRt4_Q1_B() { return Rt4_Q1_B; }
+    public static String getRt4_Q1_C() { return Rt4_Q1_C; }
+    public static String getRt4_Q1_D() { return Rt4_Q1_D; }
+    public static String getRt4_Q2_A() { return Rt4_Q2_A; }
+    public static String getRt4_Q2_B() { return Rt4_Q2_B; }
+    public static String getRt4_Q2_C() { return Rt4_Q2_C; }
+    public static String getRt4_Q2_D() { return Rt4_Q2_D; }
+
+    public static String getRt4Dlg1() { return Rt4Dlg1; }
+    public static String getRt4Dlg2() { return Rt4Dlg2; }
+    public static String getRt4N1() { return Rt4N1; }
 
     public static String getD1_1() { return D1_1; }
     public static String getD1_2() { return D1_2; }
