@@ -325,6 +325,7 @@ public class dialogueFlow {
                 nextquestion(test, next, A, B, C, D);
                 break;
             case 29:
+                hideAns( A, B, C, D);
                 switch (test.getChoicenum()) {
                     case 1:
                         dialogue.setText(stemDialogue.getR2_4());
@@ -349,9 +350,9 @@ public class dialogueFlow {
                 }
                 break;
             case 30:
-                dialogue.setText(humssdialogue.getH5_2());
+                dialogue.setText(humssdialogue.getH5_3());
                 dialogue.setCharacterDelay(50);
-                dialogue.animateText(humssdialogue.getH5_2());
+                dialogue.animateText(humssdialogue.getH5_3());
                 break;
             case 31:
                 dialogue.setText(ictDialogue.getI5_3());
@@ -394,9 +395,9 @@ public class dialogueFlow {
                 dialogue.animateText(mcDialogue.getM5_5());
                 break;
             case 39:
-                dialogue.setText(mcDialogue.getM5_5());
+                dialogue.setText(mcDialogue.getM5_6());
                 dialogue.setCharacterDelay(50);
-                dialogue.animateText(mcDialogue.getM5_5());
+                dialogue.animateText(mcDialogue.getM5_6());
                 break;
             case 40:
                 dialogue.setText(stemDialogue.getS5_10());
@@ -412,6 +413,113 @@ public class dialogueFlow {
                 dialogue.setText(appRelated.getD5_14());
                 dialogue.setCharacterDelay(50);
                 dialogue.animateText(appRelated.getD5_14());
+                break;
+            case 43:
+                dialogue.setText(appRelated.getD6_2());
+                dialogue.setCharacterDelay(50);
+                dialogue.animateText(appRelated.getD6_2());
+                break;
+            case 44:
+                dialogue.setText(appRelated.getD6_3());
+                dialogue.setCharacterDelay(50);
+                dialogue.animateText(appRelated.getD6_3());
+                break;
+            case 45:
+                dialogue.setText(appRelated.getD6_4());
+                dialogue.setCharacterDelay(50);
+                dialogue.animateText(appRelated.getD6_4());
+                localint = 3;
+                test.setQuestionnum(localint);
+                nextquestion(test, next, A, B, C, D);
+                break;
+            case 46:
+                hideAns( A, B, C, D);
+                dialogue.setText(humssdialogue.getH6_2());
+                dialogue.setCharacterDelay(50);
+                dialogue.animateText(humssdialogue.getH6_2());
+                break;
+            case 47:
+                dialogue.setText(humssdialogue.getH6_3());
+                dialogue.setCharacterDelay(50);
+                dialogue.animateText(humssdialogue.getH6_3());
+                break;
+            case 48:
+                dialogue.setText(appRelated.getD6_5());
+                dialogue.setCharacterDelay(50);
+                dialogue.animateText(appRelated.getD6_5());
+                break;
+            case 49:
+                dialogue.setText(appRelated.getD6_6());
+                dialogue.setCharacterDelay(50);
+                dialogue.animateText(appRelated.getD6_6());
+                break;
+            case 50:
+                dialogue.setText(stemDialogue.getS6_2());
+                dialogue.setCharacterDelay(50);
+                dialogue.animateText(stemDialogue.getS6_2());
+                break;
+            case 51:
+                dialogue.setText(stemDialogue.getS6_3());
+                dialogue.setCharacterDelay(50);
+                dialogue.animateText(stemDialogue.getS6_3());
+                break;
+            case 52:
+                dialogue.setText(appRelated.getD6_7());
+                dialogue.setCharacterDelay(50);
+                dialogue.animateText(appRelated.getD6_7());
+                break;
+            case 53:
+                switch (test.getChoicenum()){
+                    case 1:
+                        dialogue.setText(mcDialogue.getR3_1());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getR3_1());
+                        break;
+                    case 2:
+                        dialogue.setText(mcDialogue.getR3_2());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getR3_2());
+                        break;
+                    case 3:
+                        dialogue.setText(mcDialogue.getR3_3());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getR3_3());
+                        break;
+                    case 4:
+                        dialogue.setText(mcDialogue.getR3_4());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getR3_4());
+                        break;
+                }
+            case 54:
+                dialogue.setText(appRelated.getD6_8());
+                dialogue.setCharacterDelay(50);
+                dialogue.animateText(appRelated.getD6_8());
+                break;
+            case 55:
+                dialogue.setText(stemDialogue.getS6_4());
+                dialogue.setCharacterDelay(50);
+                dialogue.animateText(stemDialogue.getS6_4());
+                break;
+            case 56:
+                dialogue.setText(ictDialogue.getI6_2());
+                dialogue.setCharacterDelay(50);
+                dialogue.animateText(ictDialogue.getI6_2());
+                break;
+            case 57:
+                dialogue.setText(ictDialogue.getI6_3());
+                dialogue.setCharacterDelay(50);
+                dialogue.animateText(ictDialogue.getI6_3());
+                break;
+            case 58:
+                dialogue.setText(appRelated.getD6_9());
+                dialogue.setCharacterDelay(50);
+                dialogue.animateText(appRelated.getD6_9());
+                break;
+            case 59:
+                dialogue.setText(stemDialogue.getS6_5());
+                dialogue.setCharacterDelay(50);
+                dialogue.animateText(stemDialogue.getS6_5());
                 break;
         }
         break;
@@ -453,6 +561,19 @@ public class dialogueFlow {
                 displayAns(A, B, C, D);
                 break;
             case 3:
+                A.setText(appRelated.getQ3_A());
+                A.setCharacterDelay(0);
+                A.animateText(appRelated.getQ3_A());
+                B.setText(appRelated.getQ3_B());
+                B.setCharacterDelay(0);
+                B.animateText(appRelated.getQ3_B());
+                C.setText(appRelated.getQ3_C());
+                C.setCharacterDelay(0);
+                C.animateText(appRelated.getQ3_C());
+                D.setText(appRelated.getQ3_D());
+                D.setCharacterDelay(0);
+                D.animateText(appRelated.getQ3_D());
+                displayAns(A, B, C, D);
                 break;
             case 4:
                 break;
@@ -521,6 +642,9 @@ public class dialogueFlow {
                 }
                 break;
             case 3:
+                dialogue.setText(stemDialogue.getS6_1());
+                dialogue.setCharacterDelay(50);
+                dialogue.animateText(stemDialogue.getS6_1());
                 break;
             case 4:
                 break;

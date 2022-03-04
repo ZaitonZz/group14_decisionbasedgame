@@ -40,8 +40,10 @@ public class mcDialogue {
     private static String R2_3 = "What about Computersocity? Hmm I'm not sure if it's a good one, but what do you guys think?";
     private static String R2_4 = "[silence]";
 
-    private static String R3_1_1 = "Alrighty, my device is more of a software that can switch to different apps within the desktop in an efficient amount of time, ";
-    private static String R3_1_2 = "hinting that its quite fast. It's called StreamDeck.";
+    private static String R3_1 = "Uhmm alrighty my speech is all about a device that can be used for flat surfaces it’s called the StreamDeck";
+    private static String R3_2 = "Uhmm alrighty my speech is all about a device that can be used for flat surfaces it’s called the RGB to all devices";
+    private static String R3_3 = "Uhmm alrighty my speech is all about a device that can be used for flat surfaces it’s called the Logitech C270 Desktop WebCam";
+    private static String R3_4 = "Uhmm alrighty my speech is all about a device that can be used for flat surfaces it’s called the DeskMatt";
 
     private static String R4_1_1 = "ABM-senpai since this is my last year I just want to say I want to be apart with you, ";
     private static String R4_1_2 = "well i-i-i-i mean be with you and your course together until we graduate even though you're about to be going to a university!";
@@ -87,8 +89,10 @@ public class mcDialogue {
     public static String getR2_3() { return R2_3; }
     public static String getR2_4() { return R2_4; }
 
-    public static String getR3_1_1() { return R3_1_1; }
-    public static String getR3_1_2() { return R3_1_2; }
+    public static String getR3_1() { return R3_1; }
+    public static String getR3_2() { return R3_2; }
+    public static String getR3_3() { return R3_3; }
+    public static String getR3_4() { return R3_4; }
 
     public static String getR4_1_1() { return R4_1_1; }
     public static String getR4_1_2() { return R4_1_2; }

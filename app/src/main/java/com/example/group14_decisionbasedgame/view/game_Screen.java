@@ -19,12 +19,12 @@ import com.example.group14_decisionbasedgame.controller.dialogueFlow;
 import com.example.group14_decisionbasedgame.controller.typewriter_effect;
 import com.example.group14_decisionbasedgame.model.appRelated;
 
-public class scene_one extends AppCompatActivity implements View.OnClickListener {
+public class game_Screen extends AppCompatActivity implements View.OnClickListener {
     //TODO: UI + clock
     // TODO: button design for Pause, auto, skip and back
     private androidx.constraintlayout.widget.ConstraintLayout myLayout = null;
 
-    private Button btnAuto, btnPause, btnHist, btnNext,btnA, btnB, btnC, btnD;
+    private Button btnAuto, btnPause, btnHist, btnNext;
     private Boolean allowedback;
     ImageView background, img_char;
     typewriter_effect txt_dlg,txt_A,txt_B,txt_C,txt_D;
@@ -33,11 +33,11 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
     int localvar;
 
 
-    public scene_one(){}
+    public game_Screen(){}
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.scene_one);
+        setContentView(R.layout.game_screen);
         enableFullscreen();
         new dialogueFlow();
         Log.d(TAG, "scene one activated");
@@ -59,10 +59,6 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
         btnPause = (Button) findViewById(R.id.btn_Pause);
         btnAuto = findViewById(R.id.btn_auto);
         btnNext = findViewById(R.id.btn_next);
-        btnA = findViewById(R.id.btn_A);
-        btnB = findViewById(R.id.btn_B);
-        btnC = findViewById(R.id.btn_C);
-        btnD = findViewById(R.id.btn_D);
 
         txt_dlg = findViewById(R.id.txt_dlg);
         txt_A = findViewById(R.id.txt_A);
@@ -98,7 +94,7 @@ public class scene_one extends AppCompatActivity implements View.OnClickListener
     public void onClick(View v) {
     switch (v.getId()) {
         case R.id.btn_Pause:
-            startActivity(new Intent(scene_one.this, pause_screen.class));
+            startActivity(new Intent(game_Screen.this, pause_screen.class));
             break;
         case R.id.btn_auto:
             break;

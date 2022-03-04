@@ -25,43 +25,48 @@ public class appRelated {
     static String Q1_C = "[C. run away from the scene.]";
     static String Q1_D = "[D. ignore the offer.]";
 
-    static String Q1_B_1 ="You notice that you’re constantly walking aimlessly for what feels like miles, and yet no interest has sparked. ";
-    static String Q1_C_1 ="You start to hear a song that you aren’t familiar with… As the narrator I know it’s the Bruno Mars Run Away song. As the songs starts to kick in this you realise that there is no escape to this tragic yet cursed wonderland,";
-    static String Q1_C_2 ="yet you keep running and running. You realise that the hallway looks similar to the one you saw earlier and decide to go into the room. As you take your first glance you see the same girl you bumped into earlier this morning…";
+    static String Q1_B_1 = "You notice that you’re constantly walking aimlessly for what feels like miles, and yet no interest has sparked. ";
+    static String Q1_C_1 = "You start to hear a song that you aren’t familiar with… As the narrator I know it’s the Bruno Mars Run Away song. As the songs starts to kick in this you realise that there is no escape to this tragic yet cursed wonderland,";
+    static String Q1_C_2 = "yet you keep running and running. You realise that the hallway looks similar to the one you saw earlier and decide to go into the room. As you take your first glance you see the same girl you bumped into earlier this morning…";
 
-    static String D5_1 ="You enter the club room with the pretty senior, and see three girls glaring as you enter the room.";
-    static String D5_2 ="You realise one of them was the girl you bumped into earlier this morning.";
-    static String D5_3 ="You look at the girl you ran into this morning with pitiful eyes.";
-    static String D5_4 ="A girl with green hair and tall stature stands up and begins to speak with confidence.";
-    static String D5_5 ="After her short introduction, HUMSS senpai is sits herself down, whilst a very shy individual takes the stand next.";
-    static String D5_6 ="ICT senpai takes her seat. A few seconds go by with no one taking the stand,";
-    static String D5_7 =" but you notice all of your seniors staring at the girl with pink hair.";
-    static String D5_8 ="The senior who called you in for the club immediately interjects.";
-    static String D5_9 ="You want to contribute and prove to your seniors that you are reliable,";
-    static String D5_10="but the problem is you have no idea what the whole club is about.";
-    static String D5_11="You scan the room for any clues that could give you an idea of what this is all for.";
-    static String D5_12="Everyone in the room is staring and trying to come up with a name.";
-    static String D5_13="You enter a sequence of events where the whole club needs a name. Thus you must decide what fate is waiting ahead!";
-    static String D5_14="With the club meeting being adjourned, you all leave and head home.";
+    static String D5_1 = "You enter the club room with the pretty senior, and see three girls glaring as you enter the room.";
+    static String D5_2 = "You realise one of them was the girl you bumped into earlier this morning.";
+    static String D5_3 = "You look at the girl you ran into this morning with pitiful eyes.";
+    static String D5_4 = "A girl with green hair and tall stature stands up and begins to speak with confidence.";
+    static String D5_5 = "After her short introduction, HUMSS senpai is sits herself down, whilst a very shy individual takes the stand next.";
+    static String D5_6 = "ICT senpai takes her seat. A few seconds go by with no one taking the stand,";
+    static String D5_7 = " but you notice all of your seniors staring at the girl with pink hair.";
+    static String D5_8 = "The senior who called you in for the club immediately interjects.";
+    static String D5_9 = "You want to contribute and prove to your seniors that you are reliable,";
+    static String D5_10= "but the problem is you have no idea what the whole club is about.";
+    static String D5_11= "You scan the room for any clues that could give you an idea of what this is all for.";
+    static String D5_12= "Everyone in the room is staring and trying to come up with a name.";
+    static String D5_13= "You enter a sequence of events where the whole club needs a name. Thus you must decide what fate is waiting ahead!";
+    static String D5_14= "With the club meeting being adjourned, you all leave and head home.";
 
     static String Q2_A = "[A. Station ]";
-    static String Q2_B =" [B. Kawaii Computers ]";
-    static String Q2_C =" [C.Computersocity]";
-    static String Q2_D =" [D. Give up on naming the group and then decide for themselves?]";
+    static String Q2_B = "[B. Kawaii Computers ]";
+    static String Q2_C = "[C.Computersocity]";
+    static String Q2_D = "[D. Give up on naming the group and then decide for themselves?]";
 
-    static String D6_1 ="With the club meeting being adjourned, you all leave and head home.";
-    static String D6_2 ="You enter the clubroom with your senpais and settle yourselves. You remember the topics you will be discussing today,";
-    static String D6_3 ="and try to remember what device you chose to cover.";
-    static String D6_4 ="It's now your faith to decide on what to choose again. What type of speech are you willing to do!?";
-    static String Q3 = "[A. StreamDeck] [B. RGB to all devices] [C.Logitech C270 Desktop WebCam] [D. Desk Matt]";
-    static String D6_5 ="HUMSS senpai continues to explain the Liquid Coolant device in more detail,";
-    static String D6_6 ="while the rest listen with their undivided attention solely on her exquisite tone of voice that shapes the sentences everytime she speaks.";
-    static String D6_7 ="You stand in front of all your peers and begin your presentation.";
-    static String D6_8 ="MC-kun continues to casually speak about his/her device in a controlled tone.";
-    static String D6_9 ="ICT continued to power through with her discussion.";
-    static String D6_10="ABM senpai quickly breezed through her device, and soon enough STEM senpai was presenting hers as well,";
-    static String D6_11="and then the bell rang just on time. STEM senpai told the group that further discussion will be continued tomorrow.";
-    static String D6_12="However you we’re called out by STEM senpai after the whole group went outside the club room.";
+    static String D6_1 = "With the club meeting being adjourned, you all leave and head home.";
+    static String D6_2 = "You enter the clubroom with your senpais and settle yourselves. You remember the topics you will be discussing today,";
+    static String D6_3 = "and try to remember what device you chose to cover.";
+    static String D6_4 = "It's now your faith to decide on what to choose again. What type of speech are you willing to do!?";
+
+    static String D6_5 = "HUMSS senpai continues to explain the Liquid Coolant device in more detail,";
+    static String D6_6 = "while the rest listen with their undivided attention solely on her exquisite tone of voice that shapes the sentences everytime she speaks.";
+    static String D6_7 = "You stand in front of all your peers and begin your presentation.";
+    static String D6_8 = "MC-kun continues to casually speak about his/her device in a controlled tone.";
+    static String D6_9 = "ICT continued to power through with her discussion.";
+    static String D6_10= "ABM senpai quickly breezed through her device, and soon enough STEM senpai was presenting hers as well,";
+    static String D6_11= "and then the bell rang just on time. STEM senpai told the group that further discussion will be continued tomorrow.";
+    static String D6_12= "However you we’re called out by STEM senpai after the whole group went outside the club room.";
+
+    static String Q3_A = "[A. StreamDeck] ";
+    static String Q3_B = "[B. RGB to all devices] ";
+    static String Q3_C = "[C.Logitech C270 Desktop WebCam] ";
+    static String Q3_D = "[D. Desk Matt]";
 
     static String T1_1 ="Error 404 This Script Was Not Found! Data Corrupted! Error! Error! Restarting Simulation!";
 
@@ -138,7 +143,10 @@ public class appRelated {
     public static String getD6_11() { return D6_11; }
     public static String getD6_12() { return D6_12; }
 
-    public static String getQ3() { return Q3; }
+    public static String getQ3_A() { return Q3_A; }
+    public static String getQ3_B() { return Q3_B; }
+    public static String getQ3_C() { return Q3_C; }
+    public static String getQ3_D() { return Q3_D; }
 
     public static String getT1_1() { return T1_1; }
 
