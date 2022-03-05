@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@drawable/exit_confirmation">
 
 
     <TextView
@@ -25,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Dismiss"
+        android:backgroundTint="#F999B7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.88"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,6 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Agree"
+        android:backgroundTint="#F999B7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.124"
         app:layout_constraintStart_toStartOf="parent"

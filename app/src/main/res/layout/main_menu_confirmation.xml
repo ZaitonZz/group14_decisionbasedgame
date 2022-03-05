@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    android:background="#F9C5D5">
 
 
     <TextView
@@ -16,10 +17,11 @@
         android:textAllCaps="true"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.581"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="4dp"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="16dp"
+        />
 
     <Button
         android:id="@+id/btn_ConfirmBack"
@@ -34,7 +36,8 @@
         app:layout_constraintStart_toEndOf="@+id/btn_Confirm"
         app:layout_constraintTop_toBottomOf="@+id/txtMenuConfirmation"
         app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:backgroundTint="#F999B7"/>
 
     <Button
         android:id="@+id/btn_Confirm"
@@ -47,6 +50,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtMenuConfirmation"
         app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints" />
+        tools:ignore="MissingConstraints"
+        android:backgroundTint="#F999B7"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
