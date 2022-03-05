@@ -9,9 +9,11 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.group14_decisionbasedgame.R;
 
-public class main_menu_confirmation extends Activity {
+public class main_menu_confirmation extends AppCompatActivity {
 
     private Button btnConfirmBack, btnConfirm;
 

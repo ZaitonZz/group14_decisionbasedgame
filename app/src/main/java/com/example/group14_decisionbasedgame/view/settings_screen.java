@@ -31,7 +31,7 @@ import com.example.group14_decisionbasedgame.controller.musicRelated;
 
 
 
-public class settings_screen extends Activity{
+public class settings_screen extends AppCompatActivity{
 
     private Button btnBack, btnUpdate, btnRestart;
     private SwitchCompat audioSwitch;

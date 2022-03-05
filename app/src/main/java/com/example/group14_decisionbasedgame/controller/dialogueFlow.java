@@ -2,7 +2,10 @@ package com.example.group14_decisionbasedgame.controller;
 
 import static android.content.ContentValues.TAG;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Handler;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -15,10 +18,17 @@ import com.example.group14_decisionbasedgame.model.humssdialogue;
 import com.example.group14_decisionbasedgame.model.ictDialogue;
 import com.example.group14_decisionbasedgame.model.mcDialogue;
 import com.example.group14_decisionbasedgame.model.stemDialogue;
+import com.example.group14_decisionbasedgame.view.Intro_Screen;
+import com.example.group14_decisionbasedgame.view.exit_confirmation;
+import com.example.group14_decisionbasedgame.view.game_Screen;
+import com.example.group14_decisionbasedgame.view.loading_screen_toStart;
+import com.example.group14_decisionbasedgame.view.main_menu;
+import com.example.group14_decisionbasedgame.view.reboot_scene;
 
 public class dialogueFlow {
     static int localint;
-    public dialogueFlow(){
+
+    public dialogueFlow() {
         new mcDialogue();
         new stemDialogue();
         new humssdialogue();
@@ -27,7 +37,7 @@ public class dialogueFlow {
         new appRelated();
     }
 
-    public static void sceneone(ImageView character, typewriter_effect dialogue, Button auto, Button skip_next, Context context){
+    public static void sceneone(ImageView character, typewriter_effect dialogue, Button auto, Button skip_next, Context context) {
         //TODO: test out how this single command should wait for input before moving on to the next dialogue
         //TODO: should map to scenetwo after this one is done
         //TODO: animation for characters when they fade in and fade out
@@ -36,6 +46,7 @@ public class dialogueFlow {
         dialogue.setCharacterDelay(50);
         dialogue.animateText(appRelated.getD1_1());
     }
+
     public void nextscene(appRelated test, ImageView character, ImageView background, typewriter_effect dialogue, Button next, Context context, typewriter_effect A, typewriter_effect B, typewriter_effect C, typewriter_effect D) {
         switch (test.getScenenum()) {
             case 0: //scene 1 until 1st question
@@ -631,6 +642,8 @@ public class dialogueFlow {
                         dialogue.animateText(appRelated.getRt4Dlg1());
                         break;
                     case 2:
+                        character.setImageResource(R.drawable.ict);
+                        character.setVisibility(character.VISIBLE);
                         dialogue.setText(ictDialogue.getRt4Ict1());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(ictDialogue.getRt4Ict1());
@@ -664,11 +677,21 @@ public class dialogueFlow {
                         dialogue.setText(mcDialogue.getRt4mc2());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(mcDialogue.getRt4mc2());
+                        break;
+                    case 10:
+                        dialogue.setText(ictDialogue.getRt4Ict4());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(ictDialogue.getRt4Ict4());
+                    case 11:
+                        character.setVisibility(character.INVISIBLE);
+                        dialogue.setText(mcDialogue.getRt4mc3());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getRt4mc3());
                         localint = 4;
                         test.setQuestionnum(localint);
                         nextquestion(test, next, A, B, C, D);
                         break;
-                    case 9:
+                    case 12:
                         hideAns(A, B, C, D);
                         switch (test.getChoicenum()) {
                             case 1:
@@ -680,36 +703,41 @@ public class dialogueFlow {
                                 dialogue.setText(mcDialogue.getRt4mc3_B());
                                 dialogue.setCharacterDelay(50);
                                 dialogue.animateText(mcDialogue.getRt4mc3_B());
-                                test.setDialoguenum(10);
+                                test.setDialoguenum(14);
                                 break;
                             case 3:
                                 dialogue.setText(mcDialogue.getRt4mc3_C());
                                 dialogue.setCharacterDelay(50);
                                 dialogue.animateText(mcDialogue.getRt4mc3_C());
-                                test.setDialoguenum(10);
+                                test.setDialoguenum(14);
                                 break;
                             case 4:
                                 dialogue.setText(mcDialogue.getRt4mc3_D());
                                 dialogue.setCharacterDelay(50);
                                 dialogue.animateText(mcDialogue.getRt4mc3_D());
-                                test.setDialoguenum(10);
+                                test.setDialoguenum(14);
                                 break;
                         }
                         break;
-                    case 10:
-                        dialogue.setText(ictDialogue.getRt4Ict4());
-                        dialogue.setCharacterDelay(50);
-                        dialogue.animateText(ictDialogue.getRt4Ict4());
-                        break;
-                    case 11:
+                    case 13:
                         dialogue.setText(ictDialogue.getRt4Ict5());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(ictDialogue.getRt4Ict5());
+                        break;
+                    case 14:
+                        dialogue.setText(ictDialogue.getRt4choices2());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(ictDialogue.getRt4choices2());
+                        break;
+                    case 15:
+                        dialogue.setText(ictDialogue.getRt4Ict6());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(ictDialogue.getRt4Ict6());
                         localint = 5;
                         test.setQuestionnum(localint);
                         nextquestion(test, next, A, B, C, D);
                         break;
-                    case 12:
+                    case 16:
                         hideAns(A, B, C, D);
                         switch (test.getChoicenum()) {
                             case 1:
@@ -734,36 +762,48 @@ public class dialogueFlow {
                                 break;
                         }
                         break;
-                    case 13:
-                        dialogue.setText(ictDialogue.getRt4Ict6());
-                        dialogue.setCharacterDelay(50);
-                        dialogue.animateText(ictDialogue.getRt4Ict6());
-                        break;
-                    case 14:
-                        dialogue.setText(appRelated.getRt4N1());
-                        dialogue.setCharacterDelay(50);
-                        dialogue.animateText(appRelated.getRt4N1());
-                        break;
-                    case 15:
-                    dialogue.setText(appRelated.getRt4Dlg2());
-                    dialogue.setCharacterDelay(50);
-                    dialogue.animateText(appRelated.getRt4Dlg2());
-                    break;
-                    case 16:
+                    case 17:
                         dialogue.setText(ictDialogue.getRt4Ict7());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(ictDialogue.getRt4Ict7());
                         break;
-                    case 17:
-
-
-
+                    case 18:
+                        dialogue.setText(ictDialogue.getRt4Ict8());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(ictDialogue.getRt4Ict8());
+                        break;
+                    case 19:
+                        dialogue.setText(mcDialogue.getRt4mc5());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getRt4mc5());
+                        break;
+                    case 20:
+                        dialogue.setText(appRelated.getRt4N1());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getRt4N1());
+                        break;
+                    case 21:
+                        dialogue.setText(appRelated.getRt4Dlg2());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getRt4Dlg2());
+                        break;
+                    case 22:
+                        dialogue.setText(ictDialogue.getRt4Ict9());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(ictDialogue.getRt4Ict9());
+                        break;
+                    case 23:
+                        Intent intent = new Intent(context, reboot_scene.class);
+                        context.startActivity(intent);
+                        break;
                 }
+
         }
     }
-    public void nextquestion(appRelated test,Button next, typewriter_effect A, typewriter_effect B, typewriter_effect C, typewriter_effect D){
+
+    public void nextquestion(appRelated test, Button next, typewriter_effect A, typewriter_effect B, typewriter_effect C, typewriter_effect D) {
         disNxtBut_actQstBut(next, A, B, C, D);
-        switch (test.getQuestionnum()){
+        switch (test.getQuestionnum()) {
             case 1:
                 A.setText(appRelated.getQ1_A());
                 A.setCharacterDelay(0);
@@ -844,11 +884,11 @@ public class dialogueFlow {
         }
     }
 
-    public static void nextResp(appRelated test,typewriter_effect dialogue,int qnum, int choicenum, ImageView character){
-        switch (qnum){
+    public static void nextResp(appRelated test, typewriter_effect dialogue, int qnum, int choicenum, ImageView character) {
+        switch (qnum) {
             case 1:
                 character.setVisibility(character.INVISIBLE);
-                switch (choicenum){
+                switch (choicenum) {
                     case 1:
                         Log.d(TAG, "question 1 case 1");
                         dialogue.setText(mcDialogue.getR1_1());
@@ -878,7 +918,7 @@ public class dialogueFlow {
                 }
                 break;
             case 2:
-                switch (choicenum){
+                switch (choicenum) {
                     case 1:
                         Log.d(TAG, "question 2 case 1");
                         dialogue.setText(mcDialogue.getR2_1());
@@ -914,6 +954,7 @@ public class dialogueFlow {
                 break;
         }
     }
+
     public static void disNxtBut_actQstBut(Button next, TextView a, TextView b, TextView c, TextView d) {
         next.setEnabled(false);
         a.setEnabled(true);
@@ -921,6 +962,7 @@ public class dialogueFlow {
         c.setEnabled(true);
         d.setEnabled(true);
     }
+
     public static void actNxtBut_disQstBut(Button next, TextView a, TextView b, TextView c, TextView d) {
         next.setEnabled(true);
         a.setEnabled(false);
@@ -928,16 +970,20 @@ public class dialogueFlow {
         c.setEnabled(false);
         d.setEnabled(false);
     }
-    public static void displayAns(typewriter_effect A, typewriter_effect B, typewriter_effect C, typewriter_effect D){
+
+    public static void displayAns(typewriter_effect A, typewriter_effect B, typewriter_effect C, typewriter_effect D) {
         A.setVisibility(A.VISIBLE);
         B.setVisibility(B.VISIBLE);
         C.setVisibility(C.VISIBLE);
         D.setVisibility(D.VISIBLE);
     }
-    public static void hideAns(typewriter_effect A, typewriter_effect B, typewriter_effect C, typewriter_effect D){
+
+    public static void hideAns(typewriter_effect A, typewriter_effect B, typewriter_effect C, typewriter_effect D) {
         A.setVisibility(A.INVISIBLE);
         B.setVisibility(B.INVISIBLE);
         C.setVisibility(C.INVISIBLE);
         D.setVisibility(D.INVISIBLE);
     }
+
 }
+

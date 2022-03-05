@@ -13,8 +13,8 @@ public class ictDialogue {
     private static String Rt4Ict8 = "What’s wrong don’t be afraid I’m here only I can protect you!";
     private static String Rt4Ict9 = "Noooooooooooooo!!!!!!]";
 
-    private static String Rt4choices = "[A. do you wish to continue] [B. do you wish to leave] [C. do you want to be free?] [D. do you want to restart, but once i restart it will be all this same as usual because we’re the only ones here in the world!?] ";
-
+    private static String Rt4choices = "[A. where am i] [B. what are you] [C. are you mine?!? . . . . . . . .        ] [D. i am the one making the question i hope you answer all of them hehe! ! !] ";
+    private static String Rt4choices2 = "[A. do you wish to continue] [B. do you wish to leave] [C. do you want to be free?] [D. do you want to restart, but once i restart it will be all this same as usual because we’re the only ones here in the world!?] ";
 
     private static String I5_1 = "W-w-w-what h-a-d-happened? W-w-was there a fight?.";
     private static String I5_2 = "I-i-i-i’m I-i-i-C-c-T do not mind me, I am quite shy and don’t care much for socializing, but I try my best to fulfil my duties as the clubs Secretary.";
@@ -26,6 +26,7 @@ public class ictDialogue {
 
     public ictDialogue(){}
     public static String getRt4choices() { return  Rt4choices; }
+    public static String getRt4choices2() { return  Rt4choices2; }
 
     public static String getRt4Ict1() { return  Rt4Ict1; }
     public static String getRt4Ict2() { return  Rt4Ict2; }

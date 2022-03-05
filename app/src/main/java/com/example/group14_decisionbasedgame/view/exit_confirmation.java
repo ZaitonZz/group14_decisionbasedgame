@@ -10,9 +10,11 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.group14_decisionbasedgame.R;
 
-public class exit_confirmation extends Activity {
+public class exit_confirmation extends AppCompatActivity{
 
     // TODO: Background, Button design for Agree and dismiss
 

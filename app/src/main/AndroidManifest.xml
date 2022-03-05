@@ -40,6 +40,10 @@
         <activity
             android:name=".view.main_menu_confirmation"
             android:exported="true"/>
+        <activity
+            android:name=".view.reboot_scene"
+            android:exported="true"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>
