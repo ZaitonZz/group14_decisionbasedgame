@@ -22,6 +22,7 @@ public class ictDialogue {
 
     private static String I6_2 = "A-a-a-alright! I will be presenting the RGB colours. It is a device famously known for its colourful lights that can be soothed to your preference.";
     private static String I6_3 = "(while she keeps looking around her so she won’t be that scared and shy.).";
+    private static String R4_1 = "Are y-yo-you sure you want to choose me?";
     //End of ICT dialogue
 
     public ictDialogue(){}
@@ -44,4 +45,6 @@ public class ictDialogue {
 
     public static String getI6_2() { return I6_2; }
     public static String getI6_3() { return I6_3; }
+
+    public static String getR4_1() { return R4_1; }
 }

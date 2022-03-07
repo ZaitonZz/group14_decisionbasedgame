@@ -2,10 +2,8 @@ package com.example.group14_decisionbasedgame.controller;
 
 import static android.content.ContentValues.TAG;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Handler;
 import android.util.Log;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -18,10 +16,6 @@ import com.example.group14_decisionbasedgame.model.humssdialogue;
 import com.example.group14_decisionbasedgame.model.ictDialogue;
 import com.example.group14_decisionbasedgame.model.mcDialogue;
 import com.example.group14_decisionbasedgame.model.stemDialogue;
-import com.example.group14_decisionbasedgame.view.Intro_Screen;
-import com.example.group14_decisionbasedgame.view.exit_confirmation;
-import com.example.group14_decisionbasedgame.view.game_Screen;
-import com.example.group14_decisionbasedgame.view.loading_screen_toStart;
 import com.example.group14_decisionbasedgame.view.main_menu;
 import com.example.group14_decisionbasedgame.view.reboot_scene;
 
@@ -191,6 +185,7 @@ public class dialogueFlow {
                 Log.d(TAG, "Route 1 activated");
                 switch (test.getDialoguenum()) {
                     case 1:
+                        background.setImageResource(R.drawable.classroom);
                         character.setVisibility(character.INVISIBLE);
                         dialogue.setText(appRelated.getD5_1());
                         dialogue.setCharacterDelay(50);
@@ -202,26 +197,32 @@ public class dialogueFlow {
                         dialogue.animateText(appRelated.getD5_2());
                         break;
                     case 3:
+                        character.setVisibility(character.VISIBLE);
+                        character.setImageResource(R.drawable.abmtwo);
                         dialogue.setText(abmDialogue.getA5_1());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(abmDialogue.getA5_1());
                         break;
                     case 4:
+                        character.setImageResource(R.drawable.humsstwo);
                         dialogue.setText(humssdialogue.getH5_1());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(humssdialogue.getH5_1());
                         break;
                     case 5:
+                        character.setImageResource(R.drawable.icttwo);
                         dialogue.setText(ictDialogue.getI5_1());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(ictDialogue.getI5_1());
                         break;
                     case 6:
+                        character.setImageResource(R.drawable.stemtwo);
                         dialogue.setText(stemDialogue.getS5_1());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(stemDialogue.getS5_1());
                         break;
                     case 7:
+                        character.setVisibility(character.INVISIBLE);
                         dialogue.setText(mcDialogue.getM5_1());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(mcDialogue.getM5_1());
@@ -237,16 +238,20 @@ public class dialogueFlow {
                         dialogue.animateText(mcDialogue.getM5_2());
                         break;
                     case 10:
+                        character.setVisibility(character.VISIBLE);
+                        character.setImageResource(R.drawable.abmtwo);
                         dialogue.setText(abmDialogue.getA5_2());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(abmDialogue.getA5_2());
                         break;
                     case 11:
+                        character.setImageResource(R.drawable.stemtwo);
                         dialogue.setText(stemDialogue.getS5_2());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(stemDialogue.getS5_2());
                         break;
                     case 12:
+                        character.setImageResource(R.drawable.humsstwo);
                         dialogue.setText(appRelated.getD5_4());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(appRelated.getD5_4());
@@ -257,6 +262,7 @@ public class dialogueFlow {
                         dialogue.animateText(humssdialogue.getH5_2());
                         break;
                     case 14:
+                        character.setImageResource(R.drawable.icttwo);
                         dialogue.setText(appRelated.getD5_5());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(appRelated.getD5_5());
@@ -267,6 +273,7 @@ public class dialogueFlow {
                         dialogue.animateText(ictDialogue.getI5_2());
                         break;
                     case 16:
+                        character.setVisibility(character.INVISIBLE);
                         dialogue.setText(appRelated.getD5_6());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(appRelated.getD5_6());
@@ -277,11 +284,14 @@ public class dialogueFlow {
                         dialogue.animateText(appRelated.getD5_7());
                         break;
                     case 18:
+                        character.setVisibility(character.VISIBLE);
+                        character.setImageResource(R.drawable.abmtwo);
                         dialogue.setText(abmDialogue.getA5_3());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(abmDialogue.getA5_3());
                         break;
                     case 19:
+                        character.setImageResource(R.drawable.stemtwo);
                         dialogue.setText(appRelated.getD5_8());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(appRelated.getD5_8());
@@ -297,16 +307,19 @@ public class dialogueFlow {
                         dialogue.animateText(stemDialogue.getS5_4());
                         break;
                     case 22:
+                        character.setImageResource(R.drawable.abmtwo);
                         dialogue.setText(abmDialogue.getA5_4());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(abmDialogue.getA5_4());
                         break;
                     case 23:
+                        character.setImageResource(R.drawable.stemtwo);
                         dialogue.setText(stemDialogue.getS5_5());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(stemDialogue.getS5_5());
                         break;
                     case 24:
+                        character.setVisibility(character.INVISIBLE);
                         dialogue.setText(appRelated.getD5_9());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(appRelated.getD5_9());
@@ -335,6 +348,8 @@ public class dialogueFlow {
                         nextquestion(test, next, A, B, C, D);
                         break;
                     case 29:
+                        character.setVisibility(character.VISIBLE);
+                        character.setImageResource(R.drawable.stemtwo);
                         hideAns(A, B, C, D);
                         switch (test.getChoicenum()) {
                             case 1:
@@ -360,21 +375,25 @@ public class dialogueFlow {
                         }
                         break;
                     case 30:
+                        character.setImageResource(R.drawable.humsstwo);
                         dialogue.setText(humssdialogue.getH5_3());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(humssdialogue.getH5_3());
                         break;
                     case 31:
+                        character.setImageResource(R.drawable.icttwo);
                         dialogue.setText(ictDialogue.getI5_3());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(ictDialogue.getI5_3());
                         break;
                     case 32:
+                        character.setImageResource(R.drawable.abmtwo);
                         dialogue.setText(abmDialogue.getA5_5());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(abmDialogue.getA5_5());
                         break;
                     case 33:
+                        character.setVisibility(character.INVISIBLE);
                         dialogue.setText(mcDialogue.getM5_3());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(mcDialogue.getM5_3());
@@ -385,6 +404,8 @@ public class dialogueFlow {
                         dialogue.animateText(mcDialogue.getM5_4());
                         break;
                     case 35:
+                        character.setVisibility(character.VISIBLE);
+                        character.setImageResource(R.drawable.stemtwo);
                         dialogue.setText(stemDialogue.getS5_7());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(stemDialogue.getS5_7());
@@ -400,6 +421,7 @@ public class dialogueFlow {
                         dialogue.animateText(stemDialogue.getS5_9());
                         break;
                     case 38:
+                        character.setVisibility(character.INVISIBLE);
                         dialogue.setText(mcDialogue.getM5_5());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(mcDialogue.getM5_5());
@@ -410,6 +432,8 @@ public class dialogueFlow {
                         dialogue.animateText(mcDialogue.getM5_6());
                         break;
                     case 40:
+                        character.setVisibility(character.VISIBLE);
+                        character.setImageResource(R.drawable.stemtwo);
                         dialogue.setText(stemDialogue.getS5_10());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(stemDialogue.getS5_10());
@@ -420,11 +444,13 @@ public class dialogueFlow {
                         dialogue.animateText(stemDialogue.getS5_11());
                         break;
                     case 42:
+                        character.setVisibility(character.INVISIBLE);
                         dialogue.setText(appRelated.getD5_14());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(appRelated.getD5_14());
                         break;
                     case 43:
+                        background.setImageResource(R.drawable.clubroom);
                         dialogue.setText(appRelated.getD6_2());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(appRelated.getD6_2());
@@ -443,6 +469,7 @@ public class dialogueFlow {
                         nextquestion(test, next, A, B, C, D);
                         break;
                     case 46:
+                        character.setImageResource(R.drawable.humsstwo);
                         hideAns(A, B, C, D);
                         dialogue.setText(humssdialogue.getH6_2());
                         dialogue.setCharacterDelay(50);
@@ -464,6 +491,7 @@ public class dialogueFlow {
                         dialogue.animateText(appRelated.getD6_6());
                         break;
                     case 50:
+                        character.setImageResource(R.drawable.stemtwo);
                         dialogue.setText(stemDialogue.getS6_2());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(stemDialogue.getS6_2());
@@ -474,6 +502,7 @@ public class dialogueFlow {
                         dialogue.animateText(stemDialogue.getS6_3());
                         break;
                     case 52:
+                        character.setVisibility(character.INVISIBLE);
                         dialogue.setText(appRelated.getD6_7());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(appRelated.getD6_7());
@@ -501,17 +530,21 @@ public class dialogueFlow {
                                 dialogue.animateText(mcDialogue.getR3_4());
                                 break;
                         }
+                        break;
                     case 54:
                         dialogue.setText(appRelated.getD6_8());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(appRelated.getD6_8());
                         break;
                     case 55:
+                        character.setVisibility(character.VISIBLE);
+                        character.setImageResource(R.drawable.stemtwo);
                         dialogue.setText(stemDialogue.getS6_4());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(stemDialogue.getS6_4());
                         break;
                     case 56:
+                        character.setImageResource(R.drawable.icttwo);
                         dialogue.setText(ictDialogue.getI6_2());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(ictDialogue.getI6_2());
@@ -522,11 +555,14 @@ public class dialogueFlow {
                         dialogue.animateText(ictDialogue.getI6_3());
                         break;
                     case 58:
+                        character.setVisibility(character.INVISIBLE);
                         dialogue.setText(appRelated.getD6_9());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(appRelated.getD6_9());
                         break;
                     case 59:
+                        character.setVisibility(character.VISIBLE);
+                        character.setImageResource(R.drawable.stemtwo);
                         dialogue.setText(stemDialogue.getS6_5());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(stemDialogue.getS6_5());
@@ -537,6 +573,7 @@ public class dialogueFlow {
                         dialogue.animateText(stemDialogue.getS6_6());
                         break;
                     case 61:
+                        character.setVisibility(character.INVISIBLE);
                         dialogue.setText(appRelated.getD6_10());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(appRelated.getD6_10());
@@ -552,16 +589,22 @@ public class dialogueFlow {
                         dialogue.animateText(appRelated.getD6_12());
                         break;
                     case 64:
+                        character.setVisibility(character.VISIBLE);
+                        character.setImageResource(R.drawable.stemtwo);
+                        background.setImageResource(R.drawable.outside);
                         dialogue.setText(stemDialogue.getST_1());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(stemDialogue.getST_1());
                         break;
                     case 65:
+                        character.setVisibility(character.INVISIBLE);
                         dialogue.setText(mcDialogue.getMT_1());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(mcDialogue.getMT_1());
                         break;
                     case 66:
+                        character.setVisibility(character.VISIBLE);
+                        character.setImageResource(R.drawable.stemtwo);
                         dialogue.setText(stemDialogue.getST_2());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(stemDialogue.getST_2());
@@ -572,6 +615,7 @@ public class dialogueFlow {
                         dialogue.animateText(stemDialogue.getST_3());
                         break;
                     case 68:
+                        character.setVisibility(character.INVISIBLE);
                         dialogue.setText(mcDialogue.getMT_2());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(mcDialogue.getMT_2());
@@ -582,16 +626,20 @@ public class dialogueFlow {
                         dialogue.animateText(mcDialogue.getMT_3());
                         break;
                     case 70:
+                        character.setVisibility(character.VISIBLE);
+                        character.setImageResource(R.drawable.stemtwo);
                         dialogue.setText(stemDialogue.getST_4());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(stemDialogue.getST_4());
                         break;
                     case 71:
+                        character.setVisibility(character.INVISIBLE);
                         dialogue.setText(appRelated.getT1_1());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(appRelated.getT1_1());
                         break;
                     case 72:
+                        background.setImageResource(R.drawable.clubroom);
                         dialogue.setText(appRelated.getD7_1());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(appRelated.getD7_1());
@@ -602,6 +650,8 @@ public class dialogueFlow {
                         dialogue.animateText(appRelated.getD7_2());
                         break;
                     case 74:
+                        character.setVisibility(character.VISIBLE);
+                        character.setImageResource(R.drawable.abmtwo);
                         dialogue.setText(abmDialogue.getA7_1());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(abmDialogue.getA7_1());
@@ -617,19 +667,149 @@ public class dialogueFlow {
                         dialogue.animateText(abmDialogue.getA7_2());
                         break;
                     case 77:
+                        character.setImageResource(R.drawable.stemtwo);
                         dialogue.setText(appRelated.getD7_4());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(appRelated.getD7_4());
                         break;
                     case 78:
-                        dialogue.setText(stemDialogue.getS7_1());
+                        dialogue.setText(stemDialogue.getS6_7());
                         dialogue.setCharacterDelay(50);
-                        dialogue.animateText(stemDialogue.getS7_1());
+                        dialogue.animateText(stemDialogue.getS6_7());
                         break;
                     case 79:
                         dialogue.setText(appRelated.getD7_5());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(appRelated.getD7_5());
+                        break;
+                    case 80:
+                        character.setVisibility(character.INVISIBLE);
+                        dialogue.setText(appRelated.getD7_6());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getD7_6());
+                        break;
+                    case 81:
+                        background.setImageResource(R.drawable.outside);
+                        dialogue.setText(mcDialogue.getM6_1());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getM6_1());
+                        break;
+                    case 82:
+                        background.setImageResource(R.drawable.clubroom);
+                        dialogue.setText(appRelated.getD8_1());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getD8_1());
+                        break;
+                    case 83:
+                        character.setVisibility(character.VISIBLE);
+                        character.setImageResource(R.drawable.stemtwo);
+                        dialogue.setText(stemDialogue.getS8_2());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(stemDialogue.getS8_2());
+                        break;
+                    case 84:
+                        dialogue.setText(stemDialogue.getS8_3());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(stemDialogue.getS8_3());
+                        break;
+                    case 85:
+                        character.setVisibility(character.INVISIBLE);
+                        dialogue.setText(appRelated.getD8_2());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getD8_2());
+                        break;
+                    case 86:
+                        dialogue.setText(mcDialogue.getM7_1());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getM7_1());
+                        break;
+                    case 87:
+                        character.setVisibility(character.VISIBLE);
+                        dialogue.setText(stemDialogue.getS8_4());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(stemDialogue.getS8_4());
+                        break;
+                    case 88:
+                        dialogue.setText(appRelated.getD8_3());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getD8_3());
+                        break;
+                    case 89:
+                        character.setVisibility(character.INVISIBLE);
+                        dialogue.setText(appRelated.getD8_4());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getD8_4());
+                        break;
+                    case 90:
+                        dialogue.setText(mcDialogue.getM7_2());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getM7_2());
+                        break;
+                    case 91:
+                        dialogue.setText(mcDialogue.getM7_3());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getM7_3());
+                        break;
+                    case 92:
+                        dialogue.setText(mcDialogue.getM7_5());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getM7_5());
+                        break;
+                    case 93:
+                        dialogue.setText(mcDialogue.getM7_7());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getM7_7());
+                        break;
+                    case 94:
+                        localint = 4;
+                        test.setQuestionnum(localint);
+                        nextquestion(test, next, A, B, C, D);
+                        dialogue.setText(appRelated.getD8_5());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getD8_5());
+                        break;
+                    case 95:
+                        switch(test.getChoicenum()){
+                            case 1:
+                                dialogue.setText(abmDialogue.getR4_1());
+                                dialogue.setCharacterDelay(50);
+                                dialogue.animateText(abmDialogue.getR4_1());
+                                break;
+                            case 2:
+                                dialogue.setText(stemDialogue.getR4_1());
+                                dialogue.setCharacterDelay(50);
+                                dialogue.animateText(stemDialogue.getR4_1());
+                                break;
+                            case 3:
+                                dialogue.setText(ictDialogue.getR4_1());
+                                dialogue.setCharacterDelay(50);
+                                dialogue.animateText(ictDialogue.getR4_1());
+                                break;
+                            case 4:
+                                dialogue.setText(humssdialogue.getR4_1());
+                                dialogue.setCharacterDelay(50);
+                                dialogue.animateText(humssdialogue.getR4_1());
+                                break;
+                        }
+                        break;
+                    case 96:
+                        dialogue.setText(appRelated.getD8_6());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(appRelated.getD8_6());
+                        break;
+                    case 97:
+                        dialogue.setText(stemDialogue.getS8_5());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(stemDialogue.getS8_5());
+                        break;
+                    case 98:
+                        dialogue.setText(mcDialogue.getM7_8());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getM7_8());
+                        break;
+                    case 99:
+                        Intent i = new Intent(context, main_menu.class);
+                        context.startActivity(i);
                         break;
                 }
                 break;
@@ -697,7 +877,7 @@ public class dialogueFlow {
                         dialogue.setCharacterDelay(50);
                         dialogue.setTextColor(0xFF000000);
                         dialogue.animateText(mcDialogue.getRt4mc3());
-                        localint = 4;
+                        localint = 5;
                         test.setQuestionnum(localint);
                         nextquestion(test, next, A, B, C, D);
                         break;
@@ -747,7 +927,7 @@ public class dialogueFlow {
                         dialogue.setTextColor(0xFF0000FF);
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(ictDialogue.getRt4Ict6());
-                        localint = 5;
+                        localint = 6;
                         test.setQuestionnum(localint);
                         nextquestion(test, next, A, B, C, D);
                         break;
@@ -870,6 +1050,21 @@ public class dialogueFlow {
                 displayAns(A, B, C, D);
                 break;
             case 4:
+                A.setText(appRelated.getQ4_A());
+                A.setCharacterDelay(0);
+                A.animateText(appRelated.getQ4_A());
+                B.setText(appRelated.getQ4_B());
+                B.setCharacterDelay(0);
+                B.animateText(appRelated.getQ4_B());
+                C.setText(appRelated.getQ4_C());
+                C.setCharacterDelay(0);
+                C.animateText(appRelated.getQ4_C());
+                D.setText(appRelated.getQ4_D());
+                D.setCharacterDelay(0);
+                D.animateText(appRelated.getQ4_D());
+                displayAns(A, B, C, D);
+                break;
+            case 5:
                 A.setText(appRelated.getRt4_Q1_A());
                 A.setCharacterDelay(0);
                 A.animateText(appRelated.getRt4_Q1_A());
@@ -884,7 +1079,7 @@ public class dialogueFlow {
                 D.animateText(appRelated.getRt4_Q1_D());
                 displayAns(A, B, C, D);
                 break;
-            case 5:
+            case 6:
                 A.setText(appRelated.getRt4_Q2_A());
                 A.setCharacterDelay(0);
                 A.animateText(appRelated.getRt4_Q2_A());
@@ -967,11 +1162,35 @@ public class dialogueFlow {
                 }
                 break;
             case 3:
+                character.setVisibility(character.VISIBLE);
+                character.setImageResource(R.drawable.stemtwo);
                 dialogue.setText(stemDialogue.getS6_1());
                 dialogue.setCharacterDelay(50);
                 dialogue.animateText(stemDialogue.getS6_1());
                 break;
             case 4:
+                switch (choicenum){
+                    case 1:
+                        dialogue.setText(mcDialogue.getR4_1());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getR4_1());
+                        break;
+                    case 2:
+                        dialogue.setText(mcDialogue.getR4_2());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getR4_2());
+                        break;
+                    case 3:
+                        dialogue.setText(mcDialogue.getR4_3());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getR4_3());
+                        break;
+                    case 4:
+                        dialogue.setText(mcDialogue.getR4_4());
+                        dialogue.setCharacterDelay(50);
+                        dialogue.animateText(mcDialogue.getR4_4());
+                        break;
+                }
                 break;
         }
     }
@@ -1006,4 +1225,3 @@ public class dialogueFlow {
         D.setVisibility(D.INVISIBLE);
     }
 }
-

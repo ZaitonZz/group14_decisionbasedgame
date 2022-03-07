@@ -78,9 +78,9 @@ public class appRelated {
     static String D6_7 = "You stand in front of all your peers and begin your presentation.";
     static String D6_8 = "MC-kun continues to casually speak about his/her device in a controlled tone.";
     static String D6_9 = "ICT continued to power through with her discussion.";
-    static String D6_10= "ABM senpai quickly breezed through her device, and soon enough STEM senpai was presenting hers as well,";
-    static String D6_11= "and then the bell rang just on time. STEM senpai told the group that further discussion will be continued tomorrow.";
-    static String D6_12= "However you we’re called out by STEM senpai after the whole group went outside the club room.";
+    static String D6_10= "ABM quickly stood up and postured herself to say her speech";
+    static String D6_11= "However,the bell rang so STEM senpai told the group that further discussion will be continued tomorrow.";
+    static String D6_12= "Strangely, you we’re called out by STEM-senpai outside as all the other club members dispersed to there homes.";
 
     static String Q3_A = "[A. StreamDeck] ";
     static String Q3_B = "[B. RGB to all devices] ";
@@ -101,8 +101,12 @@ public class appRelated {
     static String D8_3 ="STEM senpai is seated and mentions a quick 5 minute break before discussions begin.";
     static String D8_4 ="You take a look around the room and observe all your senpais. You begin to imagine putting yourself in their shoes and pursuing their strands.";
     static String D8_5 ="It's now your faith to decide on what strand you are going to pursue once you're in Senior High!";
-    static String D8_6 ="The story settles in a surprising twist for You! Have I made a good deal?";
-    static String D8_7 ="\"Wait, who are you STOP!\"";
+    static String D8_6 ="The story settles in a surprising twist for You! Have I made a good deal?\"Wait, who are you STOP!\"";
+
+    static String Q4_A = "[A. ABM]";
+    static String Q4_B = "[B. STEM]";
+    static String Q4_C = "[C. ICT-TECH VOC]";
+    static String Q4_D = "[D. HUMSS]";
     //end of Narrator Dialogue
 
     public appRelated(){}
@@ -197,7 +201,11 @@ public class appRelated {
     public static String getD8_4() { return D8_4; }
     public static String getD8_5() { return D8_5; }
     public static String getD8_6() { return D8_6; }
-    public static String getD8_7() { return D8_7; }
+
+    public static String getQ4_A() { return Q4_A; }
+    public static String getQ4_B() { return Q4_B; }
+    public static String getQ4_C() { return Q4_C; }
+    public static String getQ4_D() { return Q4_D; }
 
     public int getScenenum() { return scenenum; }
     public void setScenenum(int scenenum) { this.scenenum = scenenum; }

@@ -27,18 +27,20 @@ public class stemDialogue {
     private static String S6_4 = "What was wonderful MC-kun it's quite something i gotta tell you! So should i choose ICT to go on stage next…?";
     private static String S6_5 = "Oh! Wow that was amazing ICT you really outdid yourself today keep it up! Okay, now we're left with me and ABM.";
     private static String S6_6 = "Alright, I shall be last so ABM you can go ahead, and please do restrict yourself from getting angry while looking at MC-kun alright?";
+    private static String S6_7 = "*says speech";
 
     private static String ST_1 ="MC-kun Do you know why I called you out here?";
     private static String ST_2 ="MC-kun I know that you’re just a simulation created by a person(She waves casually to the person who created this Script!,";
     private static String ST_3 ="while MC-kun was having trouble understanding the words that she had said!)";
     private static String ST_4 ="I just want to say good-bye first to the person who’s reading and writing this Script!(Continues to wave at nothing...)";
 
-    private static String S7_1 ="says speech*";
-    private static String S7_2 ="I’d just like to say that all the effort that we have been making for our club is highly appreciated,";
-    private static String S7_3 ="and even if we all come from different strands we can find a middle ground when it comes to Computers and Technology!";
+    private static String S8_2 ="I’d just like to say that all the effort that we have been making for our club is highly appreciated,";
+    private static String S8_3 ="and even if we all come from different strands we can find a middle ground when it comes to Computers and Technology!";
+    private static String S8_4 ="Thank you again, for joining this club!";
+    private static String S8_5 ="You thought you could escape from ME!";
 
-    private static String S8_1 ="Thank you again, for joining this club!";
-    private static String S8_2 ="You thought you could escape from ME!";
+    private static String R4_1 ="What!? Really Wah! I will gladly take your offer";
+    private static String R4_1_1 = "Finally ME! and YOU! are together Forever and ever! ";
     //end of STEM Dialogue
 
     public stemDialogue(){}
@@ -70,16 +72,18 @@ public class stemDialogue {
     public static String getS6_4() { return S6_4; }
     public static String getS6_5() { return S6_5; }
     public static String getS6_6() { return S6_6; }
+    public static String getS6_7() { return S6_7; }
 
     public static String getST_1() { return ST_1; }
     public static String getST_2() { return ST_2; }
     public static String getST_3() { return ST_3; }
     public static String getST_4() { return ST_4; }
 
-    public static String getS7_1() { return S7_1; }
-    public static String getS7_2() { return S7_2; }
-    public static String getS7_3() { return S7_3; }
-
-    public static String getS8_1() { return S8_1; }
     public static String getS8_2() { return S8_2; }
+    public static String getS8_3() { return S8_3; }
+    public static String getS8_4() { return S8_4; }
+    public static String getS8_5() { return S8_5; }
+
+    public static String getR4_1() { return R4_1; }
+    public static String getR4_1_1() { return R4_1_1; }
 }
