@@ -682,8 +682,8 @@ public class dialogueFlow {
                         dialogue.setText(ictDialogue.getRt4Ict4());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(ictDialogue.getRt4Ict4());
+                        break;
                     case 11:
-                        character.setVisibility(character.INVISIBLE);
                         dialogue.setText(mcDialogue.getRt4mc3());
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(mcDialogue.getRt4mc3());
@@ -692,6 +692,7 @@ public class dialogueFlow {
                         nextquestion(test, next, A, B, C, D);
                         break;
                     case 12:
+                        character.setVisibility(character.INVISIBLE);
                         hideAns(A, B, C, D);
                         switch (test.getChoicenum()) {
                             case 1:
@@ -797,10 +798,9 @@ public class dialogueFlow {
                         context.startActivity(intent);
                         break;
                 }
-
+                break;
         }
     }
-
     public void nextquestion(appRelated test, Button next, typewriter_effect A, typewriter_effect B, typewriter_effect C, typewriter_effect D) {
         disNxtBut_actQstBut(next, A, B, C, D);
         switch (test.getQuestionnum()) {
@@ -984,6 +984,5 @@ public class dialogueFlow {
         C.setVisibility(C.INVISIBLE);
         D.setVisibility(D.INVISIBLE);
     }
-
 }
 
