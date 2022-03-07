@@ -1,28 +1,18 @@
 package com.example.group14_decisionbasedgame.view;
 
-import static android.content.ContentValues.TAG;
-
-import android.app.Activity;
-import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.AudioManager;
-import android.media.session.MediaController;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.RadioGroup;
-import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
-import androidx.core.app.ActivityCompat;
 
 import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.controller.musicRelated;
@@ -33,7 +23,8 @@ import com.example.group14_decisionbasedgame.controller.musicRelated;
 
 public class settings_screen extends AppCompatActivity{
 
-    private Button btnBack, btnUpdate, btnRestart;
+    private Button btnUpdate, btnRestart;
+    private TextView btnBack;
     private SwitchCompat audioSwitch;
 
 
@@ -75,7 +66,7 @@ public class settings_screen extends AppCompatActivity{
                 }
             }
         });
-        btnBack = (Button) findViewById(R.id.btn_Pause);
+        btnBack = (TextView) findViewById(R.id.btn_X);
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
