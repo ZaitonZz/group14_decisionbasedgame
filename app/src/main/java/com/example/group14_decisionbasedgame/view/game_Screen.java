@@ -20,8 +20,8 @@ import com.example.group14_decisionbasedgame.controller.typewriter_effect;
 import com.example.group14_decisionbasedgame.model.appRelated;
 
 public class game_Screen extends AppCompatActivity implements View.OnClickListener {
-    //TODO: UI + clock
-    // TODO: button design for Pause, auto, skip and back
+    //TODO: remove music when exit
+
     private androidx.constraintlayout.widget.ConstraintLayout myLayout = null;
 
     private Button btnAuto, btnPause, btnHist, btnNext;

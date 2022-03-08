@@ -16,8 +16,7 @@ import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.controller.musicRelated;
 
 public class main_menu extends AppCompatActivity implements View.OnClickListener{
-//TODO: Add the background
-//TODO: Button designs
+    //TODO: make the main menu layout more compatible with devices
 
 
     private Button btnStart, btnSettings,btnExit, btnCredits;
