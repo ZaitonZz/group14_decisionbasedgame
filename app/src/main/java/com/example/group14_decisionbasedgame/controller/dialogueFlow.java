@@ -193,6 +193,10 @@ public class dialogueFlow {
                                 }
                                 break;
                             case 4:
+                                dialogue.setText(appRelated.getRt4Dlg1());
+                                dialogue.setTextColor(0xFFFFFFFF);
+                                dialogue.setCharacterDelay(50);
+                                dialogue.animateText(appRelated.getRt4Dlg1());
                                 test.setScenenum(2);
                                 test.setDialoguenum(1);
                                 break;
@@ -984,13 +988,13 @@ public class dialogueFlow {
                         dialogue.setTextColor(0xFF000000);
                         dialogue.animateText(mcDialogue.getRt4mc2());
                         break;
-                    case 10:
+                    case 9:
                         dialogue.setText(ictDialogue.getRt4Ict4());
                         dialogue.setTextColor(0xFF0000FF);
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(ictDialogue.getRt4Ict4());
                         break;
-                    case 11:
+                    case 10:
                         dialogue.setText(mcDialogue.getRt4mc3());
                         dialogue.setCharacterDelay(50);
                         dialogue.setTextColor(0xFF000000);
@@ -999,7 +1003,7 @@ public class dialogueFlow {
                         test.setQuestionnum(localint);
                         nextquestion(test, next, A, B, C, D);
                         break;
-                    case 12:
+                    case 11:
                         character.setVisibility(character.INVISIBLE);
                         hideAns(A, B, C, D);
                         switch (test.getChoicenum()) {
@@ -1012,35 +1016,35 @@ public class dialogueFlow {
                                 dialogue.setText(mcDialogue.getRt4mc3_B());
                                 dialogue.setCharacterDelay(50);
                                 dialogue.animateText(mcDialogue.getRt4mc3_B());
-                                test.setDialoguenum(14);
+                                test.setDialoguenum(13);
                                 break;
                             case 3:
                                 dialogue.setText(mcDialogue.getRt4mc3_C());
                                 dialogue.setCharacterDelay(50);
                                 dialogue.animateText(mcDialogue.getRt4mc3_C());
-                                test.setDialoguenum(14);
+                                test.setDialoguenum(13);
                                 break;
                             case 4:
                                 dialogue.setText(mcDialogue.getRt4mc3_D());
                                 dialogue.setCharacterDelay(50);
                                 dialogue.animateText(mcDialogue.getRt4mc3_D());
-                                test.setDialoguenum(14);
+                                test.setDialoguenum(13);
                                 break;
                         }
                         break;
-                    case 13:
+                    case 12:
                         dialogue.setText(ictDialogue.getRt4Ict5());
                         dialogue.setTextColor(0xFF0000FF);
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(ictDialogue.getRt4Ict5());
                         break;
-                    case 14:
+                    case 13:
                         dialogue.setText(ictDialogue.getRt4choices2());
                         dialogue.setTextColor(0xFF000000);
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(ictDialogue.getRt4choices2());
                         break;
-                    case 15:
+                    case 14:
                         dialogue.setText(ictDialogue.getRt4Ict6());
                         dialogue.setTextColor(0xFF0000FF);
                         dialogue.setCharacterDelay(50);
@@ -1049,7 +1053,7 @@ public class dialogueFlow {
                         test.setQuestionnum(localint);
                         nextquestion(test, next, A, B, C, D);
                         break;
-                    case 16:
+                    case 15:
                         dialogue.setTextColor(0xFF000000);
                         hideAns(A, B, C, D);
                         switch (test.getChoicenum()) {
@@ -1075,43 +1079,43 @@ public class dialogueFlow {
                                 break;
                         }
                         break;
-                    case 17:
+                    case 16:
                         dialogue.setText(ictDialogue.getRt4Ict7());
                         dialogue.setTextColor(0xFF0000FF);
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(ictDialogue.getRt4Ict7());
                         break;
-                    case 18:
+                    case 17:
                         dialogue.setText(ictDialogue.getRt4Ict8());
                         dialogue.setTextColor(0xFF0000FF);
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(ictDialogue.getRt4Ict8());
                         break;
-                    case 19:
+                    case 18:
                         dialogue.setText(mcDialogue.getRt4mc5());
                         dialogue.setTextColor(0xFF000000);
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(mcDialogue.getRt4mc5());
                         break;
-                    case 20:
+                    case 19:
                         dialogue.setText(appRelated.getRt4N1());
                         dialogue.setTextColor(0xFFFFFF00);
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(appRelated.getRt4N1());
                         break;
-                    case 21:
+                    case 20:
                         dialogue.setText(appRelated.getRt4Dlg2());
                         dialogue.setTextColor(0xFFFFFFFF);
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(appRelated.getRt4Dlg2());
                         break;
-                    case 22:
+                    case 21:
                         dialogue.setText(ictDialogue.getRt4Ict9());
                         dialogue.setTextColor(0xFF0000FF);
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(ictDialogue.getRt4Ict9());
                         break;
-                    case 23:
+                    case 22:
                         Intent intent = new Intent(context, reboot_scene.class);
                         context.startActivity(intent);
                         break;
@@ -1242,13 +1246,7 @@ public class dialogueFlow {
                         dialogue.setCharacterDelay(50);
                         dialogue.animateText(mcDialogue.getR1_3());
                         break;
-                    case 4:
-                        Log.d(TAG, "question 1 case 4");
-                        dialogue.setText(appRelated.getRt4Dlg1());
-                        dialogue.setTextColor(0xFFFFFFFF);
-                        dialogue.setCharacterDelay(50);
-                        dialogue.animateText(appRelated.getRt4Dlg1());
-                        break;
+
                 }
                 break;
             case 2:
