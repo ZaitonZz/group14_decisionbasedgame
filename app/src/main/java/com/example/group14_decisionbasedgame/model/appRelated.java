@@ -14,7 +14,7 @@ public class appRelated {
 
     static String Rt4_Q1_A ="[A. where am i]";
     static String Rt4_Q1_B ="[B. what are you]";
-    static String Rt4_Q1_C ="[C. are you mine?!? . . . . . . . .        ]";
+    static String Rt4_Q1_C ="[C. are you mine?!? . . . . . . . .]";
     static String Rt4_Q1_D ="[D. i am the one making the question i hope you answer all of them hehe! ! !] ";
 
     static String Rt4_Q2_A ="[A. do you wish to continue]";
