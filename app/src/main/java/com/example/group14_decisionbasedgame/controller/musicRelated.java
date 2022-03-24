@@ -107,7 +107,24 @@ public class musicRelated {
         gScreen.start();
         Log.d(TAG, "girl one activated");
     }
-
+    public static void strtgood_ending(Context context) {
+        gScreen = MediaPlayer.create(context, R.raw.good_ending);
+        gScreen.setLooping(true);
+        gScreen.start();
+        Log.d(TAG, "actibaited");
+    }
+    public static void strtcorrupt(Context context) {
+        gScreen = MediaPlayer.create(context, R.raw.ict_corrupted);
+        gScreen.setLooping(true);
+        gScreen.start();
+        Log.d(TAG, "actibaited");
+    }
+    public static void strtcredits(Context context) {
+        gScreen = MediaPlayer.create(context, R.raw.credits);
+        gScreen.setLooping(true);
+        gScreen.start();
+        Log.d(TAG, "actibaited");
+    }
     public static void stop_gScreen_music() {
         gScreen.release();
         gScreen = null;

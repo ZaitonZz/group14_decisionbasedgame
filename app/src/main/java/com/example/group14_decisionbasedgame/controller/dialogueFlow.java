@@ -206,6 +206,8 @@ public class dialogueFlow {
                 Log.d(TAG, "Route 1 activated");
                 switch (test.getDialoguenum()) {
                     case 1:
+                        musicRelated.stop_gScreen_music();
+                        musicRelated.strthumss_secondary(context);
                         background.setImageResource(R.drawable.classroom);
                         character.setVisibility(character.INVISIBLE);
                         dialogue.setText(appRelated.getD5_1());
@@ -276,6 +278,8 @@ public class dialogueFlow {
                         dialogue.animateText(abmDialogue.getA5_2());
                         break;
                     case 11:
+                        musicRelated.stop_gScreen_music();
+                        musicRelated.strtict_main(context);
                         character.setImageResource(R.drawable.stemtwo);
                         dialogue.setText(stemDialogue.getS5_2());
                         dialogue.setTextColor(0xFF800080);
@@ -424,6 +428,8 @@ public class dialogueFlow {
                         }
                         break;
                     case 30:
+                        musicRelated.stop_gScreen_music();
+                        musicRelated.strtgood_ending(context);
                         character.setImageResource(R.drawable.humsstwo);
                         dialogue.setText(humssdialogue.getH5_3());
                         dialogue.setTextColor(0xFF00FF00);
@@ -671,6 +677,8 @@ public class dialogueFlow {
                         dialogue.animateText(appRelated.getD6_12());
                         break;
                     case 64:
+                        musicRelated.stop_gScreen_music();
+                        musicRelated.strtcorrupt(context);
                         character.setVisibility(character.VISIBLE);
                         character.setImageResource(R.drawable.stemtwo);
                         background.setImageResource(R.drawable.outside);
@@ -729,6 +737,8 @@ public class dialogueFlow {
                         dialogue.animateText(appRelated.getT1_1());
                         break;
                     case 72:
+                        musicRelated.stop_gScreen_music();
+                        musicRelated.strtabm_secondary(context);
                         background.setImageResource(R.drawable.clubroom);
                         dialogue.setText(appRelated.getD7_1());
                         dialogue.setTextColor(0xFFFFFFFF);
@@ -795,6 +805,8 @@ public class dialogueFlow {
                         dialogue.animateText(mcDialogue.getM6_1());
                         break;
                     case 82:
+                        musicRelated.stop_gScreen_music();
+                        musicRelated.strtcredits(context);
                         background.setImageResource(R.drawable.clubroom);
                         dialogue.setText(appRelated.getD8_1());
                         dialogue.setTextColor(0xFFFFFFFF);
@@ -873,6 +885,8 @@ public class dialogueFlow {
                         dialogue.animateText(mcDialogue.getM7_7());
                         break;
                     case 94:
+                        musicRelated.stop_gScreen_music();
+                        musicRelated.strtstem_main(context);
                         localint = 4;
                         test.setQuestionnum(localint);
                         nextquestion(test, next, A, B, C, D);
@@ -910,6 +924,8 @@ public class dialogueFlow {
                         }
                         break;
                     case 96:
+                        musicRelated.stop_gScreen_music();
+                        musicRelated.strtcorrupt(context);
                         dialogue.setText(appRelated.getD8_6());
                         dialogue.setTextColor(0xFFFFFFFF);
                         dialogue.setCharacterDelay(50);
