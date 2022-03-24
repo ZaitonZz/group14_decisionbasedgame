@@ -3,7 +3,8 @@ package com.example.group14_decisionbasedgame.model;
 public class ictDialogue {
 
 
-    private static String Rt4Ict1 = "You’re finally awake MC-kun, Did you see my message when you followed and progressed towards the game or should i call it an simulation if you don’t know what am i talking about its this (I See You) that was me i just wanted you to be with me so thank god you chose to ignore the offer?!?!";
+    private static String Rt4Ict1 = "You’re finally awake MC-kun, Did you see my message when you followed and progressed towards the game or should i call it an simulation.";
+    private static String Rt4Ict1_2 =" If you don’t know what am i talking about its this (I See You) that was me i just wanted you to be with me so thank god you chose to ignore the offer?!?!";
     private static String Rt4Ict2 = "What do you mean by everyone it's only me just me okay let's do some quick Q&A time ehehe! ";
     private static String Rt4Ict3 = "okay no more for that i will make the questions now You must answer them and you can leave hehe!?";
     private static String Rt4Ict4 = "If you don’t participate i will just have you gone or stored away in the deep thoughts of the script writer! Do You UNDERSTAND! ";
@@ -30,6 +31,8 @@ public class ictDialogue {
     public static String getRt4choices2() { return  Rt4choices2; }
 
     public static String getRt4Ict1() { return  Rt4Ict1; }
+    public static String getRt4Ict1_2() { return  Rt4Ict1_2; }
+
     public static String getRt4Ict2() { return  Rt4Ict2; }
     public static String getRt4Ict3() { return  Rt4Ict3; }
     public static String getRt4Ict4() { return  Rt4Ict4; }
