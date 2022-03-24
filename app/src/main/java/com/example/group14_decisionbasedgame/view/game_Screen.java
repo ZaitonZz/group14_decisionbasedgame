@@ -16,11 +16,11 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.example.group14_decisionbasedgame.R;
 import com.example.group14_decisionbasedgame.controller.dialogueFlow;
+import com.example.group14_decisionbasedgame.controller.musicRelated;
 import com.example.group14_decisionbasedgame.controller.typewriter_effect;
 import com.example.group14_decisionbasedgame.model.appRelated;
 
 public class game_Screen extends AppCompatActivity implements View.OnClickListener {
-    //TODO: remove music when exit
 
     private androidx.constraintlayout.widget.ConstraintLayout myLayout = null;
 
@@ -131,7 +131,16 @@ public class game_Screen extends AppCompatActivity implements View.OnClickListen
             break;
     }
     }
-
+    @Override
+    protected void onPause() {
+        super.onPause();
+        musicRelated.stop_gScreen_music();
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        musicRelated.con_gScreen_music();
+    }
 
 
     private void enableFullscreen() {

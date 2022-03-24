@@ -16,8 +16,6 @@ import com.example.group14_decisionbasedgame.R;
 
 public class exit_confirmation extends AppCompatActivity{
 
-    // TODO: Background, Button design for Agree and dismiss
-
     private Button btnAgree;
     private Button btnDismiss;
 

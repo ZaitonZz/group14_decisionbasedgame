@@ -27,9 +27,6 @@ public class settings_screen extends AppCompatActivity{
     private TextView btnBack;
     private SwitchCompat audioSwitch;
 
-
-    // TODO: Need button design for Back(X) ,Update restart, and Switch design for Audio
-    // TODO: Background
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

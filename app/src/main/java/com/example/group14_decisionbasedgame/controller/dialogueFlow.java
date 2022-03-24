@@ -32,8 +32,6 @@ public class dialogueFlow {
     }
 
     public static void sceneone(ImageView character, typewriter_effect dialogue, Button auto, Button skip_next, Context context) {
-        //TODO: test out how this single command should wait for input before moving on to the next dialogue
-        //TODO: should map to scenetwo after this one is done
         //TODO: animation for characters when they fade in and fade out
         musicRelated.strtstem_main(context);
         dialogue.setText(appRelated.getD1_1());
